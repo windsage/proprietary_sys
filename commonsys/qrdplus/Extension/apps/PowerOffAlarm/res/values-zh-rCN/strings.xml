@@ -1,0 +1,13 @@
+<!--
+ * Copyright (c) 2017-2018 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+-->
+
+<resources>
+    <string name="app_name">关机闹钟</string>
+    <string name="permlab_power_off_alarm">关机闹钟</string>
+    <string name="permdesc_power_off_alarm">设置和清除关机闹钟时间（关机
+        闹钟可以唤醒在关机状态下的手机） </string>
+</resources>

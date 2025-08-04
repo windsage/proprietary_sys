@@ -1,0 +1,49 @@
+aidl_interface {
+    owner: "qti",
+    name: "vendor.qti.hardware.data.iwlandata",
+    vendor_available: true,
+    host_supported: true,
+    local_include_dir: ".",
+    system_ext_specific: true,
+    srcs: ["vendor/qti/hardware/data/iwlandata/*.aidl"],
+    imports: [
+        "android.hardware.radio-V3",
+        "android.hardware.radio.data-V3",
+        "android.hardware.radio.network-V3",
+    ],
+    stability: "vintf",
+    backend: {
+        cpp: {
+            enabled: false,
+        },
+        java: {
+            enabled: true,
+            platform_apis: true,
+            sdk_version: "module_current",
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [
+                "android.hardware.radio-V2",
+                "android.hardware.radio.data-V2",
+                "android.hardware.radio.network-V2",
+            ],
+        },
+        {
+            version: "2",
+            imports: [
+                "android.hardware.radio-V3",
+                "android.hardware.radio.data-V3",
+                "android.hardware.radio.network-V3",
+            ],
+        },
+
+    ],
+    frozen: true,
+
+}

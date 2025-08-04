@@ -1,0 +1,24 @@
+android_app_import {
+    name: "QualcommVoiceActivation",
+    apk: "QualcommVoiceActivation.apk",
+    privileged: true,
+    system_ext_specific: true,
+    presigned: true,
+    preprocessed: true,
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-qva",
+    system_ext_specific: true,
+    sub_dir: "permissions",
+    src: "privapp-permissions-com.quicinc.voice.activation.xml",
+    filename_from_src: true,
+}
+
+prebuilt_etc {
+    name: "default_permissions_allowlist_qva",
+    system_ext_specific: true,
+    sub_dir: "default-permissions",
+    src: "default-permissions-com.quicinc.voice.activation.xml",
+    filename_from_src: true,
+}

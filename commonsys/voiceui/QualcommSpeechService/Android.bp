@@ -1,0 +1,20 @@
+android_app {
+    name: "QualcommSpeechService",
+    resource_dirs: ["res"],
+    system_ext_specific: true,
+    platform_apis: true,
+    certificate: "platform",
+    privileged: true,
+    srcs: [
+        "src/**/*.java",
+    ],
+    defaults: ["latest_vendor_qti_hardware_qasr_java_static"],
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-qspeech",
+    system_ext_specific: true,
+    sub_dir: "permissions",
+    src: "privapp-permissions-com.qualcomm.qti.voiceai.speech.xml",
+    filename_from_src: true,
+}

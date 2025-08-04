@@ -1,0 +1,9 @@
+{
+  "qiifa_tools": "/pkg/QIIFA/QIIFA-tools",
+  "wroot": ".",
+  "symbol": "build/symbols",
+  "dlkm": "out/target/product/kalama/dlkm/lib/modules",
+  "rootfs": ".",
+  "platform": "LA",
+  "python-dir": "/pkg/QIIFA/sandbox/QIIFA-tools/qiifa-python/Python-3.12.1/bin/python3.12"
+}

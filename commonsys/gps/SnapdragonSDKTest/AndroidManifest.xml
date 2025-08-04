@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--*====*====*====*====*====*====*====*====*====*====*====*====*====*====*====*
+  Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+=============================================================================*-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="my.tests.snapdragonsdktest"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="34" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.BIND_DEVICE_ADMIN"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.MANAGE_APP_OPS_MODES"/>
+    <uses-permission android:name="com.qualcomm.permission.IZAT"/>
+    <uses-permission android:name="com.qualcomm.permission.ACCESS_USER_CONSENT_API"/>
+    <uses-permission android:name="com.qualcomm.qti.permission.ACCESS_ROBUST_LOCATION_API"/>
+    <uses-permission android:name="com.qualcomm.qti.permission.ACCESS_SV_CONFIG_API"/>
+    <uses-permission android:name="com.qualcomm.qti.permission.ACCESS_PRECISE_LOCATION_API" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name">
+
+        <uses-library android:name="com.qti.location.sdk" />
+
+        <activity
+            android:name="my.tests.snapdragonsdktest.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleInstance"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:resizeableActivity="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DebugReportActivity" />
+        <activity android:name=".FullscreenActivity" />
+        <activity android:name=".FlpActivity" />
+        <activity android:name=".XtraThrottleActivity" />
+        <activity android:name=".GtpActivity" />
+        <activity android:name=".GtpWwanActivity" />
+        <activity android:name=".GtpOemConsentActivity" />
+        <activity android:name=".GnssConfigActivity" />
+        <activity android:name=".PrecisePositionActivity" />
+
+    </application>
+</manifest>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+  ~ All Rights Reserved.
+  ~ Confidential and Proprietary - Qualcomm Technologies, Inc.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/voiceai_reference_app"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/reference_app"
+                android:textColor="@color/transparent_text_color"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:id="@+id/voice_call_translation_background"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/voiceai_reference_app"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="18dp"
+                android:contentDescription="@string/item_background"
+                android:scaleType="fitXY"
+                android:src="@drawable/item_background" />
+
+            <TextView
+                android:id="@+id/voice_call_translation_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/voiceai_reference_app"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="64dp"
+                android:text="@string/voice_call_translation"
+                android:textColor="@color/white"
+                android:textSize="@dimen/second_level_text_size"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:id="@+id/voice_call_translation_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/voiceai_reference_app"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="38dp"
+                android:src="@drawable/icn_chevron_right"
+                android:thumbTint="@color/switch_color"
+                android:thumbTintMode="multiply"
+                android:trackTint="@color/color_snapdragon_purple"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <ImageView
+                android:id="@+id/conversation_recording_background"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/voice_call_translation_background"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="18dp"
+                android:contentDescription="@string/item_background"
+                android:scaleType="fitXY"
+                android:src="@drawable/item_background" />
+
+            <TextView
+                android:id="@+id/conversation_recording_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/voice_call_translation_background"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/conversation_recording"
+                android:textColor="@color/white"
+                android:textSize="@dimen/second_level_text_size"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:id="@+id/conversation_recording_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/voice_call_translation_background"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="38dp"
+                android:src="@drawable/icn_chevron_right"
+                android:thumbTint="@color/switch_color"
+                android:thumbTintMode="multiply"
+                android:trackTint="#cc3253dc"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

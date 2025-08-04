@@ -1,0 +1,1 @@
+97d1a9926c3aa142f1af087c17c6aa1d3f61283550d163de1d1303e161f99e52 vendor.qti.hardware.sigma_miracast@1.0::Isigma_miracast

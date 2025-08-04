@@ -1,0 +1,19 @@
+
+android_app {
+    name: "datastatusnotification",
+
+    optimize: {
+        enabled: false,
+    },
+
+    srcs: ["**/*.java"],
+
+    certificate: "platform",
+    libs: [
+        "qcrilhook",
+    ],
+
+    product_specific: true,
+    sdk_version: "system_current",
+
+}

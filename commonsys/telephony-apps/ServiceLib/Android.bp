@@ -1,0 +1,26 @@
+
+cc_library  {
+    name: "libjni_aidl_service",
+    product_specific: true,
+    srcs: ["serviceLib.cpp"],
+    shared_libs: [
+        "liblog",
+        "libbinder_ndk",
+    ],
+    header_libs: ["jni_headers"],
+    //stl: "c++_shared",
+    arch: {
+        arm: {
+            instruction_set: "arm",
+        },
+    },
+}
+
+
+java_library_static {
+    name: "QtiAidlServiceLib",
+    installable: true,
+    product_specific: true,
+    srcs: ["com/qualcomm/qti/servicelib/ServiceLib.java"],
+    sdk_version: "system_current",
+}

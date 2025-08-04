@@ -1,0 +1,10 @@
+android_app {
+    name: "dcf",
+    certificate: "platform",
+    optimize: {
+        enabled: false,
+    },
+    platform_apis: true,
+    system_ext_specific: true,
+    privileged: true,
+}

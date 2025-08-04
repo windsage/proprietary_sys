@@ -1,0 +1,19 @@
+<manifest version="1.0" type="framework">
+<!---/*************************************************************************
+* Copyright (c) 2023 Qualcomm Technologies, Inc.
+* All Rights Reserved.
+* Confidential and Proprietary - Qualcomm Technologies, Inc.
+****************************************************************************-->
+    <hal format="aidl">
+        <name>vendor.qti.hardware.systemhelperaidl</name>
+        <version>1</version>
+        <interface>
+            <name>ISystemEvent</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>ISystemResource</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</manifest>

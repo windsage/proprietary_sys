@@ -1,0 +1,1508 @@
+{
+  "Qesdk": {
+    "name": "Dcf",
+    "opcode": "0x63",
+    "qesdk_ver": 2,
+    "subsystems": [
+      {
+        "name": "Dcf",
+        "native_prefix": "dcf_",
+        "id": 2682,
+
+        "highest_version":5,
+
+        "versions": [
+          {
+            "version": 1,
+
+            "enums": [
+              {
+                "name": "Version",
+                "num_of_vals": 1,
+                "vals" : [
+                  {
+                    "name": "Version_1",
+                    "val": 1
+                  }
+                ]
+              },
+              {
+                "name": "ReferenceClientId",
+                "num_of_vals": 1,
+                "vals" : [
+                  {
+                    "name": "ReferenceClientId_Default",
+                    "val": 1
+                  }
+                ]
+              },
+              {
+                "name": "ClientRegistrationStatus",
+                "num_of_vals": 2,
+                "vals": [
+                  {
+                    "name": "ClientRegistrationStatus_Success",
+                    "val": 0
+                  },
+                  {
+                    "name": "ClientRegistrationStatus_Error",
+                    "val": 1
+                  }
+                ]
+              },
+              {
+                "name": "TriggerStatus",
+                "num_of_vals": 2,
+                "vals": [
+                  {
+                    "name": "TriggerStatus_Success",
+                    "val": 0
+                  },
+                  {
+                    "name": "TriggerStatus_Error",
+                    "val": 1
+                  }
+                ]
+              },
+              {
+                "name": "DuplicateDetectionStatus",
+                "num_of_vals": 2,
+                "vals": [
+                  {
+                    "name": "DuplicateDetectionStatus_Success",
+                    "val": 0
+                  },
+                  {
+                    "name": "DuplicateDetectionStatus_Error",
+                    "val": 1
+                  }
+                ]
+              },
+              {
+                "name": "BleScanStatus",
+                "num_of_vals": 2,
+                "vals": [
+                  {
+                    "name": "BleScanStatus_Success",
+                    "val": 0
+                  },
+                  {
+                    "name": "BleScanStatus_Error",
+                    "val": 1
+                  }
+                ]
+              },
+              {
+                "name": "PlatformStatus",
+                "num_of_vals": 3,
+                "vals": [
+                  {
+                    "name": "PlatformStatus_Available",
+                    "val": 0
+                  },
+                  {
+                    "name": "PlatformStatus_Unavailable",
+                    "val": 1
+                  },
+                  {
+                    "name": "PlatformStatus_Unavailable_RESET_BLE_TRANSPORT",
+                    "val": 2
+                  }
+                ]
+              },
+              {
+                "name": "PropertyId",
+                "num_of_vals": 12,
+                "vals" : [
+                  {
+                    "name": "PropertyId_Timestamp",
+                    "val": 0
+                  },
+                  {
+                    "name": "PropertyId_EventType",
+                    "val": 1
+                  },
+                  {
+                    "name": "PropertyId_AddressType",
+                    "val": 2
+                  },
+                  {
+                    "name": "PropertyId_Address",
+                    "val": 3
+                  },
+                  {
+                    "name": "PropertyId_TxPower",
+                    "val": 4
+                  },
+                  {
+                    "name": "PropertyId_Rssi",
+                    "val": 5
+                  },
+                  {
+                    "name": "PropertyId_PrimaryPhy",
+                    "val": 6
+                  },
+                  {
+                    "name": "PropertyId_SecondaryPhy",
+                    "val": 7
+                  },
+                  {
+                    "name": "PropertyId_AdvertisingSid",
+                    "val": 8
+                  },
+                  {
+                    "name": "PropertyId_PeriodicAdvertisingInterval",
+                    "val": 9
+                  },
+                  {
+                    "name": "PropertyId_DirectAddressType",
+                    "val": 10
+                  },
+                  {
+                    "name": "PropertyId_DirectAddress",
+                    "val": 11
+                  }
+                ]
+              },
+              {
+                "name": "Condition",
+                "num_of_vals": 3,
+                "vals" : [
+                  {
+                    "name": "Condition_LessOrEqual",
+                    "val": 0
+                  },
+                  {
+                    "name": "Condition_GreaterOrEqual",
+                    "val": 1
+                  },
+                  {
+                    "name": "Condition_Equals",
+                    "val": 2
+                  }
+                ]
+              },
+              {
+                "name": "ScanMode",
+                "num_of_vals": 5,
+                "vals" : [
+                  {
+                    "name": "ScanMode_Opportunistic",
+                    "val": 0
+                  },
+                  {
+                    "name": "ScanMode_LowPower",
+                    "val": 1
+                  },
+                  {
+                    "name": "ScanMode_Balanced",
+                    "val": 2
+                  },
+                  {
+                    "name": "ScanMode_LowLatency",
+                    "val": 3
+                  },
+                  {
+                    "name": "ScanMode_AmbientDiscovery",
+                    "val": 4
+                  }
+                ]
+              },
+              {
+                "name": "AdvertisingInterval",
+                "num_of_vals": 4,
+                "vals" : [
+                  {
+                    "name": "AdvertisingInterval_Default",
+                    "val": 0
+                  },
+                  {
+                    "name": "AdvertisingInterval_Low",
+                    "val": 1
+                  },
+                  {
+                    "name": "AdvertisingInterval_Medium",
+                    "val": 2
+                  },
+                  {
+                    "name": "AdvertisingInterval_High",
+                    "val": 3
+                  }
+                ]
+              },
+              {
+                "name": "TxPowerLevel",
+                "num_of_vals": 5,
+                "vals" : [
+                  {
+                    "name": "TxPowerLevel_Default",
+                    "val": 0
+                  },
+                  {
+                    "name": "TxPowerLevel_UltraLow",
+                    "val": 1
+                  },
+                  {
+                    "name": "TxPowerLevel_Low",
+                    "val": 2
+                  },
+                  {
+                    "name": "TxPowerLevel_Medium",
+                    "val": 3
+                  },
+                  {
+                    "name": "TxPowerLevel_High",
+                    "val": 4
+                  }
+                ]
+              },
+              {
+                "name": "BleAdvertiseStatus",
+                "num_of_vals": 7,
+                "vals" : [
+                  {
+                    "name": "BleAdvertiseStatus_Error_NoError",
+                    "val": 0
+                  },
+                  {
+                    "name": "BleAdvertiseStatus_Error_DataTooLarge",
+                    "val": 1
+                  },
+                  {
+                    "name": "BleAdvertiseStatus_Eror_TooManyAdvertisers",
+                    "val": 2
+                  },
+                  {
+                    "name": "BleAdvertiseStatus_Error_InternalError",
+                    "val": 3
+                  },
+                  {
+                    "name": "BleAdvertiseStatus_Error_IncorrectParameters",
+                    "val": 4
+                  },
+                  {
+                    "name": "BleAdvertiseStatus_Error_FeatureUnsupported",
+                    "val": 5
+                  },
+                  {
+                    "name": "BleAdvertiseStatus_Error_TurnedOff",
+                    "val": 6
+                  }
+                ]
+              },
+              {
+                "name": "TriggerRequestType",
+                "num_of_vals": 2,
+                "vals" : [
+                  {
+                    "name" : "TriggerRequestType_Set",
+                    "val" : 0
+                  },
+                  {
+                    "name" : "TriggerRequestType_Cancel",
+                    "val" : 1
+                  }
+                ]
+              }
+            ],
+            "blob" : {
+              "name" : "DataBuffer",
+              "max_size" : 250
+
+            },
+            "vectors": [
+              {
+                "name": "TriggerIds",
+                "type": "int32",
+                "max_size": 64
+              },
+              {
+                "name": "PropertyIdContainer",
+                "type": "enum",
+                "enum_name": "PropertyId",
+                "max_size": 12
+              },
+              {
+                "name": "PropertyContainer",
+                "type": "uint64",
+                "max_size": 12
+              },
+              {
+                "name": "ConditionContainer",
+                "type": "enum",
+                "enum_name": "Condition",
+                "max_size": 12
+              },
+              {
+                "name": "BlobVector",
+                "type": "bnry_blb",
+                "max_size": 64
+              },
+              {
+                "name": "ManufacturerIds",
+                "type": "uint32",
+                "max_size": 64
+              },
+              {
+                "name": "DeviceNames",
+                "type": "string",
+                "max_size": 64
+              }
+            ],
+            "structs": [
+              {
+                "name": "DataFilters",
+                "members": [
+                  {
+                    "id": 0,
+                    "name" : "serviceDataUuids",
+                    "type" : "vector",
+                    "vec_name": "BlobVector"
+                  },
+                  {
+                    "id": 1,
+                    "name" : "serviceData",
+                    "type" : "vector",
+                    "vec_name": "BlobVector"
+                  },
+                  {
+                    "id": 2,
+                    "name" : "serviceDataMasks",
+                    "type" : "vector",
+                    "vec_name": "BlobVector"
+                  },
+                  {
+                    "id": 3,
+                    "name" : "manufacturerIds",
+                    "type" : "vector",
+                    "vec_name": "ManufacturerIds"
+                  },
+                  {
+                    "id": 4,
+                    "name" : "manufacturerData",
+                    "type" : "vector",
+                    "vec_name": "BlobVector"
+                  },
+                  {
+                    "id": 5,
+                    "name" : "manufacturerDataMasks",
+                    "type" : "vector",
+                    "vec_name": "BlobVector"
+                  }
+                ]
+              },
+              {
+                "name": "PropertyFilters",
+                "members": [
+                  {
+                    "id": 0,
+                    "name" : "propertyIds",
+                    "type" : "vector",
+                    "vec_name": "PropertyIdContainer"
+                  },
+                  {
+                    "id": 1,
+                    "name" : "propertyValues",
+                    "type" : "vector",
+                    "vec_name": "PropertyContainer"
+                  },
+                  {
+                    "id": 2,
+                    "name" : "acceptIf",
+                    "type" : "vector",
+                    "vec_name": "ConditionContainer"
+                  }
+                ]
+              },
+              {
+                "name": "Properties",
+                "members": [
+                  {
+                    "id": 0,
+                    "name" : "propertyIds",
+                    "type" : "vector",
+                    "vec_name": "PropertyIdContainer"
+                  },
+                  {
+                    "id": 1,
+                    "name" : "propertyValues",
+                    "type" : "vector",
+                    "vec_name": "PropertyContainer"
+                  }
+                ]
+              },
+              {
+                "name": "BleScanData",
+                "members": [
+                  {
+                    "id": 0,
+                    "name" : "rawData",
+                    "type" : "bnry_blb",
+                    "blb_name": "DataBuffer"
+                  },
+                  {
+                    "id": 1,
+                    "name" : "serviceDataUuids",
+                    "type" : "vector",
+                    "vec_name": "BlobVector"
+                  },
+                  {
+                    "id": 2,
+                    "name" : "serviceData",
+                    "type" : "vector",
+                    "vec_name": "BlobVector"
+                  },
+                  {
+                    "id": 3,
+                    "name" : "manufacturerIds",
+                    "type" : "vector",
+                    "vec_name": "ManufacturerIds"
+                  },
+                  {
+                    "id": 4,
+                    "name" : "manufacturerData",
+                    "type" : "vector",
+                    "vec_name": "BlobVector"
+                  },
+                  {
+                    "id": 5,
+                    "name" : "deviceName",
+                    "type" : "string"
+                  },
+                  {
+                    "id": 6,
+                    "name" : "serviceUuids",
+                    "type" : "vector",
+                    "vec_name": "BlobVector"
+                  }
+                ]
+              },
+              {
+                "name": "ScanSettings",
+                "members": [
+                  {
+                    "id": 0,
+                    "name" : "mode",
+                    "type" : "enum",
+                    "enum_name": "ScanMode"
+                  },
+                  {
+                    "id": 1,
+                    "name" : "maxLatency",
+                    "type" : "uint32"
+                  },
+                  {
+                    "id": 2,
+                    "name" : "highRssiThreshold",
+                    "type" : "int32"
+                  }
+                ]
+              },
+              {
+                "name": "ScanFilters",
+                "members": [
+                  {
+                    "id": 0,
+                    "name" : "serviceDataUuids",
+                    "type" : "vector",
+                    "vec_name": "BlobVector"
+                  },
+                  {
+                    "id": 1,
+                    "name" : "serviceData",
+                    "type" : "vector",
+                    "vec_name": "BlobVector"
+                  },
+                  {
+                    "id": 2,
+                    "name" : "serviceDataMasks",
+                    "type" : "vector",
+                    "vec_name": "BlobVector"
+                  },
+                  {
+                    "id": 3,
+                    "name" : "manufacturerIds",
+                    "type" : "vector",
+                    "vec_name": "ManufacturerIds"
+                  },
+                  {
+                    "id": 4,
+                    "name" : "manufacturerData",
+                    "type" : "vector",
+                    "vec_name": "BlobVector"
+                  },
+                  {
+                    "id": 5,
+                    "name" : "manufacturerDataMasks",
+                    "type" : "vector",
+                    "vec_name": "BlobVector"
+                  },
+                  {
+                    "id": 6,
+                    "name" : "deviceNames",
+                    "type" : "vector",
+                    "vec_name": "DeviceNames"
+                  },
+                  {
+                    "id": 7,
+                    "name" : "serviceUuids",
+                    "type" : "vector",
+                    "vec_name": "BlobVector"
+                  },
+                  {
+                    "id": 8,
+                    "name" : "serviceUuidMasks",
+                    "type" : "vector",
+                    "vec_name": "BlobVector"
+                  }
+                ]
+              },
+              {
+                "name": "AdvertisingParameters",
+                "members": [
+                  {
+                    "id": 0,
+                    "name" : "interval",
+                    "type" : "enum",
+                    "enum_name": "AdvertisingInterval"
+                  },
+                  {
+                    "id": 1,
+                    "name" : "txPowerLevel",
+                    "type" : "enum",
+                    "enum_name": "TxPowerLevel"
+                  },
+                  {
+                    "id": 2,
+                    "name" : "includeTxPower",
+                    "type" : "uint8"
+                  }
+                ]
+              },
+              {
+                "name": "AdvertiseData",
+                "members": [
+                  {
+                    "id": 0,
+                    "name" : "serviceData",
+                    "type" : "vector",
+                    "vec_name": "BlobVector"
+                  },
+                  {
+                    "id": 1,
+                    "name" : "serviceDataUuids",
+                    "type" : "vector",
+                    "vec_name": "BlobVector"
+                  },
+                  {
+                    "id": 2,
+                    "name" : "manufacturerIds",
+                    "type" : "vector",
+                    "vec_name": "ManufacturerIds"
+                  },
+                  {
+                    "id": 3,
+                    "name" : "manufacturerData",
+                    "type" : "vector",
+                    "vec_name": "BlobVector"
+                  },
+                  {
+                    "id": 4,
+                    "name" : "serviceUuids",
+                    "type" : "vector",
+                    "vec_name": "BlobVector"
+                  },
+                  {
+                    "id": 5,
+                    "name" : "rawAdvertiseData",
+                    "type" : "bnry_blb",
+                    "blb_name": "DataBuffer"
+                  },
+                  {
+                    "id": 6,
+                    "name" : "includeLocalName",
+                    "type" : "uint8"
+                  }
+                ]
+              }
+            ],
+            "callbacks": [
+              {
+                "name": "ClientRegistrationCallback",
+                "ret_type": "void",
+                "num_of_args": 4,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "token",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "status",
+                    "type": "enum",
+                    "enum_name": "ClientRegistrationStatus"
+                  },
+                  {
+                    "id": 2,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 3,
+                    "name": "cookie",
+                    "type": "qesdk_cookie"
+                  }
+                ]
+              },
+              {
+                "name": "DataReadyCallback",
+                "ret_type": "void",
+                "num_of_args": 5,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "triggerIds",
+                    "type": "vector",
+                    "vec_name" : "TriggerIds"
+                  },
+                  {
+                    "id": 2,
+                    "name" : "data",
+                    "type": "struct",
+                    "struct_name": "BleScanData"
+                  },
+                  {
+                    "id": 3,
+                    "name": "properties",
+                    "type": "struct",
+                    "struct_name": "Properties"
+                  },
+                  {
+                    "id": 4,
+                    "name": "cookie",
+                    "type": "qesdk_cookie"
+                  }
+                ]
+              },
+              {
+                "name": "TriggerStatusCallback",
+                "ret_type": "void",
+                "num_of_args": 5,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "triggerId",
+                    "type": "int32"
+                  },
+                  {
+                    "id": 2,
+                    "name": "requestType",
+                    "type": "enum",
+                    "enum_name": "TriggerRequestType"
+                  },
+                  {
+                    "id": 3,
+                    "name": "status",
+                    "type": "enum",
+                    "enum_name": "TriggerStatus"
+                  },
+                  {
+                    "id": 4,
+                    "name": "cookie",
+                    "type": "qesdk_cookie"
+                  }
+                ]
+              },
+              {
+                "name": "DuplicateDetectionStatusCallback",
+                "ret_type": "void",
+                "num_of_args": 5,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "token",
+                    "type": "int32"
+                  },
+                  {
+                    "id": 2,
+                    "name": "triggerId",
+                    "type": "int32"
+                  },
+                  {
+                    "id": 3,
+                    "name": "status",
+                    "type": "enum",
+                    "enum_name": "DuplicateDetectionStatus"
+                  },
+                  {
+                    "id": 4,
+                    "name": "cookie",
+                    "type": "qesdk_cookie"
+                  }
+                ]
+              },
+              {
+                "name": "BleScanStatusCallback",
+                "ret_type": "void",
+                "num_of_args": 4,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "token",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 2,
+                    "name": "status",
+                    "type": "enum",
+                    "enum_name": "BleScanStatus"
+                  },
+                  {
+                    "id": 3,
+                    "name": "cookie",
+                    "type": "qesdk_cookie"
+                  }
+                ]
+              },
+              {
+                "name": "BleAdvertiseStatusCallback",
+                "ret_type": "void",
+                "num_of_args": 4,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "token",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 2,
+                    "name": "status",
+                    "type": "enum",
+                    "enum_name" : "BleAdvertiseStatus"
+                  },
+                  {
+                    "id": 3,
+                    "name": "cookie",
+                    "type": "qesdk_cookie"
+                  }
+                ]
+              },
+              {
+                "name": "PlatformStatusCallback",
+                "ret_type": "void",
+                "num_of_args": 3,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "status",
+                    "type": "enum",
+                    "enum_name" : "PlatformStatus"
+                  },
+                  {
+                    "id": 2,
+                    "name": "cookie",
+                    "type": "qesdk_cookie"
+                  }
+                ]
+              }
+            ],
+            "funcs": [
+              {
+                "name": "getVersion",
+                "ret_type": "enum",
+                "enum_name" : "Version",
+                "callback": false,
+                "num_of_args": 0,
+                "args": [
+                ]
+              },
+              {
+                "name": "registerClient",
+                "ret_type": "int32",
+                "callback": true,
+                "num_of_args": 3,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "refClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "callback",
+                    "type": "callback_t",
+                    "cb_name": "ClientRegistrationCallback"
+                  },
+                  {
+                    "id": 2,
+                    "name": "cookie",
+                    "type": "qesdk_cookie"
+                  }
+                ]
+              },
+              {
+                "name": "deregisterClient",
+                "ret_type": "int32",
+                "callback": false,
+                "num_of_args": 1,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  }
+                ]
+              },
+              {
+                "name": "setPlatformStatusCallback",
+                "ret_type": "int32",
+                "callback": true,
+                "num_of_args": 3,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "callback",
+                    "type": "callback_t",
+                    "cb_name": "PlatformStatusCallback"
+                  },
+                  {
+                    "id": 2,
+                    "name": "cookie",
+                    "type": "qesdk_cookie"
+                  }
+                ]
+              },
+              {
+                "name": "setDataReadyCallback",
+                "ret_type": "int32",
+                "callback": true,
+                "num_of_args": 3,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "callback",
+                    "type": "callback_t",
+                    "cb_name": "DataReadyCallback"
+                  },
+                  {
+                    "id": 2,
+                    "name": "cookie",
+                    "type": "qesdk_cookie"
+                  }
+                ]
+              },
+              {
+                "name": "setTriggerStatusCallback",
+                "ret_type": "int32",
+                "callback": true,
+                "num_of_args": 3,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "callback",
+                    "type": "callback_t",
+                    "cb_name": "TriggerStatusCallback"
+                  },
+                  {
+                    "id": 2,
+                    "name": "cookie",
+                    "type": "qesdk_cookie"
+                  }
+
+                ]
+              },
+              {
+                "name": "setDuplicateDetectionStatusCallback",
+                "ret_type": "int32",
+                "callback": true,
+                "num_of_args": 3,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "callback",
+                    "type": "callback_t",
+                    "cb_name": "DuplicateDetectionStatusCallback"
+                  },
+                  {
+                    "id": 2,
+                    "name": "cookie",
+                    "type": "qesdk_cookie"
+                  }
+
+                ]
+              },
+              {
+                "name": "setBleScanStatusCallback",
+                "ret_type": "int32",
+                "callback": true,
+                "num_of_args": 3,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "callback",
+                    "type": "callback_t",
+                    "cb_name": "BleScanStatusCallback"
+                  },
+                  {
+                    "id": 2,
+                    "name": "cookie",
+                    "type": "qesdk_cookie"
+                  }
+                ]
+              },
+              {
+                "name": "setBleAdvertiseStatusCallback",
+                "ret_type": "int32",
+                "callback": true,
+                "num_of_args": 3,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "callback",
+                    "type": "callback_t",
+                    "cb_name": "BleAdvertiseStatusCallback"
+                  },
+                  {
+                    "id": 2,
+                    "name": "cookie",
+                    "type": "qesdk_cookie"
+                  }
+                ]
+              },
+              {
+                "name": "setTrigger",
+                "ret_type": "int32",
+                "callback": false,
+                "num_of_args": 3,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "dataFilters",
+                    "type": "struct",
+                    "struct_name": "DataFilters"
+                  },
+                  {
+                    "id": 2,
+                    "name": "propertyFilters",
+                    "type": "struct",
+                    "struct_name": "PropertyFilters"
+                  }
+                ]
+              },
+              {
+                "name": "cancelTrigger",
+                "ret_type": "int32",
+                "callback": false,
+                "num_of_args": 2,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "triggerId",
+                    "type": "int32"
+                  }
+                ]
+              },
+              {
+                "name": "configureDuplicateDetection",
+                "ret_type": "int32",
+                "callback": false,
+                "num_of_args": 4,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "triggerId",
+                    "type": "int32"
+                  },
+                  {
+                    "id": 2,
+                    "name": "dataFilters",
+                    "type": "struct",
+                    "struct_name": "DataFilters"
+                  },
+                  {
+                    "id": 3,
+                    "name": "propertyFilters",
+                    "type": "struct",
+                    "struct_name": "PropertyFilters"
+                  }
+                ]
+              },
+              {
+                "name": "cancelDuplicateDetection",
+                "ret_type": "int32",
+                "callback": false,
+                "num_of_args": 2,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "triggerId",
+                    "type": "int32"
+                  }
+                ]
+              },
+              {
+                "name": "startBleScan",
+                "ret_type": "int32",
+                "callback": false,
+                "num_of_args": 3,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "scanSettings",
+                    "type": "struct",
+                    "struct_name": "ScanSettings"
+                  },
+                  {
+                    "id": 2,
+                    "name": "scanFilters",
+                    "type": "struct",
+                    "struct_name": "ScanFilters"
+                  }
+                ]
+              },
+              {
+                "name": "stopBleScan",
+                "ret_type": "int32",
+                "callback": false,
+                "num_of_args": 1,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  }
+                ]
+              },
+              {
+                "name": "startBleAdvertising",
+                "ret_type": "int32",
+                "callback": false,
+                "num_of_args": 4,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "advertisingParameters",
+                    "type": "struct",
+                    "struct_name": "AdvertisingParameters"
+                  },
+                  {
+                    "id": 2,
+                    "name": "advertiseData",
+                    "type": "struct",
+                    "struct_name": "AdvertiseData"
+                  },
+                  {
+                    "id": 3,
+                    "name": "duration",
+                    "type": "uint32"
+                  }
+                ]
+              },
+              {
+                "name": "stopBleAdvertising",
+                "ret_type": "int32",
+                "callback": false,
+                "num_of_args": 1,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "version": 2,
+
+            "enums":[
+              {
+                "name": "Version",
+                "extended":true,
+                "num_of_vals": 1,
+                "vals" : [
+                  {
+                    "name": "Version_2",
+                    "val": 2
+                  }
+                ]
+              }
+            ],
+
+            "funcs":[
+              {
+                "name": "setBatchPeriodPreference",
+                "ret_type": "int32",
+                "callback": false,
+                "num_of_args": 2,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "batchPeriodMillis",
+                    "type": "uint32"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "version": 3,
+
+            "enums":[
+              {
+                "name": "Version",
+                "extended":true,
+                "num_of_vals": 1,
+                "vals" : [
+                  {
+                    "name": "Version_3",
+                    "val": 3
+                  }
+                ]
+              }
+            ],
+
+            "funcs":[
+              {
+                "name": "configureDuplicateDetection2",
+                "ret_type": "int32",
+                "callback": false,
+                "num_of_args": 5,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "triggerId",
+                    "type": "int32"
+                  },
+                  {
+                    "id": 2,
+                    "name": "duplicateDetectionPeriod",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 3,
+                    "name": "dataFilters",
+                    "type": "struct",
+                    "struct_name": "DataFilters"
+                  },
+                  {
+                    "id": 4,
+                    "name": "propertyFilters",
+                    "type": "struct",
+                    "struct_name": "PropertyFilters"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "version": 4,
+
+            "enums":[
+              {
+                "name": "Version",
+                "extended":true,
+                "num_of_vals": 1,
+                "vals" : [
+                  {
+                    "name": "Version_4",
+                    "val": 4
+                  }
+                ]
+              },
+              {
+                "name": "CustomRequestStatus",
+                "num_of_vals": 2,
+                "vals": [
+                  {
+                    "name": "CustomRequestStatus_Success",
+                    "val": 0
+                  },
+                  {
+                    "name": "CustomRequestStatus_Error",
+                    "val": 1
+                  }
+                ]
+              }
+            ],
+            "callbacks": [
+            {
+                "name": "CustomRequestStatusCallback",
+                "ret_type": "void",
+                "num_of_args": 4,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "token",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 2,
+                    "name": "status",
+                    "type": "enum",
+                    "enum_name" : "CustomRequestStatus"
+                  },
+                  {
+                    "id": 3,
+                    "name": "cookie",
+                    "type": "qesdk_cookie"
+                  }
+                ]
+              },
+              {
+                "name": "CustomEventCallback",
+                "ret_type": "void",
+                "num_of_args": 4,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "event_msg_id",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 2,
+                    "name" : "event",
+                    "type" : "bnry_blb"
+                  },
+                  {
+                    "id": 3,
+                    "name": "cookie",
+                    "type": "qesdk_cookie"
+                  }
+                ]
+              }
+            ],
+            "funcs":[
+              {
+                "name": "setCustomRequestStatusCallback",
+                "ret_type": "int32",
+                "callback": true,
+                "num_of_args": 3,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "callback",
+                    "type": "callback_t",
+                    "cb_name": "CustomRequestStatusCallback"
+                  },
+                  {
+                    "id": 2,
+                    "name": "cookie",
+                    "type": "qesdk_cookie"
+                  }
+                ]
+              },
+              {
+                "name": "setCustomEventCallback",
+                "ret_type": "int32",
+                "callback": true,
+                "num_of_args": 3,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "callback",
+                    "type": "callback_t",
+                    "cb_name": "CustomEventCallback"
+                  },
+                  {
+                    "id": 2,
+                    "name": "cookie",
+                    "type": "qesdk_cookie"
+                  }
+                ]
+              },
+              {
+                "name": "sendCustomRequest",
+                "ret_type": "int32",
+                "callback": false,
+                "num_of_args": 2,
+                "args": [
+                  {
+                    "id": 0,
+                    "name": "platformClientId",
+                    "type": "uint32"
+                  },
+                  {
+                    "id": 1,
+                    "name": "request",
+                    "type" : "bnry_blb"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "version": 5,
+
+            "enums":[
+              {
+                "name": "Version",
+                "extended":true,
+                "num_of_vals": 1,
+                "vals" : [
+                  {
+                    "name": "Version_5",
+                    "val": 5
+                  }
+                ]
+              },
+              {
+                "name": "ScanMode",
+                "extended":true,
+                "num_of_vals": 6,
+                "vals" : [
+                  {
+                    "name": "ScanMode_OEM_1",
+                    "val": 5
+                  },
+                  {
+                    "name": "ScanMode_OEM_2",
+                    "val": 6
+                  },
+                  {
+                    "name": "ScanMode_OEM_3",
+                    "val": 7
+                  },
+                  {
+                    "name": "ScanMode_OEM_4",
+                    "val": 8
+                  },
+                  {
+                    "name": "ScanMode_OEM_5",
+                    "val": 9
+                  },
+                  {
+                    "name": "ScanMode_OEM_6",
+                    "val": 10
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

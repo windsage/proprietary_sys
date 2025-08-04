@@ -1,0 +1,10 @@
+<!--
+    Copyright (c) 2022 Qualcomm Technologies, Inc.
+    All Rights Reserved.
+    Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+<resources>
+    <dimen name="icon_margin">16dp</dimen>
+    <dimen name="device_icon">48dp</dimen>
+    <dimen name="capability_icon">30dp</dimen>
+</resources>

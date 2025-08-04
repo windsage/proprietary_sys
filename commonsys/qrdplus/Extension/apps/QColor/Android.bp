@@ -1,0 +1,18 @@
+android_app {
+    name: "QColor",
+
+    srcs: ["src/**/*.java"],
+    static_libs: [
+        "vendor.display.color-V1.4-java",
+        "vendor.qti.hardware.display.color-V1-java",
+    ],
+
+    platform_apis: true,
+    system_ext_specific: true,
+    optimize: {
+        enabled: false,
+    },
+
+    certificate: "platform",
+
+}

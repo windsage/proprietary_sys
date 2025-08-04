@@ -1,0 +1,23 @@
+aidl_interface {
+    name: "vendor.qti.hardware.radio.internal.deviceinfo",
+    vendor_available: true,
+    product_specific: true,
+    srcs: ["vendor/qti/hardware/radio/internal/deviceinfo/*.aidl"],
+    local_include_dir: ".",
+    stability: "vintf",
+    host_supported: true,
+    owner: "qti",
+    backend: {
+        java: {
+            enabled: true,
+             sdk_version: "system_current",
+        },
+        cpp: {
+            enabled: false,
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    versions: ["1"],
+}

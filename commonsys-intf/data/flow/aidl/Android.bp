@@ -1,0 +1,32 @@
+// This is the expected build file, but it may not be right in all cases
+
+aidl_interface {
+    name: "vendor.qti.hardware.data.flowaidlservice",
+    vendor_available: true,
+    host_supported: true,
+    srcs: ["vendor/qti/hardware/data/flowaidlservice/*.aidl"],
+    stability: "vintf",
+    product_specific: false,
+    system_ext_specific: true,
+    owner: "qti",
+    backend: {
+        cpp: {
+            enabled: false,
+        },
+        java: {
+            enabled: true,
+            sdk_version: "system_current",
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+    frozen: true,
+
+}

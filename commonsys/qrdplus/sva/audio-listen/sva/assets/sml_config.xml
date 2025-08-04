@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2021 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<ContainerGroup>
+
+    <Container name="sml_pdk">
+        <Item name="Training.numGuardFramesForEPD" type="INTEGER" value="30" />
+        <Item name="Training.enableFstageEpd" type="BOOLEAN" value="false" />
+        <Item name="Training.numGuardFramesForFStageEPD" type="INTEGER" value="30" />
+        <Item name="Training.checkChopped" type="BOOLEAN" value="false" />
+        <Item name="Training.choppingFrameThreshold" type="INTEGER" value="8" />
+        <Item name="Training.snrThresholdForNoisySamples" type="FLOAT" value="6.0" />
+        <Item name="Training.doPcmNormalization" type="BOOLEAN" value="false" />
+        <Item name="Training.nCleanRecordings" type="INTEGER" value="5" />
+        <Item name="Training.checkClipped" type="BOOLEAN" value="false" />
+        <Item name="Training.nClippingThreshold" type="INTEGER" value="160" />
+        <Item name="Training.clippingRatioThreshold" type="FLOAT" value="0.004" />
+        <Item name="Training.enableZeroProcessingForPdkXS" type="BOOLEAN" value="true" />
+        <Item name="Training.nZerosPaddingFrames" type="INTEGER" value="180" />
+        <Item name="Training.bEnableEPDForUv72" type="BOOLEAN" value="true" />
+
+        <Item name="EPD.minSnrOnset" type="FLOAT" value="3.0" />
+        <Item name="EPD.minSnrLeave" type="FLOAT" value="3.0" />
+        <Item name="EPD.snrFloor" type="FLOAT" value="-30.0" />
+        <Item name="EPD.snrThresholds" type="FLOAT" value="6.0" />
+        <Item name="EPD.forgettingFactorNoise" type="FLOAT" value="0.03" />
+        <Item name="EPD.numFrameTransientFrame" type="INTEGER" value="10" />
+        <Item name="EPD.minEnergyFrameRatio" type="FLOAT" value="0.05" />
+        <Item name="EPD.minNoiseEnergy" type="FLOAT" value="10" />
+        <Item name="EPD.numMinFramesInPhrase" type="INTEGER" value="15" />
+        <Item name="EPD.numMinFramesInSpeech" type="INTEGER" value="0" />
+        <Item name="EPD.numMaxFrameInSpeechGap" type="INTEGER" value="50" />
+        <Item name="EPD.numFramesInHead" type="INTEGER" value="0" />
+        <Item name="EPD.numFramesInTail" type="INTEGER" value="0" />
+        <Item name="EPD.preEmphasize" type="INTEGER" value="1" />
+        <Item name="EPD.numMaxFrames" type="INTEGER" value="10000" />
+        <Item name="EPD.keyword_threshold" type="INTEGER" value="0" />
+
+        <Item name="Ada.enable" type="BOOLEAN" value="false" />
+        <Item name="Ada.enable_car_noise" type="BOOLEAN" value="true" />
+        <Item name="Ada.enable_music_noise" type="BOOLEAN" value="true" />
+        <Item name="Ada.enable_party_noise" type="BOOLEAN" value="true" />
+        <Item name="Ada.enable_radio_noise" type="BOOLEAN" value="true" />
+        <Item name="Ada.car_noise" type="STRING" value="12,24" />
+        <Item name="Ada.music_noise" type="STRING" value="12,24" />
+        <Item name="Ada.party_noise" type="STRING" value="12,24" />
+        <Item name="Ada.radio_noise" type="STRING" value="12,24" />
+        <Item name="Ada.numCleanRepetition" type="INTEGER" value="0" />
+        <Item name="Ada.enablePitch" type="BOOLEAN" value="false" />
+        <Item name="Ada.enableTempo" type="BOOLEAN" value="false" />
+        <Item name="Ada.enableLevel" type="BOOLEAN" value="false" />
+        <Item name="Ada.enableReverb" type="BOOLEAN" value="false" />
+        <Item name="Ada.noiseTypeForVoP" type="INTEGER" value="2" />
+        <Item name="Ada.noiseSnrForVoP" type="FLOAT" value="6.0" />
+    </Container>
+
+    <Container name="sml_udk">
+        <Item name="Training.numGuardFramesForFstageUV" type="INTEGER" value="0" />
+        <Item name="Training.numGuardFramesForSstageUV" type="INTEGER" value="30" />
+        <Item name="Training.minPhonemeLength" type="INTEGER" value="3" />
+        <Item name="Training.maxPhonemeLength" type="INTEGER" value="45" />
+        <Item name="Training.doPcmNormalization" type="BOOLEAN" value="false" />
+        <Item name="Training.numPreGuardFramesForSstageUDK" type="INTEGER" value="30" />
+        <Item name="Training.numPostGuardFramesForSstageUDK" type="INTEGER" value="70" />
+        <Item name="Training.bEnableEPDForUv72" type="BOOLEAN" value="true" />
+        <Item name="Training.qualityCheckingThresholdForSstageUDK" type="INTEGER" value="30" />
+
+        <Item name="EPD.minSnrOnset" type="FLOAT" value="3.0" />
+        <Item name="EPD.minSnrLeave" type="FLOAT" value="3.0" />
+        <Item name="EPD.snrFloor" type="FLOAT" value="-30.0" />
+        <Item name="EPD.snrThresholds" type="FLOAT" value="6.0" />
+        <Item name="EPD.forgettingFactorNoise" type="FLOAT" value="0.03" />
+        <Item name="EPD.numFrameTransientFrame" type="INTEGER" value="10" />
+        <Item name="EPD.minEnergyFrameRatio" type="FLOAT" value="0.05" />
+        <Item name="EPD.minNoiseEnergy" type="FLOAT" value="10" />
+        <Item name="EPD.numMinFramesInPhrase" type="INTEGER" value="15" />
+        <Item name="EPD.numMinFramesInSpeech" type="INTEGER" value="0" />
+        <Item name="EPD.numMaxFrameInSpeechGap" type="INTEGER" value="50" />
+        <Item name="EPD.numFramesInHead" type="INTEGER" value="0" />
+        <Item name="EPD.numFramesInTail" type="INTEGER" value="0" />
+        <Item name="EPD.preEmphasize" type="INTEGER" value="1" />
+        <Item name="EPD.numMaxFrames" type="INTEGER" value="10000" />
+        <Item name="EPD.keyword_threshold" type="INTEGER" value="0" />
+
+        <Item name="Ada.kw.enable" type="BOOLEAN" value="false" />
+        <Item name="Ada.kw.enable_car_noise" type="BOOLEAN" value="false" />
+        <Item name="Ada.kw.enable_music_noise" type="BOOLEAN" value="false" />
+        <Item name="Ada.kw.enable_party_noise" type="BOOLEAN" value="true" />
+        <Item name="Ada.kw.enable_radio_noise" type="BOOLEAN" value="false" />
+        <Item name="Ada.kw.car_noise" type="STRING" value="5,12" />
+        <Item name="Ada.kw.music_noise" type="STRING" value="5,12" />
+        <Item name="Ada.kw.party_noise" type="STRING" value="5,12" />
+        <Item name="Ada.kw.radio_noise" type="STRING" value="5,12" />
+        <Item name="Ada.kw.numCleanRepetition" type="INTEGER" value="0" />
+        <Item name="Ada.kw.enablePitch" type="BOOLEAN" value="false" />
+        <Item name="Ada.kw.enableTempo" type="BOOLEAN" value="false" />
+        <Item name="Ada.kw.enableLevel" type="BOOLEAN" value="false" />
+        <Item name="Ada.kw.enableReverb" type="BOOLEAN" value="false" />
+        <Item name="Ada.kw.noise_type_vop" type="INTEGER" value="2" />
+        <Item name="Ada.kw.noise_snr_vop" type="FLOAT" value="6.0" />
+
+        <Item name="Ada.user.enable" type="BOOLEAN" value="false" />
+        <Item name="Ada.user.enable_car_noise" type="BOOLEAN" value="false" />
+        <Item name="Ada.user.enable_music_noise" type="BOOLEAN" value="false" />
+        <Item name="Ada.user.enable_party_noise" type="BOOLEAN" value="true" />
+        <Item name="Ada.user.enable_radio_noise" type="BOOLEAN" value="false" />
+        <Item name="Ada.user.car_noise" type="STRING" value="3,12" />
+        <Item name="Ada.user.music_noise" type="STRING" value="3,12" />
+        <Item name="Ada.user.party_noise" type="STRING" value="3,12" />
+        <Item name="Ada.user.radio_noise" type="STRING" value="3,12" />
+        <Item name="Ada.user.numCleanRepetition" type="INTEGER" value="1" />
+        <Item name="Ada.user.enablePitch" type="BOOLEAN" value="false" />
+        <Item name="Ada.user.enableTempo" type="BOOLEAN" value="false" />
+        <Item name="Ada.user.enableLevel" type="BOOLEAN" value="false" />
+        <Item name="Ada.user.enableReverb" type="BOOLEAN" value="false" />
+        <Item name="Ada.user.noise_type_vop" type="STRING" value="2" />
+        <Item name="Ada.user.noise_snr_vop" type="FLOAT" value="6.0" />
+    </Container>
+
+    <Container name="sml_onlineEPD">
+        <Item name="EPD.minSnrOnset" value="3.0" type="FLOAT" />
+        <Item name="EPD.minSnrLeave" value="3.0" type="FLOAT" />
+        <Item name="EPD.snrFloor" value="-30.0" type="FLOAT" />
+        <Item name="EPD.snrThresholds" value="6.0" type="FLOAT" />
+        <Item name="EPD.forgettingFactorNoise" value="0.03" type="FLOAT" />
+        <Item name="EPD.numFrameTransientFrame" value="10" type="INTEGER" />
+        <Item name="EPD.minEnergyFrameRatio" value="0.05" type="FLOAT" />
+        <Item name="EPD.minNoiseEnergy" value="10.0" type="FLOAT" />
+        <Item name="EPD.numMinFramesInPhrase" value="15" type="INTEGER" />
+        <Item name="EPD.numMinFramesInSpeech" value="0" type="INTEGER" />
+        <Item name="EPD.numMaxFrameInSpeechGap" value="30" type="INTEGER" />
+        <Item name="EPD.numFramesInHead" value="0" type="INTEGER" />
+        <Item name="EPD.numFramesInTail" value="0" type="INTEGER" />
+        <Item name="EPD.preEmphasize" value="1" type="INTEGER" />
+        <Item name="EPD.numMaxFrames" value="10000" type="INTEGER" />
+    </Container>
+</ContainerGroup>

@@ -1,0 +1,26 @@
+android_app {
+    name: "Xpan",
+    system_ext_specific: true,
+
+    srcs: ["src/**/*.java"],
+
+    platform_apis: true,
+    certificate: "platform",
+    privileged: true,
+    required: ["privapp-permission-xpan.xml"],
+
+    static_libs: [
+      "vendor.qti.hardware.bluetooth.xpanprovider-V1-java",
+    ],
+
+    optimize: {
+        enabled: false,
+    },
+}
+
+   prebuilt_etc {
+    name: "privapp-permission-xpan.xml",
+    src: "privapp-permission-xpan.xml",
+    system_ext_specific: true,
+    sub_dir: "permissions",
+  }

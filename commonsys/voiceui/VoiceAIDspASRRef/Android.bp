@@ -1,0 +1,22 @@
+
+android_app {
+    name: "VoiceAIDspASRRef",
+
+    srcs: ["src/**/*.java"],
+    resource_dirs: ["res"],
+    product_specific: true,
+    sdk_version: "current",
+    min_sdk_version: "29",
+    target_sdk_version: "current",
+    optimize: {
+        enabled: false,
+    },
+    static_libs: [
+        "androidx.core_core-ktx",
+        "androidx-constraintlayout_constraintlayout",
+        "androidx.preference_preference",
+        "com.google.android.material_material",
+        "androidx.navigation_navigation-fragment",
+        "androidx.navigation_navigation-ui",
+    ],
+}

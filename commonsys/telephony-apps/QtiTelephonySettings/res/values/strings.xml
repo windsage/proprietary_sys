@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (c) 2022-2024 Qualcomm Technologies, Inc.
+    All Rights Reserved.
+    Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">QtiTelephonySettings</string>
+    <string name="title_activity_main">Settings</string>
+    <string name="qti_telephony_package_name">com.qti.phone</string>
+    <string name="cellular_roaming">Cellular Roaming</string>
+    <string name="cellular_roaming_summary">Control cellular functionality in roaming</string>
+    <string name="cellular_roaming_sync_state">Cellular roaming sync state</string>
+    <string name="smart_dds_switch">Smart DDS switch</string>
+    <string name="smart_dds_switch_summary">Allow modem to intelligently switch the default data subscription.</string>
+    <string name="wait_summary">Please wait...</string>
+    <string name="feature_unavailable">Feature unavailable</string>
+    <string name="modem_error_summary">Error!</string>
+    <string name="modem_mismatch_summary">Mismatch with modem</string>
+    <string name="non_active_subscription">Subscription is not active</string>
+    <string name="airplaneModeEnabled">Turn off airplane mode and try again</string>
+    <plurals name="mobile_network_summary_count">
+        <item quantity="one"><xliff:g id="count" example="1">%1$d</xliff:g> SIM</item>
+        <item quantity="other"><xliff:g id="count" example="2">%1$d</xliff:g> SIMs</item>
+    </plurals>
+    <!-- Title of selecting NR mode in developer options settings [CHAR LIMIT=NONE]-->
+    <string name="preferred_5G_nr_mode_title">Preferred 5G NR Mode</string>
+    <!-- String for NSA, SA, NSA+SA [CHAR LIMIT=NONE]-->
+    <string name="nr_nsa">NSA</string>
+    <string name="nr_sa">SA</string>
+    <string name="nr_nsa_sa">NSA + SA</string>
+    <!-- Title of selecting MSIM preference either DSDA or DSDS mode [CHAR LIMIT=NONE]-->
+    <string name="msim_preference_title">MSIM Preference</string>
+    <string name="msim_preference_summary">Set MSIM Preference</string>
+    <string name="sim_selection_title">SIM Type Selection</string>
+    <string name="ciwlan_preference_title">Cellular IWLAN Preference</string>
+    <string name="ciwlan_preference_summary">Choose between \"only\" and \"preferred\" modes</string>
+    <string name="progress_dialog_title">Switching SIM type</string>
+    <string name="update">UPDATE</string>
+    <string name="slot">Slot %s</string>
+    <string name="slot1">Slot 1</string>
+    <string name="slot2">Slot 2</string>
+    <string name="switch_simtype_fail">Failed to switch SIM type</string>
+    <string name="switch_simtype_pass">SIM type switching success</string>
+    <string name="switch_sim_port_pass">Operation success</string>
+    <string name="invalid_combination">Invalid combination</string>
+    <string name="operation_failed">Operation failed</string>
+    <string name="timed_out">Request timed out please retry</string>
+    <string name="no_change">Nothing to change</string>
+    <string name="port_selection_title">SIM Port Selection</string>
+    <string name="dual_data_title">DATA++DATA</string>
+    <string name="dual_data_summary">Allow internet connection on all active SIMs simultaneously</string>
+    <string name="dual_data_preference_selection_fail">DATA++DATA user selection failed.</string>
+    <string name="submit">Submit</string>
+    <string name="home">HOME</string>
+    <string name="roaming">ROAMING</string>
+    <string name="ciwlan_only">ONLY</string>
+    <string name="ciwlan_preferred">PREFERRED</string>
+    <string name="ims_settings_title">IMS Settings</string>
+</resources>

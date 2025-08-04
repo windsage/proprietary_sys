@@ -1,0 +1,13 @@
+
+java_library_static {
+
+    name: "izat.lib.idlclient",
+    owner: "qti",
+
+    srcs: ["java/**/*.java"],
+
+    jarjar_rules: ":framework-jarjar-rules",
+    static_libs: [
+                  "vendor.qti.gnss-V8-java",
+                 ],
+}

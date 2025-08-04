@@ -1,0 +1,114 @@
+/*
+ * Copyright (c) 2023 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ *
+ */
+
+package vendor.qti.hardware.radio.ims@1.9;
+
+import @1.0::CallDomain;
+import @1.0::CallModifyFailCause;
+import @1.0::CallState;
+import @1.0::IpPresentation;
+import @1.0::RttMode;
+import @1.3::VerstatInfo;
+import @1.4::MultiIdentityLineInfoHal;
+import @1.5::CallFailCauseResponse;
+import @1.5::TirMode;
+import @1.6::CallType;
+import @1.6::RedialInfo;
+import @1.6::ServiceStatusInfo;
+import @1.7::CrsData;
+import @1.7::CallProgressInfo;
+
+struct CallDetails {
+     CallType callType;
+     CallDomain callDomain;
+     uint32_t extrasLength;
+     vec<string> extras;
+     vec<ServiceStatusInfo> localAbility;
+     vec<ServiceStatusInfo> peerAbility;
+     uint32_t callSubstate;
+     uint32_t mediaId;
+     uint32_t causeCode;
+     RttMode rttMode;
+     string sipAlternateUri;
+     bool isVosSupported;
+};
+
+struct CallModifyInfo {
+    uint32_t callIndex;
+     bool hasCallDetails;
+     CallDetails callDetails;
+     CallModifyFailCause failCause;
+};
+
+struct CallInfo {
+    CallState state;
+    uint32_t index;
+    uint32_t toa;
+    bool hasIsMpty;
+    bool isMpty;
+    bool hasIsMT;
+    bool isMT;
+    MultiIdentityLineInfoHal mtMultiLineInfo;
+    uint32_t als;
+    bool hasIsVoice;
+    bool isVoice;
+    bool hasIsVoicePrivacy;
+    bool isVoicePrivacy;
+    string number;
+    uint32_t numberPresentation;
+    string name;
+    uint32_t namePresentation;
+    bool hasCallDetails;
+    CallDetails callDetails;
+    bool hasFailCause;
+    CallFailCauseResponse failCause;
+    bool hasIsEncrypted;
+    bool isEncrypted;
+    bool hasIsCalledPartyRinging;
+    bool isCalledPartyRinging;
+    string historyInfo;
+    bool hasIsVideoConfSupported;
+    bool isVideoConfSupported;
+    VerstatInfo verstatInfo;
+    TirMode tirMode;
+    /*
+     * True if the message is intended for preliminary resource allocation
+     * only and shall not be visible to the end user.
+     * Default: False
+     */
+    bool isPreparatory;
+    CrsData crsData;
+    //Call progress info for MO calls during alerting stage.
+    CallProgressInfo callProgInfo;
+    //Diversion information to report call forward info will be valid only for incoming calls.
+    string  diversionInfo;
+};
+
+struct Coordinate2D {
+    uint32_t x;
+    uint32_t y;
+};
+
+struct VosMoveInfo {
+    Coordinate2D start;
+    Coordinate2D end;
+};
+
+struct VosTouchInfo {
+    Coordinate2D touch;
+    /**
+     * Milliseconds
+     */
+    uint32_t touchDuration;
+};
+
+struct VosActionInfo {
+    bool hasVosMoveInfo;
+    VosMoveInfo vosMoveInfo;
+    bool hasVosTouchInfo;
+    VosTouchInfo vosTouchInfo;
+};

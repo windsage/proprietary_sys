@@ -1,0 +1,18 @@
+<!--
+  ~ Copyright (c) 2023 Qualcomm Technologies, Inc.
+  ~ All Rights Reserved.
+  ~ Confidential and Proprietary - Qualcomm Technologies, Inc.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="18dp"
+    android:height="18dp"
+    android:viewportWidth="18"
+    android:viewportHeight="18">
+  <path
+      android:strokeWidth="1"
+      android:pathData="M9.353,9.353m-5.853,0a5.853,5.853 0,1 1,11.706 0a5.853,5.853 0,1 1,-11.706 0"
+      android:strokeAlpha="0.2"
+      android:fillColor="#00000000"
+      android:strokeColor="#ffffff"/>
+</vector>

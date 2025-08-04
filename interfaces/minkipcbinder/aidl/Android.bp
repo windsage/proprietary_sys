@@ -1,0 +1,33 @@
+aidl_interface {
+    name: "vendor.qti.hardware.minkipcbinder",
+    srcs: [
+        "vendor/qti/hardware/minkipcbinder/IMinkServer.aidl",
+        "vendor/qti/hardware/minkipcbinder/IMinkTransact.aidl",
+    ],
+    stability: "vintf",
+    vendor_available: true,
+    system_ext_specific: true,
+    imports: [
+        "android.hardware.common-V2",
+    ],
+    backend: {
+        cpp: {
+            enabled: false,
+        },
+        ndk: {
+            enabled: true,
+        },
+        java: {
+            platform_apis: true,
+        },
+    },
+    owner: "qti",
+    versions_with_info: [
+        {
+            version: "1",
+            imports: ["android.hardware.common-V2"],
+        },
+    ],
+    frozen: true,
+
+}

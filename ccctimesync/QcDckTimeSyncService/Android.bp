@@ -1,0 +1,17 @@
+android_app {
+    name: "QcDckTimeSyncService",
+    srcs: [
+        "src/**/*.java",
+    ],
+    libs: [
+        //KEYSTONE(I45eeaf87ef4687f900b2be5957ab38db2b383eb6,b/371099638)
+        "org.carconnectivity.android.digitalkey.timesync.impl",
+    ],
+    static_libs: [
+        "android.hardware.bluetooth.lmp_event-V1-java"
+    ],
+    certificate: ":com.android.bluetooth.certificate",
+    platform_apis: true,
+    privileged: true,
+    system_ext_specific: true,
+}

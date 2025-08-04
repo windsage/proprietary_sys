@@ -1,0 +1,30 @@
+android_app {
+    name: "BluetoothDsDaService",
+    system_ext_specific: true,
+
+    min_sdk_version: "31",
+    target_sdk_version: "current",
+
+    aaptflags: ["--auto-add-overlay"],
+
+    srcs: ["src/**/*.java"],
+
+
+    certificate: "platform",
+
+    owner: "qti",
+
+    optimize: {
+        enabled: false,
+    },
+
+    platform_apis: true,
+}
+
+prebuilt_etc {
+    name: "default_permissions_btdsda",
+    system_ext_specific: true,
+    sub_dir: "default-permissions",
+    src: "com.qualcomm.qtil.btdsda.xml",
+    filename_from_src: true,
+}

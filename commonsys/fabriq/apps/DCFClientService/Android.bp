@@ -1,0 +1,32 @@
+java_library_static {
+    name: "wfd-service-aidl",
+    sdk_version:"current",
+
+    srcs: [
+        "src/com/qualcomm/wfd/WfdEnums.java",
+        "src/com/qualcomm/wfd/WfdStatus.java",
+        "src/com/qualcomm/wfd/WfdDevice.java",
+        "src/com/qualcomm/wfd/service/*.aidl",
+    ],
+}
+
+android_app {
+    name: "DCFClientService",
+    srcs: [
+        "src/**/*.kt",
+        "src/**/*.java",
+        "src/**/client/service/I*.aidl",
+        "src/**/screensharing/I*.aidl",
+    ],
+    sdk_version:"system_current",
+    certificate: "platform",
+    product_specific: true,
+    resource_dirs:[
+        "res/",
+    ],
+    manifest: "AndroidManifest.xml",
+    static_libs: [
+        "androidx.core_core-ktx",
+        "wfd-service-aidl",
+    ],
+}

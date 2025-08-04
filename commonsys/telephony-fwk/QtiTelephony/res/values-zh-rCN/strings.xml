@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2023, Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+ -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Primary Card dialog title -->
+    <string name="primary_card_selection_dialog_title">主卡选项</string>
+
+    <!-- Primary Card dialog text -->
+    <string name="primary_card_selection_body_text">检测到新SIM卡,请选择主卡为数据卡</string>
+
+    <!-- Primary Card dialog OK button text -->
+    <string name="primary_card_selection_dialog_button_ok">确定</string>
+
+    <!-- Subsidy Simcards selection dialog title -->
+    <string name="subsidysimcard_selection_dialog_title">主卡选项</string>
+
+    <!-- Subsidy Simcards selection dialog text -->
+    <string name="subsidysimcard_selection_body_text">检测到新SIM卡, 请选择哪张卡位主卡.</string>
+
+    <!-- Subsidy Simcards selection OK button text -->
+    <string name="subsidysimcard_selection_dialog_button_ok">确定</string>
+
+    <!-- Secure Mode status bar icon accessibility support description -->
+    <string name="secure_mode_status_bar_icon_description">安全模式</string>
+
+    <!-- DSDS to SS(or back) switch action progress dialog description -->
+    <string name="progress_dialog_title">执行设备配置切换</string>
+</resources>

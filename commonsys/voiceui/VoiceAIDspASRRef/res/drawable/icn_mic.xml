@@ -1,0 +1,19 @@
+<!--
+  ~ Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+  ~ All Rights Reserved.
+  ~ Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="40dp"
+    android:height="40dp"
+    android:viewportWidth="40"
+    android:viewportHeight="40">
+  <path
+      android:pathData="M31.667,16.668V20.001C31.667,23.096 30.438,26.063 28.25,28.251C26.062,30.439 23.094,31.668 20,31.668M20,31.668C16.906,31.668 13.938,30.439 11.75,28.251C9.563,26.063 8.333,23.096 8.333,20.001V16.668M20,31.668L20,36.668M20,3.332C18.674,3.332 17.402,3.859 16.465,4.797C15.527,5.734 15,7.006 15,8.332V19.999C15,21.325 15.527,22.597 16.465,23.534C17.402,24.472 18.674,24.999 20,24.999C21.326,24.999 22.598,24.472 23.535,23.534C24.473,22.597 25,21.325 25,19.999V8.332C25,7.006 24.473,5.734 23.535,4.797C22.598,3.859 21.326,3.332 20,3.332Z"
+      android:strokeLineJoin="round"
+      android:strokeWidth="3.33333"
+      android:fillColor="#00000000"
+      android:strokeColor="#ffffff"
+      android:strokeLineCap="round"/>
+</vector>

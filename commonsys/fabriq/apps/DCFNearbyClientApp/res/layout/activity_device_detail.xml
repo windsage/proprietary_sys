@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (c) 2022 Qualcomm Technologies, Inc.
+    All Rights Reserved.
+    Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/DetailCategory"
+        android:id="@+id/category_general"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/device_detail_category_general"
+        android:textAppearance="@style/TextAppearance.AppCompat.DetailCategory"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        style="@style/DetailItem"
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@string/device_detail_item_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.DetailItem"
+        app:layout_constraintTop_toBottomOf="@id/category_general"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/device_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        tools:text="Presence demo device"
+        app:layout_constraintTop_toTopOf="@id/item_name"
+        app:layout_constraintBottom_toBottomOf="@id/item_name"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        style="@style/DetailItem"
+        android:id="@+id/item_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/device_detail_item_type"
+        android:textAppearance="@style/TextAppearance.AppCompat.DetailItem"
+        app:layout_constraintTop_toBottomOf="@id/item_name"
+        app:layout_constraintStart_toStartOf="@id/item_name"/>
+
+    <TextView
+        android:id="@+id/device_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        tools:text="Phone"
+        app:layout_constraintTop_toTopOf="@id/item_type"
+        app:layout_constraintBottom_toBottomOf="@id/item_type"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        style="@style/DetailItem"
+        android:id="@+id/item_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/device_detail_item_status"
+        android:textAppearance="@style/TextAppearance.AppCompat.DetailItem"
+        app:layout_constraintTop_toBottomOf="@id/item_type"
+        app:layout_constraintStart_toStartOf="@id/item_name"/>
+
+    <TextView
+        android:id="@+id/device_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        tools:text="active"
+        app:layout_constraintTop_toTopOf="@id/item_status"
+        app:layout_constraintBottom_toBottomOf="@id/item_status"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        style="@style/DetailItem"
+        android:id="@+id/item_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/device_detail_item_id"
+        android:textAppearance="@style/TextAppearance.AppCompat.DetailItem"
+        app:layout_constraintTop_toBottomOf="@id/item_status"
+        app:layout_constraintStart_toStartOf="@id/item_name"/>
+
+    <TextView
+        android:id="@+id/device_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        tools:text="282823131414"
+        app:layout_constraintTop_toTopOf="@id/item_id"
+        app:layout_constraintBottom_toBottomOf="@id/item_id"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:background="@color/divider_color"
+        app:layout_constraintTop_toBottomOf="@id/item_id"/>
+
+    <TextView
+        style="@style/DetailCategory"
+        android:id="@+id/category_battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/device_detail_category_battery"
+        android:textAppearance="@style/TextAppearance.AppCompat.DetailCategory"
+        app:layout_constraintTop_toBottomOf="@id/item_id"
+        app:layout_constraintStart_toStartOf="@id/category_general"/>
+
+    <TextView
+        style="@style/DetailItem"
+        android:id="@+id/item_battery_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/device_detail_item_battery_status"
+        android:textAppearance="@style/TextAppearance.AppCompat.DetailItem"
+        app:layout_constraintTop_toBottomOf="@id/category_battery"
+        app:layout_constraintStart_toStartOf="@id/item_name"/>
+
+    <TextView
+        android:id="@+id/battery_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        tools:text="in charging"
+        app:layout_constraintTop_toTopOf="@id/item_battery_status"
+        app:layout_constraintBottom_toBottomOf="@id/item_battery_status"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        style="@style/DetailItem"
+        android:id="@+id/item_battery_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/device_detail_item_battery_Level"
+        android:textAppearance="@style/TextAppearance.AppCompat.DetailItem"
+        app:layout_constraintTop_toBottomOf="@id/item_battery_status"
+        app:layout_constraintStart_toStartOf="@id/item_name"/>
+
+    <TextView
+        android:id="@+id/battery_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        tools:text="10 %"
+        app:layout_constraintTop_toTopOf="@id/item_battery_level"
+        app:layout_constraintBottom_toBottomOf="@id/item_battery_level"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:background="@color/divider_color"
+        app:layout_constraintTop_toBottomOf="@id/item_battery_level"/>
+
+    <TextView
+        style="@style/DetailCategory"
+        android:id="@+id/category_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/device_detail_category_Address"
+        android:textAppearance="@style/TextAppearance.AppCompat.DetailCategory"
+        app:layout_constraintTop_toBottomOf="@id/item_battery_level"
+        app:layout_constraintStart_toStartOf="@id/category_general"/>
+
+    <TextView
+        style="@style/DetailItem"
+        android:id="@+id/item_ble_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/device_detail_item_BLE"
+        android:textAppearance="@style/TextAppearance.AppCompat.DetailItem"
+        app:layout_constraintTop_toBottomOf="@id/category_address"
+        app:layout_constraintStart_toStartOf="@id/item_name"/>
+
+    <TextView
+        android:id="@+id/ble_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        tools:text="22:22:22:22:22:22"
+        app:layout_constraintTop_toTopOf="@id/item_ble_address"
+        app:layout_constraintBottom_toBottomOf="@id/item_ble_address"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        style="@style/DetailItem"
+        android:id="@+id/item_wifi_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/device_detail_item_wifi"
+        android:textAppearance="@style/TextAppearance.AppCompat.DetailItem"
+        app:layout_constraintStart_toStartOf="@id/item_name"
+        app:layout_constraintTop_toBottomOf="@id/item_ble_address" />
+
+    <TextView
+        android:id="@+id/wifi_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        tools:text="22:22:22:22:22:22"
+        app:layout_constraintTop_toTopOf="@id/item_wifi_address"
+        app:layout_constraintBottom_toBottomOf="@id/item_wifi_address"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/category_capability_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:background="@color/divider_color"
+        app:layout_constraintTop_toBottomOf="@id/item_wifi_address"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/category_capability_group"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="category_capability_divider,category_capability,
+        screen_share_state,screen_share_text,screen_share_role, screen_share_connect"
+        android:visibility="gone"
+        />
+
+    <TextView
+        style="@style/DetailCategory"
+        android:id="@+id/category_capability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/device_detail_category_capability"
+        android:textAppearance="@style/TextAppearance.AppCompat.DetailCategory"
+        app:layout_constraintTop_toBottomOf="@id/item_wifi_address"
+        app:layout_constraintStart_toStartOf="@id/category_general"/>
+
+    <ImageView
+        android:id="@+id/screen_share_state"
+        android:layout_width="@dimen/capability_icon"
+        android:layout_height="@dimen/capability_icon"
+        android:layout_marginTop="@dimen/icon_margin"
+        android:layout_marginEnd="@dimen/icon_margin"
+        android:layout_marginBottom="@dimen/icon_margin"
+        app:layout_constraintTop_toBottomOf="@id/category_capability"
+        app:layout_constraintStart_toStartOf="@id/item_name" />
+
+    <TextView
+        android:id="@+id/screen_share_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="@dimen/icon_margin"
+        android:layout_marginStart="@dimen/icon_margin"
+        tools:text="@string/device_detail_item_screen_share"
+        android:textAppearance="@style/TextAppearance.AppCompat.DetailItem"
+        app:layout_constraintTop_toBottomOf="@id/category_capability"
+        app:layout_constraintStart_toEndOf="@id/screen_share_state"/>
+
+    <TextView
+        android:id="@+id/screen_share_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/enum_screen_share_source"
+        app:layout_constraintTop_toBottomOf="@id/screen_share_text"
+        app:layout_constraintStart_toStartOf="@id/screen_share_text"/>
+
+    <TextView
+        android:id="@+id/screen_share_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        tools:text="@string/state_screen_share_connect"
+        app:layout_constraintBottom_toBottomOf="@id/screen_share_state"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

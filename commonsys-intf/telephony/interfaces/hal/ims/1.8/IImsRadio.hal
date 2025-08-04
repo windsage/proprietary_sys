@@ -1,0 +1,46 @@
+/*
+  * Copyright (c) 2021 Qualcomm Technologies, Inc.
+  * All Rights Reserved.
+  * Confidential and Proprietary - Qualcomm Technologies, Inc.
+  *
+  * Not a Contribution.
+  * Copyright (C) 2016 The Android Open Source Project
+  *
+  * Licensed under the Apache License, Version 2.0 (the "License");
+  * you may not use this file except in compliance with the License.
+  * You may obtain a copy of the License at
+  *
+  * http://www.apache.org/licenses/LICENSE-2.0
+  *
+  * Unless required by applicable law or agreed to in writing, software
+  * distributed under the License is distributed on an "AS IS" BASIS,
+  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied
+  * See the License for the specific language governing permissions and
+  * limitations under the License.
+*/
+
+package vendor.qti.hardware.radio.ims@1.8;
+
+import @1.7::IImsRadio;
+
+interface IImsRadio extends @1.7::IImsRadio {
+
+    /**
+     * MessageId.REQUEST_SET_IMS_CONFIG
+     *
+     * @param token ID to match request/response. Response must include same token.
+     * @param config Config to be set. Contains item and value.
+     *
+     */
+    oneway setConfig_1_8(int32_t token, ConfigInfo config);
+
+     /**
+     * MessageId.REQUEST_GET_IMS_CONFIG
+     *
+     * @param token ID to match request/response. Response must include same token.
+     * @param config Config requested. Contains item and value.
+     *
+     */
+    oneway getConfig_1_8(int32_t token, ConfigInfo config);
+};
+

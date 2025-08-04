@@ -1,0 +1,13 @@
+<manifest>
+<!--Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries. All rights reserved-->
+<!--Confidential and Proprietary - Qualcomm Technologies, Inc.-->
+
+<refs>
+<image name="LE.PRODUCT.1.0" project="le/product/manifest" tag="AU_LINUX_EMBEDDED_LE.PRODUCT.1.0_TARGET_ALL.01.318.144" targets="sxrneo-xreality2-xr-debug,sxrneo-xreality2-xr-perf" sync_type="none"/>
+<composition name="LE.PRODUCT.1.0">
+<image name="KERNEL.PLATFORM.1.0" project="kernelplatform/manifest" sync_type="src_bins"/>
+</composition>
+</refs>
+
+<project dest-branch="refs/heads/la-blast.lnx.2.0" name="qc/components/loremipsum/cd" path="qc/loremipsum/cd" revision="591f1b3b5c2e08d8e98f28fed22c605c5515abc9" upstream="refs/heads/le-blast.lnx.2.0" x-component-tag="refs/tags/le-blast.lnx.2.0-220214" x-grease-customer="none" x-quic-dist="none" x-ship="none"/>
+</manifest>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (c) 2022 Qualcomm Technologies, Inc.
+    All Rights Reserved.
+    Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="preferred_5g_network_mode_choices">
+        <item>NSA Mode</item>
+        <item>SA Mode</item>
+        <item>NSA + SA Mode</item>
+    </string-array>
+
+    <string-array name="preferred_5g_network_mode_values" translatable="false">
+        <item>"1"</item>
+        <item>"2"</item>
+        <item>"0"</item>
+    </string-array>
+
+    <string-array name="msim_preference">
+        <item>DSDA Preferred(Modem operates in DSDA mode when conditions are met)</item>
+        <item>DSDS Only(Modem operates in DSDS mode only)</item>
+    </string-array>
+
+    <string-array name="msim_preference_values" translatable="false">
+        <item>"0"</item>
+        <item>"1"</item>
+    </string-array>
+</resources>

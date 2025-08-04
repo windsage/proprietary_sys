@@ -1,0 +1,48 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.qualcomm.qti.voiceai.usecase'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.qualcomm.qti.voiceai.usecase"
+        minSdk 31
+        targetSdk 34
+        versionCode 100000
+        versionName "1.0.0"
+        ndk {
+            abiFilters 'arm64-v8a'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "VoiceAIUsecase.apk"
+                }
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment:2.7.7'
+    implementation 'androidx.navigation:navigation-ui:2.7.7'
+    implementation 'com.google.mlkit:translate:17.0.2'
+    implementation files('libs/whisper.jar')
+    implementation files('libs/wrapper.phonestate.jar')
+}

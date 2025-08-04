@@ -1,0 +1,26 @@
+aidl_interface {
+    owner: "qti",
+    name: "vendor.qti.hardware.data.connectionaidl",
+    vendor_available: true,
+    host_supported: true,
+    srcs: ["vendor/qti/hardware/data/connectionaidl/*.aidl"],
+    stability: "vintf",
+    backend: {
+        cpp: {
+            enabled: false,
+        },
+        java: {
+            enabled: true,
+            platform_apis: true,
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+}

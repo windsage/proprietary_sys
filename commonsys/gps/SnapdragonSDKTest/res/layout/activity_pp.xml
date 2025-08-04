@@ -1,0 +1,44 @@
+<!--/*====*====*====*====*====*====*====*====*====*====*====*====*====*====*====*
+  Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+  All rights reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+=============================================================================*/-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+            android:id="@+id/startBtn"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/str_start_pp_session"/>
+
+    <Button
+            android:id="@+id/stopBtn"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/startBtn"
+            android:text="@string/str_stop_pp_session"/>
+
+    <Button
+            android:id="@+id/ntripBtn"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/stopBtn"
+            android:text="@string/str_ntrip_config"/>
+    <ListView
+            android:id="@+id/log"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/startBtn"
+            android:layout_alignParentLeft="true"
+            android:dividerHeight="1dp" />
+
+</RelativeLayout>

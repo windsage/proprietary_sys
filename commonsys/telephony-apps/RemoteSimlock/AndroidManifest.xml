@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+  All rights reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qualcomm.qti.remoteSimlockAuth" >
+
+    <uses-sdk android:minSdkVersion="28"
+        android:targetSdkVersion="34"/>
+
+    <permission android:name="com.qualcomm.qti.permission.REMOTE_SIMLOCK_AUTH"
+                android:protectionLevel="signatureOrSystem" />
+
+    <overlay
+        android:targetPackage="com.qualcomm.qti.remoteSimlockAuth"
+        android:requiredSystemPropertyName="ro.boot.vendor.qspa.modem"
+        android:requiredSystemPropertyValue="enabled"/>
+
+    <application/>
+
+</manifest>

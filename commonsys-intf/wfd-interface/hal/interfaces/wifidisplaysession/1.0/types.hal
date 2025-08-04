@@ -1,0 +1,251 @@
+/*==============================================================================
+ *  @file types.hal
+ *
+ *  @par DESCRIPTION:
+ *       Structures and Enumeration for HAL
+ *
+ *
+ * Copyright (c) 2019 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+==============================================================================*/
+package vendor.qti.hardware.wifidisplaysession@1.0;
+
+enum WFDMediaTrackType : uint32_t
+{
+    WFD_SESSION_AUDIO_TRACK,
+    WFD_SESSION_VIDEO_TRACK,
+    WFD_SESSION_IMAGE_TRACK
+};
+
+enum WFDRuntimeCommands : int32_t
+{
+    WFD_SESSION_CMD_OPEN_AUDIO_PROXY,
+    WFD_SESSION_CMD_CLOSE_AUDIO_PROXY,
+    WFD_SESSION_CMD_ENABLE_BITRATE_ADAPT,
+    WFD_SESSION_CMD_DISABLE_BITRATE_ADAPT,
+    WFD_SESSION_CMD_BLANK_REMOTE_DISPLAY,
+    WFD_SESSION_CMD_ENABLE_STREAMING_FEATURE,
+    WFD_SESSION_CMD_DISABLE_STREAMING_FEATURE,
+    WFD_SESSION_CMD_DISABLE_AUDIO,
+    WFD_SESSION_CMD_ENABLE_AUDIO,
+    WFD_SESSION_CMD_DISABLE_VIDEO,
+    WFD_SESSION_CMD_ENABLE_VIDEO,
+    WFD_SESSION_CMD_INVALID
+};
+
+struct audioInfo
+{
+    uint32_t nSampleRate;
+    uint32_t nSamplesPerFrame;
+    uint16_t nBitsPerSample;
+    uint16_t nChannels;
+};
+
+enum videoColorFormatType : uint32_t
+{
+    WFD_SESSION_VIDEO_FORMAT_YCbCr,
+    WFD_SESSION_VIDEO_FORMAT_ARGB32
+};
+
+struct videoInfo
+{
+    uint32_t nHeight;
+    uint32_t nWidth;
+    uint32_t nFrameRate;
+    uint32_t nMinBuffersReq;
+    uint32_t nCanSkipFrames;
+    uint32_t nMaxFrameSkipIntervalMs;
+    uint32_t nIDRIntervalMs;
+    videoColorFormatType eColorFmt;
+    bool     bEnableUBWC;
+};
+
+struct imageInfo
+{
+    uint32_t nHeight;
+    uint32_t nWidth;
+    bool     bSecure;
+    uint32_t nMaxOverlaySupport;
+};
+
+struct mediaInfo
+{
+    WFDMediaTrackType eTrackType;
+    struct trackInfo
+    {
+        audioInfo sAudioInfo;
+        videoInfo sVideoInfo;
+    }sInfo;
+};
+
+
+struct sampleInfo
+{
+    uint64_t nTimeStamp;
+    int64_t nSampleId;
+    handle   nBufHandle;
+    uint32_t nHeight;
+    uint32_t nWidth;
+    uint32_t nStride;
+    uint64_t nFrameNo;
+    uint64_t nArrivalTime;
+};
+
+enum NetIFType : uint32_t
+{
+    UNKNOWN_NET,
+    WIFI_P2P,
+    WIGIG_P2P,
+    LAN
+};
+
+struct deviceInfo
+{
+    string macAddr;
+    string ipAddr;
+    NetIFType netType;
+    uint16_t  wfdDeviceInfoBitmap;
+    uint16_t  sessionMngtControlPort;
+    int32_t   decoderLatency;
+    int32_t   extSupport;
+    uint16_t  maxThroughput;
+    uint8_t   coupleSinkStatusBitmap;
+};
+
+/* UIBC */
+enum uibc_touch_event_type : uint32_t
+{
+   WFD_UIBC_TOUCH_DOWN,
+   WFD_UIBC_TOUCH_UP,
+   WFD_UIBC_TOUCH_MOVE
+};
+
+struct uibc_touch_event_parms
+{
+   uibc_touch_event_type type;         //Type of touch event
+   uint8_t                     num_pointers; //Number of active touch points
+                                           //on the screen
+   vec<uint8_t>                 pointer_id;
+                             //Id of the pointer
+   vec<double>                    coordinate_x;
+                             //X-Coordinate with respect to the
+                             //negotiated display resolution
+   vec<double>                    coordinate_y;
+                             //Y-Coordinate with respect to the negotiated
+                             //display resolution
+ };
+
+
+ /* -----------------------------------------------------------------------
+  * Type definitions for key board event Parms
+  * -----------------------------------------------------------------------
+  */
+enum uibc_key_event_type: uint32_t
+{
+   WFD_UIBC_KEY_DOWN,
+   WFD_UIBC_KEY_UP
+};
+
+struct uibc_key_event_parms
+{
+   uibc_key_event_type type;       //Type of key event
+   uint16_t                  key_code_1; //The key code of the first key event
+                                       //in the format specified in WFD spec
+   uint16_t                  key_code_2; //The key code of the second key event
+                                       //in the format specified in WFD spec
+};
+
+
+/* -----------------------------------------------------------------------
+ * Type definitions for Zoom event parms
+ * -----------------------------------------------------------------------
+ */
+
+struct uibc_zoom_event_parms
+{
+    double  coordinate_x;           //Reference X-Coordinate for zoom with respect
+                                   //to the negotiated display resolution
+    double  coordinate_y;           //Reference Y-Coordinate for zoom with respect
+                                   //to the negotiated display resolution
+
+   uint8_t   num_times_zoom_int;     //Unsigned integer portion of the number of times
+                                   //to zoom
+   uint8_t   num_times_zoom_fraction;//Fraction portion of the number of times to zoom
+};
+
+/* -----------------------------------------------------------------------
+ * Type definitions for scroll event Parms
+ * -----------------------------------------------------------------------
+ */
+
+enum uibc_scroll_event_type : uint32_t
+{
+   WFD_UIBC_SCROLL_VERTICAL,
+   WFD_UIBC_SCROLL_HORIZONTAL
+};
+
+struct uibc_scroll_event_parms
+{
+   uibc_scroll_event_type  type; //Type of scroll event
+   int16_t       num_pixels_scrolled;  //Number of pixels scrolled with respect to
+                                     //the negotiated display resolution
+                                     //For vertical scroll, a negative number
+                                     //indicates to scroll up; a positive number
+                                     //indicates to scroll down
+                                     //For horizontal scroll, a negative number
+                                     //indicates to scroll right;a positive number
+                                     //indicates to scroll left
+};
+
+/* -----------------------------------------------------------------------
+ * Type definitions for Rotate event Parms
+ * -----------------------------------------------------------------------
+ */
+
+struct uibc_rotate_event_parms
+{
+   int8_t  num_rotate_int;       //The signed integer portion of the amount units
+                               //in radians to rotate.
+                               //A negative number indicates to rotate clockwise;
+                               //a positive number indicates to rotate counter-clockwise
+   uint8_t num_rotate_fraction;  //The fraction portion of the amount in units of
+                               //radians to rotate.
+};
+
+
+/* -----------------------------------------------------------------------
+ * Type definitions for uibc event
+ * -----------------------------------------------------------------------
+ */
+
+/* This enumerated type lists the different types of uibc events*/
+enum uibc_event_type : uint32_t
+{
+   WFD_UIBC_TOUCH,
+   WFD_UIBC_KEY,
+   WFD_UIBC_ZOOM,
+   WFD_UIBC_SCROLL,
+   WFD_UIBC_ROTATE,
+   WFD_UIBC_HID_KEY
+};
+
+struct uibc_event_parms
+{
+   uibc_touch_event_parms  touch_event;
+   uibc_key_event_parms    key_event;
+   uibc_zoom_event_parms   zoom_event;
+   uibc_scroll_event_parms scroll_event;
+   uibc_rotate_event_parms rotate_event;
+};
+
+struct uibc_event_t
+{
+   uibc_event_type  type;       //type of uibc event
+   uibc_event_parms parms;      //parameters of the event
+   uint16_t               timestamp;  //The last 16 bits of the WFD source marked
+                        //RTP timestamp of the frames that are being displayed
+                        //when user inputs are applied(from spec 1.22,line1266)
+                        //otherwise "UINT16_MAX"
+};
+

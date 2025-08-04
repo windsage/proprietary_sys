@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (c) 2022 Qualcomm Technologies, Inc.
+    All Rights Reserved.
+    Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:title="@string/settings_category_scan">
+
+        <SwitchPreference
+            app:title="@string/settings_title_scan_enable"
+            app:summary="@string/settings_summary_scan_enable"
+            app:key="key_scan_enable"
+            app:defaultValue="true"/>
+
+        <ListPreference
+            app:title="@string/settings_title_scan_mode"
+            app:defaultValue="0"
+            app:entries="@array/scan_mode_entries"
+            app:entryValues="@array/scan_mode_values"
+            app:key="key_scan_mode"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="@string/settings_category_broadcast">
+
+        <SwitchPreference
+            app:title="@string/settings_title_broadcast_enable"
+            app:summary="@string/settings_summary_broadcast_enable"
+            app:key="key_broadcast_enable"
+            app:defaultValue="true"/>
+
+        <ListPreference
+            app:title="@string/settings_title_battery_broadcast_interval"
+            app:key="key_battery_broadcast_interval"
+            app:defaultValue="10"
+            app:entries="@array/battery_broadcast_interval_entries"
+            app:entryValues="@array/battery_broadcast_interval_values"
+            app:useSimpleSummaryProvider="true"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="@string/settings_category_screen_share">
+
+        <SwitchPreference
+            app:title="@string/settings_title_screen_share_enable"
+            app:summary="@string/settings_summary_screen_share_enable"
+            app:key="key_wfd_enable"
+            app:defaultValue="false"/>
+
+        <ListPreference
+            app:title="@string/settings_title_screen_share_role"
+            app:key="key_wfd_type"
+            app:defaultValue="0"
+            app:entries="@array/wfd_type_entries"
+            app:entryValues="@array/wfd_type_values"
+            app:useSimpleSummaryProvider="true"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="@string/settings_category_context_sync">
+
+        <SwitchPreference
+            app:title="@string/settings_title_context_sync_enable"
+            app:summary="@string/settings_summary_context_sync_enable"
+            app:key="key_context_sync_enable"
+            app:defaultValue="false"/>
+
+        <ListPreference
+            app:title="@string/settings_title_send_notification_interval"
+            app:key="key_send_notification_interval"
+            app:defaultValue="10"
+            app:entries="@array/context_sync_entries"
+            app:entryValues="@array/context_sync_values"
+            app:useSimpleSummaryProvider="true"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/******************************************************************************
+ *
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ * All rights reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ *
+ ******************************************************************************/
+-->
+<resources>
+    <string name="app_name">acu</string>
+
+    <string name="acu_label">Codec preferences</string>
+    <string name="ppl_label">Application audio profile preference</string>
+
+    <string name="pref_cat_aptx_and_aptx_hd">Qualcomm&#xae; aptX&#x2122; and Qualcomm&#xae; aptX&#x2122; HD</string>
+    <string name="aptx_and_aptx_hd_priority_title">Set Qualcomm&#xae; aptX&#x2122; or Qualcomm&#xae; aptX&#x2122; HD preference when available"</string>
+    <string name="aptx_and_aptx_hd_priority_dialog_title">Set Qualcomm&#xae; aptX&#x2122; or Qualcomm&#xae; aptX&#x2122; HD preference"</string>
+    <string name="default_label">Default</string>
+    <string name="aptx_label">Qualcomm&#xae; aptX&#x2122;</string>
+    <string name="aptx_hd_label">Qualcomm&#xae; aptX&#x2122; HD</string>
+    <string name="default_value">DEFAULT</string>
+    <string name="aptx_value">APTX</string>
+    <string name="aptx_hd_value">APTX_HD</string>
+
+    <string name="pref_cat_aptx_adaptive">Qualcomm&#xae; aptX&#x2122; Adaptive</string>
+    <string name="aptx_adaptive_96khz_sample_rate_title">Enable Qualcomm&#xae; aptX&#x2122; Adaptive 96KHz sample rate support for high resolution audio when available"</string>
+    <string name="aptx_adaptive_96khz_sample_rate_dialog_title">Enable Qualcomm&#xae; aptX&#x2122; Adaptive 96KHz sample rate support</string>
+    <string name="aptx_adaptive_96khz_sample_rate_on_label">On</string>
+    <string name="aptx_adaptive_96khz_sample_rate_off_label">Off</string>
+    <string name="aptx_adaptive_96khz_sample_rate_on_value">ON</string>
+    <string name="aptx_adaptive_96khz_sample_rate_off_value">OFF</string>
+
+    <string name="pref_cat_codec_audio_profile">Codec audio profile preference</string>
+    <string name="audio_profile_override_title">Set audio profile preference</string>
+    <string name="audio_profile_override_dialog_title">Set audio profile preference</string>
+    <string name="audio_profile_override_auto_adjust_label">Auto-adjust</string>
+    <string name="audio_profile_override_high_quality_label">High Quality</string>
+    <string name="audio_profile_override_gaming_mode_label">Gaming Mode</string>
+    <string name="audio_profile_override_auto_adjust_value">AUTO_ADJUST</string>
+    <string name="audio_profile_override_high_quality_value">HIGH_QUALITY</string>
+    <string name="audio_profile_override_gaming_mode_value">GAMING_MODE</string>
+
+    <string name="audio_profile_preference_title">Set application audio profile preference</string>
+    <string name="audio_profile_preference_summary">Configure audio profile preference for installed applications. i.e. Auto-adjust, High Quality, Gaming Mode</string>
+    <string name="spinner_auto_adjust_label">Auto-adjust</string>
+    <string name="spinner_high_quality_label">High Quality</string>
+    <string name="spinner_gaming_mode_label">Gaming Mode</string>
+    <string name="spinner_auto_adjust_value">AUTO_ADJUST</string>
+    <string name="spinner_high_quality_value">HIGH_QUALITY</string>
+    <string name="spinner_gaming_mode_value">GAMING_MODE</string>
+
+</resources>

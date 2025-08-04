@@ -1,0 +1,67 @@
+/*
+ * Copyright (c) 2018-2019 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+package vendor.qti.hardware.wifidisplaysession@1.0;
+
+import IWifiDisplaySessionCb;
+
+interface IWifiDisplaySession {
+
+    createSession(IWifiDisplaySessionCb cb, int64_t clientData, deviceInfo local, deviceInfo peer) generates (int32_t status, int64_t instanceId);
+
+    start(int64_t instanceId) generates (int32_t status);
+
+    stop(int64_t instanceId) generates (int32_t status);
+
+    play(int64_t instanceId) generates (int32_t status);
+
+    pause(int64_t instanceId) generates (int32_t status);
+
+    standby(int64_t instanceId) generates (int32_t status);
+
+    teardown(int64_t instanceId, bool isRTSP) generates(int32_t status);
+
+    setRtpTransportType(int64_t instanceId, int32_t transportType) generates(int32_t status);
+
+    queryTCPSupport(int64_t instanceId) generates (int32_t status);
+
+    setDecoderLatencyValue(int64_t instanceId, int32_t latency) generates(int32_t status);
+
+    tcpPlaybackControlCmd(int64_t instanceId, int32_t cmdType, int32_t cmdVal) generates(int32_t status);
+
+    negotiateRtpTransportType(int64_t instanceId, int32_t TransportType, int32_t BufferLenMs, int32_t portNum) generates(int32_t status);
+
+    executeRuntimeCmd(int64_t instanceId, WFDRuntimeCommands cmd) generates (int32_t status);
+
+    getConfigItems(int64_t instanceId) generates (int32_t status, vec<string> cfgItems);
+
+    enableUIBCSession(int64_t instanceId, int32_t sessId) generates (int32_t status);
+
+    disableUIBCSession(int64_t instanceId, int32_t sessId) generates (int32_t status);
+
+    setUIBCSession(int64_t instanceId, int32_t sessId) generates (int32_t status);
+
+    startUIBCDataPath(int64_t instanceId) generates (int32_t status);
+
+    stopUIBCDataPath(int64_t instanceId) generates (int32_t status);
+
+    setAVMode(int64_t instanceId, int32_t mode) generates (int32_t status);
+
+    sendAvFormatChange(int64_t instanceId, int32_t codec, int32_t profile, int32_t level, int32_t formatType, uint64_t value, vec<int32_t> resParams) generates (int32_t status);
+
+    setBitrateValue(int64_t instanceId, int32_t value) generates (int32_t status);
+
+    setSessionResolution(int64_t instanceId, int32_t formatType, uint64_t value, vec<int32_t> resParams) generates (int32_t status);
+
+    getSessionResolution(int64_t instanceId) generates (int32_t status, int32_t width, int32_t height);
+
+    getCommonResolutionBitmap(int64_t instanceId) generates (int32_t status, vec<uint64_t> bitmap);
+
+    getNegotiatedResolutionBitmap(int64_t instanceId) generates (int32_t status, vec<uint64_t> bitmap);
+
+    sendIDRRequest(int64_t instanceId) generates (int32_t status);
+
+    destroysession(int64_t instanceId) generates (int32_t status);
+};

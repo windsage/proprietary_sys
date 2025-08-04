@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+  ~ All Rights Reserved.
+  ~ Confidential and Proprietary - Qualcomm Technologies, Inc.
+ -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/conversation_fragment_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/transcription_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="25dp"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/transcription_mode"
+            android:textColor="@color/transparent_text_color"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/radio_transcription_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/transcription_mode"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="18dp"
+            android:background="@drawable/radius_rectangle_background">
+
+            <RadioButton
+                android:id="@+id/radio_realtime_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/real_time"
+                android:textColor="@color/white"
+                android:textSize="@dimen/second_level_text_size"
+                tools:ignore="RelativeOverlap" />
+
+            <RadioButton
+                android:id="@+id/radio_output_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:layout_marginBottom="2dp"
+                android:text="@string/output"
+                android:textColor="@color/white"
+                android:textSize="@dimen/second_level_text_size"
+                tools:ignore="RelativeOverlap" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/transcription_language_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radio_transcription_mode"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/transcription_language"
+            android:textColor="@color/transparent_text_color"
+            android:textSize="18sp"
+            tools:ignore="RelativeOverlap" />
+
+        <Spinner
+            android:id="@+id/transcription_language_spinner"
+            android:layout_width="130dp"
+            android:layout_height="33dp"
+            android:layout_below="@id/radio_transcription_mode"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="18dp"
+            android:entries="@array/support_transcription_languages_alias"
+            android:spinnerMode="dropdown"
+            android:thumbTint="@color/switch_color"
+            android:thumbTintMode="multiply"
+            android:trackTint="@color/color_snapdragon_purple"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <ImageView
+            android:id="@+id/language_background"
+            android:layout_width="130dp"
+            android:layout_height="33dp"
+            android:layout_below="@id/radio_transcription_mode"
+            android:layout_alignStart="@id/transcription_language_spinner"
+            android:layout_marginTop="18dp"
+            android:contentDescription="@string/item_background"
+            android:src="@drawable/radius_rectangle_background" />
+
+        <TextView
+            android:id="@+id/voice_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/transcription_language_tv"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="25dp"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/translate_language_tip"
+            android:textColor="@color/transparent_text_color"
+            android:textSize="18sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/settings_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/voice_language"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="18dp"
+            android:background="@drawable/radius_rectangle_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            tools:listitem="@layout/translate_language" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

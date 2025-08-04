@@ -1,0 +1,27 @@
+<!--
+  ~ Copyright (c) 2023 Qualcomm Technologies, Inc.
+  ~ All Rights Reserved.
+  ~ Confidential and Proprietary - Qualcomm Technologies, Inc.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="200dp"
+    android:height="48dp"
+    android:viewportWidth="200"
+    android:viewportHeight="48">
+  <path
+      android:pathData="M2,48L198,48A2,2 0,0 0,200 46L200,2A2,2 0,0 0,198 0L2,0A2,2 0,0 0,0 2L0,46A2,2 0,0 0,2 48z">
+    <aapt:attr name="android:fillColor">
+      <gradient 
+          android:startX="0"
+          android:startY="24"
+          android:endX="200"
+          android:endY="24"
+          android:type="linear">
+        <item android:offset="0.09" android:color="#FF6614B9"/>
+        <item android:offset="1" android:color="#FF8E38B9"/>
+      </gradient>
+    </aapt:attr>
+  </path>
+</vector>

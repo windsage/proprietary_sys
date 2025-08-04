@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+  ~ All Rights Reserved.
+  ~ Confidential and Proprietary - Qualcomm Technologies, Inc.
+  -->
+<resources>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#0b2742</color>
+    <color name="colorPrimaryDark">#4a5a75</color>
+    <color name="colorAccent">#677790</color>
+    <color name="colorTextPrimary">#ffffff</color>
+    <color name="colorTips">#F2FFFFFF</color>
+
+    <color name="light_blue">#7ba0ff</color>
+    <color name="navigation_menu_color">#202021</color>
+    <color name="transparent_text_color">#8CFFFFFF</color>
+
+    <color name="background">#151516</color>
+    <color name="background_light">#202021</color>
+    <color name="color_snapdragon_purple">#8E38B9</color>
+    <color name="white_alpha_0_15">#26FFFFFF</color>
+    <color name="white_alpha_0_25">#40FFFFFF</color>
+    <color name="white_alpha_0_40">#66FFFFFF</color>
+    <color name="white_alpha_0_55">#8CFFFFFF</color>
+    <color name="white_alpha_0_95">#F2FFFFFF</color>
+</resources>

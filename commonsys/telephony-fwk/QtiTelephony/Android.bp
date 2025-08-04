@@ -1,0 +1,81 @@
+android_app {
+    name: "QtiTelephony",
+
+    srcs: ["**/*.java"],
+
+    exclude_srcs: ["src/com/qti/wear/*.java"],
+
+    libs: [
+        "extphonelib",
+        "qcrilhook",
+        "qti-telephony-utils",
+        "qti-telephony-hidl-wrapper",
+    ],
+    static_libs: [
+        "vendor.qti.hardware.radio.qtiradio-V1.0-java",
+        "vendor.qti.hardware.radio.qtiradio-V2.0-java",
+        "vendor.qti.hardware.radio.qtiradio-V2.1-java",
+        "vendor.qti.hardware.radio.qtiradio-V2.2-java",
+        "vendor.qti.hardware.radio.qtiradio-V2.3-java",
+        "vendor.qti.hardware.radio.qtiradio-V2.4-java",
+        "vendor.qti.hardware.radio.qtiradio-V2.5-java",
+        "vendor.qti.hardware.radio.qtiradio-V2.6-java",
+        "vendor.qti.hardware.radio.qtiradio-V2.7-java",
+        "vendor.qti.hardware.radio.qtiradio-V15-java",
+        "vendor.qti.hardware.radio.qtiradioconfig-V6-java",
+        "vendor.qti.hardware.data.dynamicdds-V1.0-java",
+        "vendor.qti.data.factory-V2.4-java",
+        "vendor.qti.data.factoryservice-V1-java",
+        "vendor.qti.hardware.data.dynamicddsaidlservice-V1-java",
+        "androidx.preference_preference",
+    ],
+
+    optimize: {
+        proguard_compatibility: true,
+    },
+
+    certificate: "platform",
+    platform_apis: true,
+    system_ext_specific: true,
+    privileged: true,
+}
+
+android_app {
+    name: "QtiTelephonyWear",
+
+    srcs: ["**/*.java"],
+
+    exclude_srcs: ["src/com/qti/phone/QtiRadioUtils.java"],
+
+    libs: [
+        "extphonelib",
+        "qcrilhook",
+        "qti-telephony-utils",
+        "qti-telephony-hidl-wrapper",
+    ],
+    static_libs: [
+        "vendor.qti.hardware.radio.qtiradio-V1.0-java",
+        "vendor.qti.hardware.radio.qtiradio-V2.0-java",
+        "vendor.qti.hardware.radio.qtiradio-V2.1-java",
+        "vendor.qti.hardware.radio.qtiradio-V2.2-java",
+        "vendor.qti.hardware.radio.qtiradio-V2.3-java",
+        "vendor.qti.hardware.radio.qtiradio-V2.4-java",
+        "vendor.qti.hardware.radio.qtiradio-V2.5-java",
+        "vendor.qti.hardware.radio.qtiradio-V2.6-java",
+        "vendor.qti.hardware.radio.qtiradio-V2.7-java",
+        "vendor.qti.hardware.radio.qtiradio-V15-java",
+        "vendor.qti.hardware.radio.qtiradioconfig-V6-java",
+        "vendor.qti.hardware.data.dynamicdds-V1.0-java",
+        "vendor.qti.hardware.data.dynamicddsaidlservice-V1-java",
+        "androidx.preference_preference",
+    ],
+
+    optimize: {
+        proguard_compatibility: true,
+    },
+
+    certificate: "platform",
+    platform_apis: true,
+    system_ext_specific: true,
+    privileged: true,
+}

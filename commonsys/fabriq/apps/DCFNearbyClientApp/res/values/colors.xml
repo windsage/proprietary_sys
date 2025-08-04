@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (c) 2022 Qualcomm Technologies, Inc.
+    All Rights Reserved.
+    Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+<resources>
+    <color name="purple_500">#FF6200EE</color>
+
+    <color name="divider_color">#5C5656</color>
+
+    <color name="text_color_detail_category">#35AEA2</color>
+    <color name="text_color_detail_item">#000000</color>
+</resources>

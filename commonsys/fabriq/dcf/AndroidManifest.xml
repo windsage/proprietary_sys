@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2022 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    coreApp="true"
+    package="com.qti.dcf"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk android:minSdkVersion="23"/>
+
+    <!-- Used for permissions that are associated with DCF. -->
+    <permission-group android:name="com.qualcomm.qti.qesdk.permission-group.DCF"
+        android:label="@string/permgrouplab_dcf"
+        android:description="@string/permgroupdesc_dcf"/>
+
+    <!-- Allows an application to share content with remote devices.
+         <p>Protection level: dangerous -->
+    <permission android:name="com.qualcomm.qti.qesdk.permission.DCF"
+        android:permissionGroup="com.qualcomm.qti.qesdk.permission-group.DCF"
+        android:label="@string/permlabel_dcf"
+        android:description="@string/permdesc_dcf"
+        android:protectionLevel="dangerous" />
+
+    <application android:label="@string/applabel_dcf"
+        android:description="@string/appdesc_dcf"
+        android:allowBackup="false">
+    </application>
+</manifest>
+

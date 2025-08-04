@@ -1,0 +1,32 @@
+// Stable AIDL
+aidl_interface {
+    name: "vendor.qti.hardware.bluetooth.xpanprovider",
+    vendor_available: true,
+    host_supported: true,
+    srcs: [
+        "aidl/vendor/qti/hardware/bluetooth/xpanprovider/*.aidl",
+    ],
+    local_include_dir: "aidl",
+    stability: "vintf",
+    owner: "qti",
+
+    backend: {
+        java: {
+            sdk_version: "module_current",
+        },
+        cpp: {
+            enabled: false,
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+    frozen: true,
+
+}

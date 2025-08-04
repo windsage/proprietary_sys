@@ -1,0 +1,54 @@
+aidl_interface {
+    name: "vendor.qti.gnss",
+    vendor_available: true,
+    owner: "qti",
+    srcs: [
+        "vendor/qti/gnss/*.aidl",
+    ],
+    stability: "vintf",
+    backend: {
+        java: {
+            platform_apis: true,
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+        {
+            version: "2",
+            imports: [],
+        },
+        {
+            version: "3",
+            imports: [],
+        },
+        {
+            version: "4",
+            imports: [],
+        },
+        {
+            version: "5",
+            imports: [],
+        },
+        {
+            version: "6",
+            imports: [],
+        },
+        {
+            version: "7",
+            imports: [],
+        },
+        {
+            version: "8",
+            imports: [],
+        },
+
+    ],
+    frozen: true,
+
+}

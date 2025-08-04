@@ -1,0 +1,23 @@
+cc_binary {
+    name: "freezerwhitelist",
+
+    srcs: ["*.cpp"],
+
+    shared_libs: [
+        "libbase",
+        "libcutils",
+        "libutils",
+        "liblog",
+        "libjsoncpp",
+    ],
+
+    cflags: [
+        "-Wall",
+        "-Werror",
+        "-Wunused",
+        "-Wunreachable-code",
+    ],
+    system_ext_specific: true,
+    proprietary: false,
+    owner: "qti",
+}

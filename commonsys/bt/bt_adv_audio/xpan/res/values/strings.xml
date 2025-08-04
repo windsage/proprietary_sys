@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*****************************************************************
+ * Copyright (c) 2022 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ ******************************************************************/
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="xpan_profile">Xpan Profile</string>
+    <string name="process" translate="false"><xliff:g id="x" /></string>
+    <string name="enter_bd_addr">Enter BD Address</string>
+    <string name="enter_bearer_type">Enter Bearer Type (1/2)</string>
+    <string name="app_name">Xpan</string>
+    <string name="permlab_xpan_database">Access Xpan Database</string>
+</resources>

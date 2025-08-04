@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/*====*====*====*====*====*====*====*====*====*====*====*====*====*====*====*
+  Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+  All rights reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+=============================================================================*/-->
+
+<ScrollView>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layout_addeditform"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_hostName"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/editTextHostName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_port"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/editTextPort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="number" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_userName"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/editTextUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="text" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_password"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="textPassword" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_point"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/editTextPoint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="text" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_nmeaInterval"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/editTextNmeaInterval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="number" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/OPTINEnable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable OPTIN"
+            android:layout_alignParentLeft = "true"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:layout_marginStart="5sp"
+            android:layout_below = "@+id/password"
+            android:textStyle="bold"/>
+
+        <CheckBox
+            android:id="@+id/checkboxOPTIN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/OPTINEnable"
+            android:checked="false"
+            android:clickable="true"
+            android:layout_below="@+id/password"
+            android:layout_marginTop="-2dp"
+            android:textSize="24sp"></CheckBox>
+
+        <TextView
+            android:id="@+id/nmeaEnable"
+            android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="requires Initial NMEA"
+                android:layout_alignParentLeft = "true"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:layout_marginStart="5sp"
+                android:layout_below = "@+id/OPTINEnable"
+                android:textStyle="bold"/>
+
+       <CheckBox
+                android:id="@+id/checkboxnmea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/nmeaEnable"
+                android:checked="false"
+                android:clickable="true"
+                android:layout_below="@+id/OPTINEnable"
+                android:textSize="24sp"></CheckBox>
+
+       <TextView
+                android:id="@+id/SSLEnable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nmeaEnable"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="5sp"
+                android:text="use SSL"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+       <CheckBox
+                android:id="@+id/checkboxSSL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nmeaEnable"
+                android:layout_toRightOf="@+id/SSLEnable"
+                android:checked="false"
+                android:clickable="true"
+                android:textSize="24sp"></CheckBox>
+
+    </LinearLayout>
+</ScrollView>

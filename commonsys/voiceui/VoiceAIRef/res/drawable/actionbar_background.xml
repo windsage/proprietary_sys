@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2023 Qualcomm Technologies, Inc.
+  ~ All Rights Reserved.
+  ~ Confidential and Proprietary - Qualcomm Technologies, Inc.
+  -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+     >
+    <item android:drawable="@color/background" android:width="360dp"
+        android:height="?attr/actionBarSize"
+        android:start="0dp"/>
+    <item android:drawable="@drawable/actionbar_mask"
+        android:start="0dp" android:gravity="top"
+        android:height="?attr/actionBarSize"
+        android:width="267dp" />
+</layer-list>

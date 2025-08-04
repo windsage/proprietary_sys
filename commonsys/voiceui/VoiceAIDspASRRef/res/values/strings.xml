@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+  ~ All Rights Reserved.
+  ~ Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<resources>
+    <string name="app_name">VoiceAIDspASRRef</string>
+    <string name="permission_deny_tips">"Permission deny, please allow permission in settings then use"</string>
+
+    <string name="cancel">Cancel</string>
+
+    <!-- Wakeword settings activity-->
+    <string name="confirm">Confirm</string>
+    <string name="friendly_tips">Friendly Tips</string>
+    <string name="turn_off_detection_before_enrollment_message">"Need turn off wakeword detection first, are you sure?"</string>
+    <string name="voice_adding_failure_message">"Can't add your voice now, please try again."</string>
+
+    <!-- training activity -->
+    <string name="enrollment_error_title">Error</string>
+    <string name="voice_ui_enrollment">Enrollment</string>
+    <string name="enrollment_error_message">Start enrollment failure, please check whether QVA is running normally.</string>
+    <string name="create_sound_model_message">"creating"</string>
+    <string name="create_sm_failure">We were unable to create your personalized sound model. Please try again.</string>
+    <string name="ok">"OK"</string>
+
+    <string name="snapdragon_voice_ui">Settings</string>
+    <string name="record_in_quiet">Make sure you are in a quiet place for speaking the sample phrases.</string>
+
+    <string name="harvard1">\"Hey Snapdragon, play music on all of the downstairs speakers.\"</string>
+    <string name="harvard2">\"What\'s the traffic like on the way to work?\"</string>
+    <string name="harvard3">\"Are there any Italian restaurants around Carmel Valley?\"</string>
+    <string name="harvard4">\"Delete my reminder to pick up my dry cleaning.\"</string>
+    <string name="harvard5">\"Set an alarm for 7:14 AM tomorrow morning.\"</string>
+
+    <string name="enroll_listening">Listening…</string>
+    <string name="enroll_listening_failed">Phrase not recorded.\nPlease try again.</string>
+    <string name="voice_ui_feature">Listen for \"Hey Snapdragon\"</string>
+    <string name="enable_continuous_transcription">Enable Continuous Transcription</string>
+    <string name="enable_partial_transcription">Enable Partial Transcription</string>
+    <string name="enable_low_power_buffer_mode">Enable Low Power Buffer Mode</string>
+    <string name="enable_uv_settings_title">"Enable User Voice"</string>
+    <string name="item_background">item_background</string>
+    <string name="voice_control">Voice Control</string>
+    <string name="icn_arrow_left">icn_arrow_left</string>
+    <string name="user_voice_enrollment_enrolled">User Voice Enrollment(Enrolled)</string>
+    <string name="re_enroll">Re-enroll</string>
+    <string name="delete_enrollment">Delete Enrollment</string>
+    <string name="voice_language">Voice Language</string>
+    <string name="language">Language</string>
+    <string name="english">English</string>
+    <string name="continue_when_ready">Continue When Ready</string>
+    <string name="enroll_tips">Find a quiet place and say the phrase below.</string>
+    <string name="enroll_steps_title">%1$d/5</string>
+    <string name="steps_1">1/5</string>
+    <string name="enroll_success">Congratulations!\nEnrollment Successful</string>
+    <string name="back_to_settings">Back to settings</string>
+    <string name="asr_translation_enabled_title">Translation to English</string>
+    <string name="privacy_title">Privacy</string>
+    <string name="terms_of_service_title">Terms of service</string>
+    <string name="third_party_licenses_title">Third party licenses</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+
+    <string name="app_version_name">V1.0.0</string>
+
+    <!-- ASR TTS -->
+    <string name="app_sub_title">"VoiceAIDspASRRef"</string>
+    <string name="voice_input_start_text">Start Voice Input</string>
+    <string name="voice_input_stop_text">Stop Listening</string>
+    <string name="clear_all">" Clear All"</string>
+    <string name="listening">Listening</string>
+    <string name="prompt_asr_edit_text_hint">Content will be generated here by clicking ‘Start Voice Input’ or wake up by saying ‘Hey Snapdragon’</string>
+
+    <string name="tts_start">Text to Speech</string>
+    <string name="tts_stop">Stop Playing</string>
+    <string name="tts_playing_hint">Playing</string>
+    <string name="prompt_tts_edit_text_hint">Enter the content here and click ‘Text to Speech’ to play the sound</string>
+</resources>

@@ -1,0 +1,42 @@
+/**
+ *
+ * Copyright (c) 2023 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ *
+ */
+
+aidl_interface {
+    name: "vendor.qti.hardware.spu",
+    vendor_available: true,
+    srcs: ["vendor/qti/hardware/spu/*.aidl"],
+    stability: "vintf",
+    imports: [
+        "android.hardware.common-V2",
+    ],
+    backend: {
+        cpp: {
+            enabled: false,
+        },
+        java: {
+            sdk_version: "module_current",
+            enabled: true,
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: ["android.hardware.common-V2"],
+        },
+        {
+            version: "2",
+            imports: ["android.hardware.common-V2"],
+        },
+
+    ],
+    frozen: true,
+
+}

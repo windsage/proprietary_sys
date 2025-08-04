@@ -1,0 +1,32 @@
+// This is the expected build file, but it may not be right in all cases
+
+aidl_interface {
+    name: "vendor.qti.qspmhal",
+    vendor_available: true,
+    system_ext_specific: true,
+    srcs: ["vendor/qti/qspmhal/*.aidl"],
+    stability: "vintf",
+    imports: [
+        "android.hardware.common-V2",
+    ],
+    backend: {
+        cpp: {
+            // cannot be enabled with andoid.hardware.common
+            enabled: false,
+        },
+        java: {
+            sdk_version: "module_current",
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: ["android.hardware.common-V2"],
+        },
+    ],
+    frozen: true,
+
+}

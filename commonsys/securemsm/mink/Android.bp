@@ -1,0 +1,6 @@
+cc_library_headers {
+   name: "mink_commonsys_headers",
+   export_include_dirs: ["include"],
+   system_ext_specific: true,
+}
+

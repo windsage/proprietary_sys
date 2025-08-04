@@ -1,0 +1,31 @@
+prebuilt_etc {
+    name: "qti-initial-package-stopped-states.xml",
+    src: "qti-initial-package-stopped-states.xml",
+    sub_dir: "sysconfig",
+    system_ext_specific: true,
+}
+soong_config_module_type {
+    name: "qti_sanitizer_cc_defaults",
+    module_type: "cc_defaults",
+    config_namespace: "qti_build_sanitizer_config",
+    variables: [
+        "build_is_hwasan",
+    ],
+    properties: [
+        "srcs",
+        "cflags",
+        "cppflags",
+        "target.android_arm64.srcs",
+        "target.android_arm.srcs",
+        "include_dirs",
+        "static_libs",
+        "required",
+        "whole_static_libs",
+        "shared_libs",
+        "libs"
+    ],
+}
+soong_config_string_variable {
+    name: "build_is_hwasan",
+    values: ["enabled", "disabled"],
+}

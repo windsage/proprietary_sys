@@ -1,0 +1,31 @@
+/*==============================================================================
+ *  @file IWifiDisplaySessionVideoTrackCb.hal
+ *
+ *  @par DESCRIPTION:
+ *       HAL interface for Wifi Display Video Track Callbacks
+ *
+ *
+ * Copyright (c) 2018 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+==============================================================================*/
+package vendor.qti.hardware.wifidisplaysession@1.0;
+
+interface IWifiDisplaySessionVideoTrackCb {
+
+    setFreeBuffer(int64_t clientdata, int64_t bufferId) generates (int32_t status);
+
+    trackInfoUpdated(int64_t clientdata, videoInfo info) generates (int32_t status);
+
+    trackPause(int64_t clientdata) generates (int32_t status);
+
+    trackResume(int64_t clientdata) generates (int32_t status);
+
+    trackStart(int64_t clientdata) generates (int32_t status);
+
+    trackStop(int64_t clientdata) generates (int32_t status);
+
+    resetFrameSkip(int64_t clientdata) generates (int32_t status);
+
+};
+

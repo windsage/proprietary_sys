@@ -1,0 +1,28 @@
+/*==============================================================================
+ *  @file IWifiDisplaySessionAudioTrack.hal
+ *
+ *  @par DESCRIPTION:
+ *       HAL interface for Wifi Display Audio Track
+ *
+ *
+ * Copyright (c) 2018 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+==============================================================================*/
+package vendor.qti.hardware.wifidisplaysession@1.0;
+
+import IWifiDisplaySessionAudioTrackCb;
+
+interface IWifiDisplaySessionAudioTrack
+{
+    createMediaTrack(uint64_t trackObj, uint64_t clientdata, IWifiDisplaySessionAudioTrackCb cb) generates(int64_t status, int64_t instanceId);
+
+    getTrackInfo(int64_t instanceId) generates (int32_t status, mediaInfo info);
+
+    setProxyInvalid(int64_t instanceId);
+
+    setProxyAvailability(int64_t instanceId, bool bAvail);
+
+    destroyMediaTrack(int64_t instanceId);
+};
+

@@ -1,0 +1,24 @@
+cc_test {
+    name: "VtsHalDataConnectionAidlTargetTest",
+    cflags: [
+        "-O0",
+        "-g",
+    ],
+    srcs: ["VtsHalDataConnectionAidlTargetTest.cpp"],
+    shared_libs: [
+        "liblog",
+        "libbinder_ndk",
+        "libutils",
+        "vendor.qti.hardware.data.connectionaidl-V1-ndk",
+        "libvintf",
+    ],
+    defaults: [
+        "use_libaidlvintf_gtest_helper_static",
+        "VtsHalTargetTestDefaults",
+    ],
+    test_suites: [
+        "general-tests",
+        "vts",
+    ],
+    owner: "qti",
+}

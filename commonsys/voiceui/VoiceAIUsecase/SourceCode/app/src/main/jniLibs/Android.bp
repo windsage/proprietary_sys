@@ -1,0 +1,133 @@
+cc_prebuilt_library_shared {
+    name: "libQnnHtp",
+    arch: {
+        arm64: {
+            srcs: [ "arm64-v8a/libQnnHtp.so" ],
+        },
+    },
+    strip: {
+        none:true,
+    },
+    installable: false,
+    compile_multilib: "64",
+    sdk_version: "29",
+    check_elf_files: false
+}
+
+cc_prebuilt_library_shared {
+    name: "libQnnHtpV79Stub",
+    arch: {
+        arm64: {
+            srcs: [ "arm64-v8a/libQnnHtpV79Stub.so" ],
+        },
+    },
+    strip: {
+        none:true,
+    },
+    installable: false,
+    compile_multilib: "64",
+    sdk_version: "29",
+    check_elf_files: false
+}
+
+cc_prebuilt_library_shared {
+    name: "libQnnSystem",
+    arch: {
+        arm64: {
+            srcs: [ "arm64-v8a/libQnnSystem.so" ],
+        },
+    },
+    strip: {
+        none:true,
+    },
+    installable: false,
+    compile_multilib: "64",
+    sdk_version: "29",
+    check_elf_files: false
+}
+
+cc_prebuilt_library_shared {
+    name: "libeai_floating",
+    arch: {
+        arm64: {
+            srcs: [ "arm64-v8a/libeai_floating.so" ],
+        },
+    },
+    strip: {
+        none:true,
+    },
+    shared_libs: [
+        "liblog",
+        "libm",
+    ],
+    installable: false,
+    compile_multilib: "64",
+    sdk_version: "29",
+    check_elf_files: false
+}
+
+cc_prebuilt_library_shared {
+    name: "libqvavad",
+    arch: {
+        arm64: {
+            srcs: [ "arm64-v8a/libqvavad.so" ],
+        },
+    },
+    strip: {
+        none:true,
+    },
+    shared_libs: [
+        "liblog",
+        "libeai_floating",
+    ],
+    installable: false,
+    compile_multilib: "64",
+    sdk_version: "29",
+    check_elf_files: false
+}
+
+cc_prebuilt_library_shared {
+    name: "libdnnvad_jni",
+    arch: {
+        arm64: {
+            srcs: [ "arm64-v8a/libdnnvad_jni.so" ],
+        },
+    },
+    strip: {
+        none:true,
+    },
+    shared_libs: [
+        "libqvavad",
+        "liblog",
+        "libeai_floating",
+    ],
+    installable: false,
+    compile_multilib: "64",
+    sdk_version: "29",
+    check_elf_files: false
+}
+
+cc_prebuilt_library_shared {
+    name: "libwhisper_lib",
+    check_elf_files: false,
+    arch: {
+        arm64: {
+            srcs: [ "arm64-v8a/libwhisper_lib.so" ],
+        },
+    },
+    strip: {
+        none:true,
+    },
+    shared_libs: [
+        "libandroid",
+        "liblog",
+        "libEGL",
+        "libGLESv2",
+        "libQnnHtp",
+        "libQnnHtpV79Stub",
+        "libQnnSystem",
+    ],
+    installable: false,
+    compile_multilib: "64",
+    sdk_version: "29",
+}

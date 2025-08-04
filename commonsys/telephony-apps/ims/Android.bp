@@ -1,0 +1,49 @@
+android_app {
+
+    name: "ims",
+    certificate: "platform",
+    optimize: {
+        enabled: false,
+    },
+    platform_apis: true,
+    system_ext_specific: true,
+    libs: [
+        "androidx.annotation_annotation",
+        "qti-telephony-hidl-wrapper",
+        "qti-telephony-utils",
+        "ims-ext-common",
+    ],
+
+    static_libs: [
+        "vendor.qti.hardware.radio.qtiradioconfig-V6-java",
+        "vendor.qti.hardware.radio.ims-V20-java",
+        "vendor.qti.hardware.radio.ims-V1.0-java",
+        "vendor.qti.hardware.radio.ims-V1.1-java",
+        "vendor.qti.hardware.radio.ims-V1.2-java",
+        "vendor.qti.hardware.radio.ims-V1.3-java",
+        "vendor.qti.hardware.radio.ims-V1.4-java",
+        "vendor.qti.hardware.radio.ims-V1.5-java",
+        "vendor.qti.hardware.radio.ims-V1.6-java",
+        "vendor.qti.hardware.radio.ims-V1.7-java",
+        "vendor.qti.hardware.radio.ims-V1.8-java",
+        "vendor.qti.hardware.radio.ims-V1.9-java",
+    ],
+
+    jni_libs: [
+        "libimsmedia_jni",
+        "libimscamera_jni",
+    ],
+    required: [
+        "libimsmedia_jni",
+        "libimscamera_jni",
+    ],
+
+    proto: {
+        type: "micro",
+    },
+    privileged: true,
+
+   srcs: ["src/org/codeaurora/ims/**/*.java"] + ["src/com/qualcomm/ims/vt/**/*.java"] +
+           ["src/com/qualcomm/ims/utils/**/*.java"],
+
+}

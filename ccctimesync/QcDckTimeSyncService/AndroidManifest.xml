@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ /*****************************************************************
+  * Copyright Qualcomm Technologies, Inc. and/or its subsidiaries.
+  * All Rights Reserved.
+  * Confidential and Proprietary - Qualcomm Technologies, Inc.
+  ******************************************************************/
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="vendor.qti.bluetooth.qcdcktimesync"
+        android:sharedUserId="android.uid.bluetooth">
+
+    <application
+        android:name=".QcDckTimeSyncApplication"
+        android:directBootAware="true"
+        android:label="QcDckTimeSyncApplication"
+        android:persistent="true">
+        <service
+            android:name=".QcDckTimeSyncService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="org.carconnectivity.android.digitalkey.timesync.ICccDkTimeSync" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

@@ -1,0 +1,34 @@
+//
+// QtiTelephony service
+//
+
+android_app {
+
+    name: "QtiTelephonyService",
+
+    libs: [
+        "qti-telephony-hidl-wrapper",
+    ],
+    static_libs: [
+        "vendor.qti.hardware.radio.am-V1-java",
+        "vendor.qti.hardware.radio.am-V1.0-java",
+    ],
+
+    srcs: [
+        "src/**/*.java",
+    ],
+    platform_apis: true,
+    system_ext_specific: true,
+
+    optimize: {
+        enabled: false,
+    },
+
+    certificate: "platform",
+
+    proto: {
+        type: "micro",
+    },
+
+}
+

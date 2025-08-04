@@ -1,0 +1,150 @@
+cc_prebuilt_library_shared {
+    name: "libtranslate_jni",
+    arch: {
+        arm64: {
+            srcs: ["libs/arm64-v8a/libtranslate_jni.so"],
+        },
+    },
+    shared_libs: [
+        "libandroid",
+        "liblog",
+    ],
+    installable: false,
+    compile_multilib: "64",
+    sdk_version: "29",
+    check_elf_files: false
+}
+android_library_import {
+    name: "translate-common",
+    aars: [
+        "libs/common-18.10.0.aar"
+    ],
+}
+android_library_import {
+    name: "firebase-components",
+    aars: [
+        "libs/firebase-components-16.1.0.aar"
+    ],
+}
+android_library_import {
+    name: "firebase-encoders-json",
+    aars: [
+        "libs/firebase-encoders-json-17.1.0.aar"
+    ],
+}
+android_library_import {
+    name: "play-services-base",
+    aars: [
+        "libs/play-services-base-18.1.0.aar"
+    ],
+}
+android_library_import {
+    name: "play-services-basement",
+    aars: [
+        "libs/play-services-basement-18.1.0.aar"
+    ],
+}
+android_library_import {
+    name: "play-services-tasks",
+    aars: [
+        "libs/play-services-tasks-18.0.2.aar"
+    ],
+}
+android_library_import {
+    name: "translate",
+    aars: [
+        "libs/translate-17.0.2.aar"
+    ],
+}
+android_library_import {
+    name: "transport-api",
+    aars: [
+        "libs/transport-api-2.2.1.aar"
+    ],
+}
+android_library_import {
+    name: "transport-backend-cct",
+    aars: [
+        "libs/transport-backend-cct-2.3.3.aar"
+    ],
+}
+android_library_import {
+    name: "transport-runtime",
+    aars: [
+        "libs/transport-runtime-2.2.6.aar"
+    ],
+}
+
+java_import {
+    name: "firebase-annotations",
+    jars: [ "libs/firebase-annotations-16.0.0.jar" ]
+}
+java_import {
+    name: "firebase-encoders",
+    jars: [ "libs/firebase-encoders-16.1.0.jar" ]
+}
+java_import {
+    name: "javax.inject",
+    jars: [ "libs/javax.inject-1.jar" ]
+}
+java_import {
+    name: "okhttp3.0.0",
+    jars: [ "libs/okhttp-3.0.0.jar" ]
+}
+java_import {
+    name: "okio",
+    jars: [ "libs/okio-1.6.0.jar" ]
+}
+
+android_app {
+    name: "VoiceAIUsecase",
+    resource_dirs: ["app/src/main/res"],
+    system_ext_specific: true,
+    privileged: true,
+    use_embedded_native_libs: true,
+    min_sdk_version: "29",
+    target_sdk_version: "34",
+    sdk_version:"current",
+    stl:"c++_shared",
+    srcs: [
+        "app/src/main/java/**/*.java",
+    ],
+    manifest: "app/src/main/AndroidManifest.xml",
+    optimize: {
+        enabled: false,
+    },
+    static_libs: [
+        "androidx.annotation_annotation",
+        "androidx.appcompat_appcompat",
+        "androidx.collection_collection",
+        "androidx.concurrent_concurrent-futures",
+        "androidx.core_core-ktx",
+        "androidx-constraintlayout_constraintlayout",
+        "androidx.fragment_fragment",
+        "androidx.lifecycle_lifecycle-runtime",
+        "androidx.versionedparcelable_versionedparcelable",
+        "com.google.android.material_material",
+        "translate-common",
+        "firebase-components",
+        "firebase-encoders-json",
+        "play-services-base",
+        "play-services-basement",
+        "play-services-tasks",
+        "translate",
+        "transport-api",
+        "transport-backend-cct",
+        "transport-runtime",
+        "firebase-annotations",
+        "firebase-encoders",
+        "javax.inject",
+        "okhttp3.0.0",
+        "okio",
+        "whisper",
+        "wrapper.phonestate.jar",
+    ],
+    jni_libs: [
+        "libtranslate_jni",
+        "libdnnvad_jni",
+        "libwhisper_lib",
+    ],
+}

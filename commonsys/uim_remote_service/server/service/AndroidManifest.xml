@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+    All rights reserved.
+    Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qualcomm.uimremoteserver" >
+
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+
+    <permission
+        android:name="com.qualcomm.permission.UIM_REMOTE_SERVER"
+        android:protectionLevel="signatureOrSystem" />
+
+    <overlay
+        android:targetPackage="com.qualcomm.uimremoteserver"
+        android:requiredSystemPropertyName="ro.boot.vendor.qspa.modem"
+        android:requiredSystemPropertyValue="enabled"/>
+
+    <application>
+        <service
+            android:name=".UimRemoteServerService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.qualcomm.permission.UIM_REMOTE_SERVER" >
+        </service>
+        <uses-library android:name="com.qualcomm.uimremoteserverlibrary"/>
+        <uses-library android:name="qti-telephony-hidl-wrapper-prd"
+/>
+    </application>
+
+</manifest>

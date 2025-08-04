@@ -1,0 +1,7 @@
+prebuilt_etc {
+    name: "privapp-permissions-voiceaiusecase",
+    system_ext_specific: true,
+    sub_dir: "permissions",
+    src: "privapp-permissions-com.qualcomm.qti.voiceai.usecase.xml",
+    filename_from_src: true,
+}

@@ -1,0 +1,28 @@
+/*
+ * Copyright (c) 2022 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ *
+ */
+
+package vendor.qti.hardware.radio.lpa@1.3;
+
+import @1.1::UimLpaUserReq;
+import @1.1::UimLpaAddProfileProgressIndV1_1;
+
+enum UimLpaUserConsentType : uint32_t {
+    UIM_LPA_NO_CONFIRMATION_REQD     = 0,
+    UIM_LPA_SIMPLE_CONFIRMATION_REQD = 1,
+    UIM_LPA_STRONG_CONFIRMATION_REQD = 2
+};
+
+struct UimLpaUserReq {
+    @1.1::UimLpaUserReq base;
+    UimLpaUserConsentType user_consent_type;
+};
+
+struct UimLpaAddProfileProgressIndV1_1 {
+    @1.1::UimLpaAddProfileProgressIndV1_1 base;
+    UimLpaUserConsentType user_consent_type;
+};
+

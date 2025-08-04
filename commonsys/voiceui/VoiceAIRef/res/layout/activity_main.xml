@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (c) 2023 Qualcomm Technologies, Inc.
+    All Rights Reserved.
+    Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/activity_background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        app:elevation="0dp"
+        android:minHeight="?actionBarSize"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/settings_toolbar_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/icn_arrow_left"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icn_arrow_left" />
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="27dp"
+                android:gravity="center"
+                android:text="@string/snapdragon_voice_ui"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/voice_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="25dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/voice_control"
+                android:textColor="@color/transparent_text_color"
+                android:textSize="@dimen/second_level_text_size" />
+
+            <ImageView
+                android:id="@+id/voice_ui_feature_background"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/voice_control"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="18dp"
+                android:contentDescription="@string/item_background"
+                android:scaleType="fitXY"
+                android:src="@drawable/item_background" />
+
+            <TextView
+                android:id="@+id/voice_ui_feature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/voice_control"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/voice_ui_feature"
+                android:textColor="@color/white"
+                android:textSize="@dimen/second_level_text_size"
+                tools:ignore="RelativeOverlap" />
+
+            <Switch
+                android:id="@+id/wake_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/voice_control"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="38dp"
+                android:thumbTint="@color/switch_color"
+                android:thumbTintMode="multiply"
+                android:trackTint="@color/color_snapdragon_purple"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <ImageView
+                android:id="@+id/uv_toggle_text_background"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/voice_ui_feature_background"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="18dp"
+                android:contentDescription="@string/item_background"
+                android:scaleType="fitXY"
+                android:src="@drawable/item_background" />
+
+            <TextView
+                android:id="@+id/uv_toggle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/voice_ui_feature_background"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/enable_uv_settings_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/second_level_text_size"
+                tools:ignore="RelativeOverlap" />
+
+            <Switch
+                android:id="@+id/uv_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/voice_ui_feature_background"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="38dp"
+                android:thumbTint="@color/switch_color"
+                android:thumbTintMode="multiply"
+                android:trackTint="@color/color_snapdragon_purple"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <TextView
+                android:id="@+id/user_voice_enrollment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uv_toggle_text_background"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="24dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/user_voice_enrollment_enrolled"
+                android:textColor="@color/transparent_text_color"
+                android:textSize="@dimen/second_level_text_size" />
+
+            <ImageView
+                android:id="@+id/re_enroll_background"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/user_voice_enrollment"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="18dp"
+                android:contentDescription="@string/item_background"
+                android:scaleType="fitXY"
+                android:src="@drawable/item_background" />
+
+            <TextView
+                android:id="@+id/re_enroll_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_voice_enrollment"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/re_enroll"
+                android:textColor="@color/white"
+                android:textSize="@dimen/second_level_text_size"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:id="@+id/re_enroll_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_voice_enrollment"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="38dp"
+                android:checked="true"
+                android:contentDescription="@string/re_enroll"
+                android:src="@drawable/icn_chevron_right"
+                android:thumbTint="@color/switch_color"
+                android:thumbTintMode="multiply"
+                android:trackTint="#cc3253dc"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <ImageView
+                android:id="@+id/delete_enroll_background"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/re_enroll_background"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="18dp"
+                android:contentDescription="@string/item_background"
+                android:scaleType="fitXY"
+                android:src="@drawable/item_background" />
+
+            <TextView
+                android:id="@+id/delete_enroll_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/re_enroll_background"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/delete_enrollment"
+                android:textColor="@color/white"
+                android:textSize="@dimen/second_level_text_size"
+                tools:ignore="RelativeOverlap" />
+
+            <TextView
+                android:id="@+id/keywordless_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/delete_enroll_background"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="24dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/keywordless_title"
+                android:textColor="@color/transparent_text_color"
+                android:textSize="@dimen/second_level_text_size" />
+
+            <ImageView
+                android:id="@+id/keywordless_background"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/keywordless_text"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="18dp"
+                android:contentDescription="@string/item_background"
+                android:scaleType="fitXY"
+                android:src="@drawable/item_background" />
+
+            <TextView
+                android:id="@+id/lift_and_talk_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/keywordless_text"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/lift_and_talk_text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/second_level_text_size"
+                tools:ignore="RelativeOverlap" />
+
+            <Switch
+                android:id="@+id/lift_and_talk_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/keywordless_text"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="38dp"
+                android:thumbTint="@color/switch_color"
+                android:thumbTintMode="multiply"
+                android:trackTint="@color/color_snapdragon_purple"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <TextView
+                android:id="@+id/voice_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/keywordless_background"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="24dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/voice_language"
+                android:textColor="@color/transparent_text_color"
+                android:textSize="@dimen/second_level_text_size" />
+
+            <ImageView
+                android:id="@+id/voice_language_background"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/voice_language"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="18dp"
+                android:contentDescription="@string/item_background"
+                android:scaleType="fitXY"
+                android:src="@drawable/item_background" />
+
+            <TextView
+                android:id="@+id/voice_language_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/voice_language"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/language"
+                android:textColor="@color/white"
+                android:textSize="@dimen/second_level_text_size"
+                tools:ignore="RelativeOverlap" />
+
+            <TextView
+                android:id="@+id/current_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/voice_language"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="29dp"
+                android:layout_toStartOf="@id/voice_language_arrow"
+                android:text="@string/english"
+                android:textColor="@color/transparent_text_color"
+                android:textSize="@dimen/third_level_text_size"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:id="@+id/voice_language_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/voice_language"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="38dp"
+                android:contentDescription="@string/re_enroll"
+                android:src="@drawable/icn_chevron_right"
+                android:thumbTint="@color/switch_color"
+                android:thumbTintMode="multiply"
+                android:trackTint="#cc3253dc"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <RelativeLayout
+                android:id="@+id/tanslation_layout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/item_background"
+                android:layout_below="@id/voice_language_background">
+
+                <TextView
+                    android:id="@+id/translation_enabled_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="26dp"
+                    android:text="@string/asr_translation_enabled_title"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/second_level_text_size"
+                    tools:ignore="RelativeOverlap" />
+
+                <Switch
+                    android:id="@+id/translation_enabled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginEnd="20dp"
+                    android:thumbTint="@color/switch_color"
+                    android:thumbTintMode="multiply"
+                    android:trackTint="@color/color_snapdragon_purple"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

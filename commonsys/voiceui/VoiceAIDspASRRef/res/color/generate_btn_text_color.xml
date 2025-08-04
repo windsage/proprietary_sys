@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+  ~ All Rights Reserved.
+  ~ Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/white_alpha_0_95" android:state_enabled="true"/>
+    <item android:color="@color/white_alpha_0_40" android:state_enabled="false"/>
+</selector>

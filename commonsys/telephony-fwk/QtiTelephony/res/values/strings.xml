@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2021-2022, Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+ -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Shared Preference file for Primary Card -->
+    <string name="shared_preference_file_key">com.qti.phone.shared_preferences</string>
+
+    <!-- Primary Card dialog title -->
+    <string name="primary_card_selection_dialog_title">Primary Card Selection</string>
+
+    <!-- Primary Card dialog text -->
+    <string name="primary_card_selection_body_text">New SIM cards are detected. Please select the
+        preferred SIM card for data services.</string>
+
+    <!-- Primary Card dialog OK button text -->
+    <string name="primary_card_selection_dialog_button_ok">OK</string>
+
+    <!-- Primary Card dialog, entry for unknown SIM name -->
+    <string name="sim_card_number_title">SIM <xliff:g id="card_number">%1$d</xliff:g></string>
+
+    <!-- Subsidy Simcards selection dialog title -->
+    <string name="subsidysimcard_selection_dialog_title">Primary Sim Card Selection</string>
+
+    <!-- Subsidy Simcards selection dialog text -->
+    <string name="subsidysimcard_selection_body_text">New SIM cards are detected. Choose the
+        sim which you want to select as primary.</string>
+
+    <!-- Subsidy Simcards selection OK button text -->
+    <string name="subsidysimcard_selection_dialog_button_ok">OK</string>
+
+    <!-- Subsidy Simcards selection , entry for unknown SIM name -->
+    <string name="subsidy_sim_card_number_title">SIM <xliff:g id="card_number">%1$d</xliff:g></string>
+
+    <!-- Secure Mode status bar icon accessibility support description -->
+    <string name="secure_mode_status_bar_icon_description">Secure Mode</string>
+
+    <!-- DSDS to SS(or back) switch action progress dialog description -->
+    <string name="progress_dialog_title">Performing Device Configuration Switch</string>
+</resources>

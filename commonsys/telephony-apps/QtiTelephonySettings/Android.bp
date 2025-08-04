@@ -1,0 +1,21 @@
+android_app {
+    name: "QtiTelephonySettings",
+
+    optimize: {
+        enabled: false,
+    },
+
+    srcs: ["**/*.java"],
+    libs: [
+       "extphonelib",
+       "ims-common",
+    ],
+    static_libs: [
+        "androidx.appcompat_appcompat",
+        "androidx.preference_preference",
+        "androidx-constraintlayout_constraintlayout",
+    ],
+    certificate: "platform",
+    platform_apis: true,
+    system_ext_specific: true,
+}

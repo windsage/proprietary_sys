@@ -1,0 +1,31 @@
+aidl_interface {
+    name: "vendor.qti.ims.callcapabilityaidlservice",
+    srcs: ["vendor/qti/ims/callcapabilityaidlservice/*.aidl"],
+    local_include_dir: ".",
+    stability: "vintf",
+    host_supported: true,
+    vendor_available: true,
+    product_specific: false,
+    system_ext_specific: true,
+    owner: "qti",
+    backend: {
+        cpp: {
+            enabled: false,
+        },
+        java: {
+            enabled: true,
+            platform_apis: true,
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+    frozen: true,
+
+}

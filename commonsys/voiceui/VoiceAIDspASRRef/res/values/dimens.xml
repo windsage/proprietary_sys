@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+  ~ All Rights Reserved.
+  ~ Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+<resources>
+    <dimen name="second_level_text_size">14sp</dimen>
+    <dimen name="third_level_text_size">12sp</dimen>
+</resources>

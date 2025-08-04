@@ -1,0 +1,6 @@
+QIIFA Compatibility Report
+
+Component : loremipsum1.1.c4
+State : compatible
+Integerity Check Result : Incompatible
+QIIFA : Error : Backward compatibility Broken. Major Up-rev Required.

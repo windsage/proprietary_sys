@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ All rights reserved.
+ Confidential and Proprietary - Qualcomm Technologies, Inc.
+ -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qti.xdivert"
+    android:sharedUserId="android.uid.qtiphone">
+
+    <uses-sdk android:minSdkVersion="28"
+        android:targetSdkVersion="35"/>
+
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_USERS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+    <overlay
+        android:targetPackage="com.qti.xdivert"
+        android:requiredSystemPropertyName="ro.boot.vendor.qspa.modem"
+        android:requiredSystemPropertyValue="enabled"/>
+
+    <application android:process="com.qti.phone"
+        android:label="@string/xdivert_title"
+        android:persistent="true">
+        <uses-library android:name="qti-telephony-utils-prd" />
+        <receiver android:name=".XDivert"
+            android:label="XDivert"
+            android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="XDivertPhoneNumbers"
+            android:label="@string/phone_numbers">
+        </activity>
+
+        <activity android:name="XDivertSetting"
+            android:theme="@style/QtiImsSettingsTheme"
+            android:exported="true"
+            android:label="@string/xdivert_setting">
+        </activity>
+
+        <service android:name=".XDivertService">
+        </service>
+    </application>
+
+</manifest>

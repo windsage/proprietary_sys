@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries. All rights reserved-->
+<!--Confidential and Proprietary - Qualcomm Technologies, Inc.-->
+<api_management_metadata>
+    <modules>
+         <module name="libloremipsum" project="platform/hardware/qcom/display">
+             <platform type="LA" path="vendor/lib64/libloremipsum.so"></platform>
+             <platform type="LE" path="vendor/lib64/libloremipsum.so"></platform>
+             <header file="class1.h">
+                 <platform type="LA" path="include/classnot1.h"></platform>
+                 <platform type="LE" path="vendor/lib64/classnot1.h"></platform>
+                 <interface class="class1" name="addnums"/>
+                 <interface class="class1" name="generate_lorem_ipsum"/>
+                 <interface class="class1" name="subnums"/>
+                 <interface class="class1" name="class1"/>
+             </header>
+        </module>
+    </modules>
+</api_management_metadata>

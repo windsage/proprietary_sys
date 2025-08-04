@@ -1,0 +1,6 @@
+ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS), true)
+ifneq ($(TARGET_HAS_LOW_RAM),true)
+PRODUCT_PACKAGES += aptxui
+PRODUCT_PACKAGES += privapp-permissions-aptxui.xml
+endif #TARGET_HAS_LOW_RAM
+endif #TARGET_FWK_SUPPORTS_FULL_VALUEADDS

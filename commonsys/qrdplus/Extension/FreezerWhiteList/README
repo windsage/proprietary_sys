@@ -1,0 +1,16 @@
+/******************************************************************************
+#  Copyright (c) 2024 Qualcomm Technologies, Inc.
+#  All Rights Reserved.
+#  Confidential and Proprietary - Qualcomm Technologies, Inc.
+#******************************************************************************/
+
+qti_freezer_whitelist.json is used by freezer white list.
+1. Make sure to replace com.xxx.demoX with the real package name.
+   It supports multiple packages.
+   If there is only one package in the list, it should be:
+   "packages": [
+      "com.xxx.demo1"
+   ]
+2. Change the "enable" option from false to be true.
+3. Push this file into /product/etc/ after modification and reboot once to enable the white list.
+4. Delete this file or change the "enable" option to be false, and reboot once to disable white list.

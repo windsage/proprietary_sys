@@ -1,0 +1,90 @@
+/*
+ * Copyright (c) 2021 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ *
+ */
+
+package vendor.qti.hardware.radio.ims@1.8;
+
+import @1.0::CallState;
+import @1.0::CallType;
+import @1.0::ConfigFailureCause;
+import @1.3::VerstatInfo;
+import @1.4::MultiIdentityLineInfoHal;
+import @1.5::CallFailCauseResponse;
+import @1.5::TirMode;
+import @1.6::CallDetails;
+import @1.6::ConfigItem;
+import @1.7::CrsData;
+import @1.7::CallProgressInfo;
+
+enum ConfigItem : @1.6::ConfigItem {
+    CONFIG_ITEM_VOWIFI_ENTITLEMENT_ID
+};
+
+struct ConfigInfo {
+    ConfigItem item;
+    bool hasBoolValue;
+    bool boolValue;
+    uint32_t intValue;
+    string stringValue;
+    ConfigFailureCause errorCause;
+};
+
+enum SystemServiceDomain : int32_t {
+    NO_SRV = 0,       /* No service */
+    CS_ONLY = 1,      /* Circuit-switched only */
+    PS_ONLY = 2,      /* Packet-switched only */
+    CS_PS = 3,        /* Circuit-switched and packet-switched */
+    CAMPED = 4,       /* Camped */
+};
+
+enum SmsCallBackMode : int32_t {
+    SCBM_EXIT = 0,    /* Modem leaves Sms callback mode */
+    SCBM_ENTER = 1,   /* Modem enters Sms callback mode */
+};
+
+struct CallInfo {
+    CallState state;
+    uint32_t index;
+    uint32_t toa;
+    bool hasIsMpty;
+    bool isMpty;
+    bool hasIsMT;
+    bool isMT;
+    MultiIdentityLineInfoHal mtMultiLineInfo;
+    uint32_t als;
+    bool hasIsVoice;
+    bool isVoice;
+    bool hasIsVoicePrivacy;
+    bool isVoicePrivacy;
+    string number;
+    uint32_t numberPresentation;
+    string name;
+    uint32_t namePresentation;
+    bool hasCallDetails;
+    CallDetails callDetails;
+    bool hasFailCause;
+    CallFailCauseResponse failCause;
+    bool hasIsEncrypted;
+    bool isEncrypted;
+    bool hasIsCalledPartyRinging;
+    bool isCalledPartyRinging;
+    string historyInfo;
+    bool hasIsVideoConfSupported;
+    bool isVideoConfSupported;
+    VerstatInfo verstatInfo;
+    TirMode tirMode;
+    /*
+     * True if the message is intended for preliminary resource allocation
+     * only and shall not be visible to the end user.
+     * Default: False
+     */
+    bool isPreparatory;
+    CrsData crsData;
+    //Call progress info for MO calls during alerting stage.
+    CallProgressInfo callProgInfo;
+    //Diversion information to report call forward info will be valid only for incoming calls.
+    string  diversionInfo;
+};

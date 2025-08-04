@@ -1,0 +1,15 @@
+java_sdk_library {
+    name: "org.carconnectivity.android.digitalkey.timesync",
+    srcs: [
+        "src/**/*.java",
+        "idl/**/*.aidl",
+    ],
+    aidl: {
+        local_include_dirs: ["idl"],
+    },
+    api_packages: ["org.carconnectivity.android.digitalkey.timesync"],
+    owner: "google",
+    platform_apis: true,
+    system_ext_specific: true,
+    unsafe_ignore_missing_latest_api: true,
+}

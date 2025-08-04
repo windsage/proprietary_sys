@@ -1,0 +1,18 @@
+
+
+android_app {
+    name: "imssettings",
+    libs: ["ims-ext-common",
+    "qti-telephony-utils",
+    ],
+    static_libs: ["androidx.core_core"],
+
+    certificate: "platform",
+    optimize: {
+        enabled: false,
+    },
+    platform_apis: true,
+    system_ext_specific: true,
+
+    srcs: ["src/**/*.java"],
+}

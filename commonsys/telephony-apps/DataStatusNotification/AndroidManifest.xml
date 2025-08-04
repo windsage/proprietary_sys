@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+  All rights reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qti.qualcomm.datastatusnotification"
+    android:sharedUserId="android.uid.qtiphone" >
+
+    <uses-sdk android:minSdkVersion="28"
+        android:targetSdkVersion="35"/>
+
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+    <uses-permission android:name="com.qualcomm.permission.USE_QCRIL_MSG_TUNNEL" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PRECISE_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <overlay
+        android:targetPackage="com.qti.qualcomm.datastatusnotification"
+        android:requiredSystemPropertyName="ro.boot.vendor.qspa.modem"
+        android:requiredSystemPropertyValue="enabled"/>
+
+    <application
+        android:process="com.qti.phone"
+        android:persistent="true" >
+        <uses-library android:name="com.qualcomm.qcrilhook" />
+
+        <receiver
+            android:name=".BootReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:label="BootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".DataStatusNotificationService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+    </application>
+
+</manifest>

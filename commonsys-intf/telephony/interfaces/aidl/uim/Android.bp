@@ -1,0 +1,38 @@
+///******************************************************************************
+//*@file Android.bp
+//*brief Rules for compiling the source files
+//*******************************************************************************/
+
+// ==========================================================================
+
+// Stable AIDL
+aidl_interface {
+    name: "vendor.qti.hardware.radio.uim",
+    vendor_available: true,
+    product_specific: true,
+    srcs: ["vendor/qti/hardware/radio/uim/*.aidl"],
+    local_include_dir: ".",
+    host_supported: true,
+    stability: "vintf",
+    owner: "qti",
+    backend: {
+        java: {
+            enabled: true,
+            platform_apis: false,
+        },
+        cpp: {
+            enabled: false,
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+    frozen: true,
+
+}

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries. 
+    All rights reserved.
+    Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.qti.telephonysettings.preferences.CiwlanModePreference
+        android:key="ciwlan_preference"
+        android:title="@string/ciwlan_preference_title"
+        android:enabled="false"
+        android:fragment="com.qti.telephonysettings.CiwlanModePreferenceFragment"
+        android:summary="@string/ciwlan_preference_summary"
+        app:iconSpaceReserved="false"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true" />
+
+    <com.qti.telephonysettings.preferences.CellularRoamingPreference
+        android:key="cellular_roaming"
+        android:title="@string/cellular_roaming"
+        android:summary="@string/cellular_roaming_summary"
+        android:fragment="com.qti.telephonysettings.CellularRoamingFragment"
+        android:enabled="false"
+        app:iconSpaceReserved="false"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true" />
+
+    <com.qti.telephonysettings.preferences.SmartDdsSwitchPreference
+        android:key="smart_dds_switch"
+        app:iconSpaceReserved="false"
+        android:title="@string/smart_dds_switch"
+        android:summary="@string/smart_dds_switch_summary"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true" />
+
+    <com.qti.telephonysettings.preferences.NrModePreference
+        android:key="preferred_5G_nr_mode"
+        app:iconSpaceReserved="false"
+        android:title="@string/preferred_5G_nr_mode_title"
+        android:fragment="com.qti.telephonysettings.NrModeFragment"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true" />
+
+    <com.qti.telephonysettings.preferences.MsimPreference
+        android:title="@string/msim_preference_title"
+        android:summary="@string/msim_preference_summary"
+        android:key="msim_preference"
+        android:entries="@array/msim_preference"
+        android:entryValues="@array/msim_preference_values"
+        app:isPreferenceVisible="false"
+        app:iconSpaceReserved="false"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true" />
+
+    <com.qti.telephonysettings.preferences.SimSelectionPreference
+        android:key="sim_selection"
+        app:iconSpaceReserved="false"
+        android:title="@string/sim_selection_title"
+        android:fragment="com.qti.telephonysettings.SimSelectionFragment"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true" />
+
+    <com.qti.telephonysettings.preferences.PortSelectionPreference
+        android:key="port_selection"
+        app:iconSpaceReserved="false"
+        android:title="@string/port_selection_title"
+        android:fragment="com.qti.telephonysettings.PortSelectionFragment"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true" />
+
+    <com.qti.telephonysettings.preferences.DualDataPreference
+        android:key="dual_data"
+        app:iconSpaceReserved="false"
+        android:title="@string/dual_data_title"
+        android:summary="@string/dual_data_summary"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true" />
+
+    <com.qti.telephonysettings.preferences.ImsSettingsPreference
+        android:key="ims_settings_key"
+        app:iconSpaceReserved="false"
+        android:title="@string/ims_settings_title"
+        android:fragment="com.qti.telephonysettings.ImsSettingsFragment"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true" />
+
+</PreferenceScreen>

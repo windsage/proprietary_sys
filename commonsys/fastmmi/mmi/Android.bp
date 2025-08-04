@@ -1,0 +1,137 @@
+cc_binary {
+
+    name: "mmi",
+    srcs: [
+        "mmi.cpp",
+        "mmi_handle.cpp",
+        "module.cpp",
+        "module_local.cpp",
+        "input.cpp",
+        "draw.cpp",
+        "config.cpp",
+        "func_map.cpp",
+        "input_listener.cpp",
+        "input_listener_touch.cpp",
+        "input_listener_key.cpp",
+        "controller.cpp",
+        "mmi_cfg.cpp",
+    ],
+
+    include_dirs: [
+        "external/libxml2/include",
+        "external/freetype/include",
+        "frameworks/native/include",
+        "frameworks/base/libs/androidfw/include",
+        "frameworks/native/libs/nativewindow/include",
+    ],
+
+    cflags: [
+        "-Wall",
+        "-Wno-unused-parameter",
+    ],
+
+    static_libs: [
+        "libskia",
+        "libarect",
+        "libwebp-decode",
+        "libwebp-encode",
+        "libincfs-utils",
+        "libultrahdr",
+        "libjpegdecoder",
+        "libjpegencoder",
+        "libwuffs_mirror_release_c",
+        "libperfetto_client_experimental",
+    ],
+
+    shared_libs: [
+        "libc",
+        "libcutils",
+        "libutils",
+        "liblog",
+        "libmmi",
+        "libxml2",
+        "libft2",
+        "libui",
+        "libbinder",
+        "libgui",
+        "libdng_sdk",
+        "libexpat",
+        "libjpeg",
+        "libpiex",
+        "libpng",
+        "libz",
+        "libheif",
+        "libvulkan",
+        "libnativewindow",
+        "libEGL",
+        "libGLESv2",
+        "libc++",
+        "libbase",
+        "libutils",
+        "libhidlbase",
+        "libimage_io",
+        "libdiag_system",
+        "libbinder_ndk",
+        "vendor.qti.hardware.factory@1.0",
+        "vendor.qti.hardware.factory@1.1",
+        "vendor.qti.hardware.factory-V1-ndk",
+        "libmediandk",
+    ],
+    header_libs: [
+        "libmmi_headers",
+        "vendor_common_inc",
+        "libdiag_headers_system",
+    ],
+
+    system_ext_specific: true,
+
+    sanitize: {
+        cfi: true,
+        integer_overflow: true,
+    },
+}
+
+cc_binary {
+
+    name: "mmi_diag",
+    srcs: [
+        "diag_main.cpp",
+        "diag_handle.cpp",
+    ],
+
+    include_dirs: [
+    ],
+
+    cflags: [
+        "-Wall",
+        "-Wno-unused-parameter",
+    ],
+
+    shared_libs: [
+        "libcutils",
+        "liblog",
+        "libmmi",
+        "libdiag_system",
+        "libc++",
+        "libbase",
+        "libutils",
+        "libhidlbase",
+        "libbinder_ndk",
+        "vendor.qti.hardware.factory@1.0",
+        "vendor.qti.hardware.factory@1.1",
+        "vendor.qti.hardware.factory-V1-ndk",
+    ],
+
+    header_libs: [
+        "libmmi_headers",
+        "vendor_common_inc",
+        "libdiag_headers_system",
+    ],
+
+    system_ext_specific: true,
+
+    sanitize: {
+        cfi: true,
+        integer_overflow: true,
+    },
+}

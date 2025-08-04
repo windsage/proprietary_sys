@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+  ~ All Rights Reserved.
+  ~ Confidential and Proprietary - Qualcomm Technologies, Inc.
+ -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+android:width="48dp"
+android:height="48dp"
+android:viewportWidth="48"
+android:viewportHeight="48">
+<path
+    android:strokeColor="@android:color/white"
+    android:strokeWidth="2"
+    android:strokeAlpha="1"
+    android:pathData="M15 11.25H39.375M15 22.5H39.375M15 33.75H39.375M5.0 11.25H5.64375M5.0 22.5H5.64375M5.0 33.75H5.64375"/>
+</vector>

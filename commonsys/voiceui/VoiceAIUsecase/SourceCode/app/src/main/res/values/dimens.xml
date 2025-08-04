@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+  ~ All Rights Reserved.
+  ~ Confidential and Proprietary - Qualcomm Technologies, Inc.
+  -->
+<resources>
+    <dimen name="second_level_text_size">14sp</dimen>
+    <dimen name="third_level_text_size">12sp</dimen>
+    <string-array name="support_transcription_languages">
+        <item>EN_US</item>
+        <item>ZH_CN</item>
+        <item>KO_KR</item>
+        <item>ES_US</item>
+        <item>JA_JP</item>
+        <item>IN_HI</item>
+    </string-array>
+    <string-array name="support_transcription_languages_alias">
+        <item>English</item>
+        <item>Chinese</item>
+        <item>Korean</item>
+        <item>Spanish</item>
+        <item>Japanese</item>
+        <item>Hindi</item>
+    </string-array>
+</resources>

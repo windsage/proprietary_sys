@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*****************************************************************
+ * Copyright (c) 2022 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ ******************************************************************/
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="vendor.qti.bluetooth.xpan"
+  android:versionCode="1"
+  android:versionName="1.0.1"
+  coreApp="true">
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CONNECTIVITY_INTERNAL" />
+    <permission android:name="android.permission.NETWORK_SETUP_WIZARD"
+        android:protectionLevel="signature|setup" />
+    <uses-permission android:name="android:permission.MAINLINE_NETWORK_STACK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.NEARBY_WIFI_DEVICES"
+                     android:usesPermissionFlags="neverForLocation" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"/>
+    <!-- Required to get list of channels -->
+    <uses-permission android:name="android.permission.LOCATION_HARDWARE" />
+    <uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS" />
+    <uses-permission android:name="android.permission.READ_WIFI_CREDENTIAL"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.UPDATE_DEVICE_STATS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.MANAGE_WIFI_INTERFACES" />
+
+    <uses-sdk android:minSdkVersion="34"
+         android:targetSdkVersion="34"
+          android:maxSdkVersion="34"/>
+
+    <permission
+        android:name="vendor.qti.bluetooth.xpan.permission.ACCESS_DATABASE"
+        android:label="@string/permlab_xpan_database"
+        android:protectionLevel="signature|privileged">
+    </permission>
+
+    <application
+        android:name="vendor.qti.bluetooth.xpan.XpanApplication"
+        android:allowBackup="false"
+        android:persistent="true"
+         android:directBootAware="true">
+        <service
+            android:process="@string/process"
+            android:name="vendor.qti.bluetooth.xpan.XpanProfileService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.bluetooth.IBluetoothXpan" />
+            </intent-filter>
+       </service>
+        <receiver
+            android:process="@string/process"
+            android:enabled="true"
+            android:name="vendor.qti.bluetooth.xpan.XpanReceiver"
+            android:exported="true">
+            <intent-filter>
+                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+                  <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:process="@string/process"
+            android:name="vendor.qti.bluetooth.xpan.XpanContentProvider"
+            android:authorities="vendor.qti.bluetooth.xpan.provider"
+            android:permission="vendor.qti.bluetooth.xpan.permission.ACCESS_DATABASE"
+            android:enabled="true"
+            android:exported="true">
+        </provider>
+</application>
+</manifest>

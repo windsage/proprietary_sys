@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/******************************************************************************
+ *
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ * All rights reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ *
+ ******************************************************************************/
+-->
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:key="pref_screen">
+
+    <PreferenceCategory
+        app:key="pref_cat_aptx_and_aptx_hd"
+        app:title="">
+        <ListPreference
+            app:key="aptx_and_aptx_hd_priority"
+            app:title=""
+            app:useSimpleSummaryProvider="true"
+            app:dialogTitle="@string/aptx_and_aptx_hd_priority_dialog_title"
+            app:defaultValue="@string/default_value"
+            app:entries="@array/aptx_and_aptx_hd_priority_labels"
+            app:entryValues="@array/aptx_and_aptx_hd_priority_values"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="pref_cat_aptx_adaptive"
+        app:title="">
+        <ListPreference
+            app:key="aptx_adaptive_96khz_sample_rate"
+            app:title=""
+            app:useSimpleSummaryProvider="true"
+            app:dialogTitle="@string/aptx_adaptive_96khz_sample_rate_dialog_title"
+            app:defaultValue="@string/aptx_adaptive_96khz_sample_rate_off_value"
+            app:entries="@array/aptx_adaptive_96khz_sample_rate_labels"
+            app:entryValues="@array/aptx_adaptive_96khz_sample_rate_values"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="pref_cat_codec_audio_profile"
+        app:title="">
+        <ListPreference
+            app:key="audio_profile_override"
+            app:title=""
+            app:useSimpleSummaryProvider="true"
+            app:dialogTitle="@string/audio_profile_override_dialog_title"
+            app:defaultValue="@string/audio_profile_override_auto_adjust_value"
+            app:entries="@array/audio_profile_override_labels"
+            app:entryValues="@array/audio_profile_override_values"/>
+
+        <Preference
+            app:key="pref_audio_profile_preference"
+            app:iconSpaceReserved="false"
+            app:title="@string/audio_profile_preference_title"
+            app:summary="@string/audio_profile_preference_summary" >
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory>
+    <!--
+    Empty PreferenceCategory for divider
+    -->
+    </PreferenceCategory>
+
+</PreferenceScreen>

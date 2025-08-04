@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/******************************************************************************
+ *
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ * All rights reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ *
+ ******************************************************************************/
+-->
+<resources>
+    <string name="app_name">aptxui</string>
+    <string name="notification_a2dp_codec_name">Codec status</string>
+    <string name="notification_qss_name">Status</string>
+    <string name="qss_enabled">true</string>
+</resources>

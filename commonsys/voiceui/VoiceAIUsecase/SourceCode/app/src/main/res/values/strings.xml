@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+  ~ All rights reserved.
+  ~ Confidential and Proprietary - Qualcomm Technologies, Inc.
+  -->
+<resources>
+    <string name="app_name">VoiceAI Usecase</string>
+    <string name="voice_call_translation">Voice Call Translation</string>
+    <string name="item_background">item_background</string>
+    <string name="reference_app">Reference App</string>
+    <string name="conversation_recording">Conversation Recording</string>
+    <string name="voice_input_start_text">Start</string>
+    <string name="voice_input_stop_text">Stop</string>
+    <string name="voice_input_clip">Click start button to start conversation recording!</string>
+    <string name="transcription_mode">Transcription mode</string>
+    <string name="real_time">Real-time</string>
+    <string name="output">Output at end of conversation</string>
+    <string name="transcription_language">Transcription language</string>
+    <string name="translate_language_tip">Translate language(up to 2)</string>
+    <string name="voice_stop_tip">The conversation will be saved after stopping!</string>
+    <string name="conversation_title">"Conversation Recording"</string>
+    <string name="save_conversation_title">"Conversation Title"</string>
+    <string name="confirm">"OK"</string>
+    <string name="dup_alias_name">"Same name already exists, Please use another name"</string>
+    <string name="alias_name_too_long">"Alias name too long, Please use another name"</string>
+    <string name="conversation">conversation</string>
+    <string name="content">content</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="model_path" translatable="false">"/vendor/etc"</string>
+    <string name="voice_call_translation_feature_title">Voice Call Translation</string>
+    <string name="voice_call_settings_title">Voice Call Assistant</string>
+    <string name="voice_call_setting_my_language_title">Me</string>
+    <string name="voice_call_setting_other_language_title">Other person</string>
+    <string name="voice_call_setting_mute_my_voice">Mute my voice</string>
+    <string name="voice_call_setting_mute_others_voice">Mute other person\'s voice</string>
+    <string name="voice_call_setting_enable_feature">Enable Translation</string>
+    <string name="voice_call_translation_exit">Exit Translation</string>
+</resources>

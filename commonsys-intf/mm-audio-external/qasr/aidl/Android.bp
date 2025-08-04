@@ -1,0 +1,51 @@
+aidl_interface {
+    name: "vendor.qti.hardware.qasr",
+    vendor_available: true,
+    host_supported: true,
+    stability: "vintf",
+    flags: [
+        "-Werror",
+        "-Weverything",
+    ],
+    local_include_dir: ".",
+    srcs: ["vendor/qti/hardware/qasr/*.aidl"],
+    backend: {
+        java: {
+            enabled: true,
+            sdk_version: "module_current",
+        },
+        ndk: {
+            enabled: true,
+        },
+        cpp: {
+            enabled: false,
+        },
+    },
+
+    owner: "qti",
+    imports: [
+        "android.hardware.common-V2",
+    ],
+    versions_with_info: [
+        {
+            version: "1",
+            imports: ["android.hardware.common-V2"],
+        },
+        {
+            version: "2",
+            imports: ["android.hardware.common-V2"],
+        },
+
+    ],
+    frozen: true,
+
+}
+
+latest_vendor_qti_hardware_qasr = "vendor.qti.hardware.qasr-V1"
+
+java_defaults {
+    name: "latest_vendor_qti_hardware_qasr_java_static",
+    static_libs: [
+        latest_vendor_qti_hardware_qasr + "-java",
+    ],
+}

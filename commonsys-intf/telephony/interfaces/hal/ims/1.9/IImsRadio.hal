@@ -1,0 +1,51 @@
+/*
+  * Copyright (c) 2023 Qualcomm Technologies, Inc.
+  * All Rights Reserved.
+  * Confidential and Proprietary - Qualcomm Technologies, Inc.
+  *
+  * Not a Contribution.
+  * Copyright (C) 2016 The Android Open Source Project
+  *
+  * Licensed under the Apache License, Version 2.0 (the "License");
+  * you may not use this file except in compliance with the License.
+  * You may obtain a copy of the License at
+  *
+  * http://www.apache.org/licenses/LICENSE-2.0
+  *
+  * Unless required by applicable law or agreed to in writing, software
+  * distributed under the License is distributed on an "AS IS" BASIS,
+  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied
+  * See the License for the specific language governing permissions and
+  * limitations under the License.
+*/
+
+package vendor.qti.hardware.radio.ims@1.9;
+
+import @1.8::IImsRadio;
+import @1.5::EmergencyCallRoute;
+import @1.5::EmergencyServiceCategory;
+import @1.6::CallComposerInfo;
+
+interface IImsRadio extends @1.8::IImsRadio {
+
+    /**
+     * MessageId.REQUEST_SEND_VOS_SUPPORT_STATUS
+     *
+     * Sends isVosSupported to Modem, Modem will pack it into xml and send to n/w.
+     * @param token ID to match request/response. Response must include same token.
+     * @param isVosSupported informs device supports video online service.
+     *
+     */
+    oneway sendVosSupportStatus(int32_t token, bool isVosSupported);
+
+     /**
+     * MessageId.REQUEST_SEND_VOS_ACTION_INFO
+     *
+     * @param token ID to match request/response. Response must include same token.
+     * @param vosActionInfo - the struct containing the vos action request params like
+     * vosMoveInfo, vosTouchInfo.
+     *
+     */
+    oneway sendVosActionInfo(int32_t token, VosActionInfo vosActionInfo);
+};
+

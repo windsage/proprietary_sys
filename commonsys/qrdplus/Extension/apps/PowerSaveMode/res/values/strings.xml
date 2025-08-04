@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (c) 2022 Qualcomm Technologies, Inc.
+    All Rights Reserved.
+    Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<resources>
+    <string name="help_resource">"It will provide better performance power modes which can extend battery life and give better power consumption experience."</string>
+
+    <string name="app_name">"Usable Power Mode"</string>
+
+    <string name="power_save_mode_option_none">"None"</string>
+    <string name="power_save_mode_option_light">"Light Mode"</string>
+    <string name="power_save_mode_option_medium">"Medium Mode"</string>
+    <string name="power_save_mode_option_deep">"Deep Mode"</string>
+
+    <string-array name="power_save_mode_options_strings" translatable="false">
+        <item>@string/power_save_mode_option_none</item>
+        <item>@string/power_save_mode_option_light</item>
+        <item>@string/power_save_mode_option_medium</item>
+        <item>@string/power_save_mode_option_deep</item>
+    </string-array>
+
+    <integer-array name="power_save_mode_options_values" translatable="false">
+        <item>0x80</item>
+        <item>0x81</item>
+        <item>0x82</item>
+        <item>0x83</item>
+    </integer-array>
+</resources>

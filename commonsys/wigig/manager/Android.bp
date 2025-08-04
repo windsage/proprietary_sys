@@ -1,0 +1,20 @@
+//=============================================
+//  Wigig Manager
+//=============================================
+java_library {
+    name: "wigig_manager",
+    enabled: false,
+    srcs: [
+
+        "java/**/*.java",
+        "java/**/*.aidl",
+
+    ],
+    aidl: {
+        local_include_dirs: ["java"],
+    },
+    optimize: {
+        enabled: false,
+    },
+    platform_apis: true,
+}

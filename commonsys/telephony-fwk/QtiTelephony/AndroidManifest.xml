@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ All rights reserved.
+ Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:androidprv="http://schemas.android.com/apk/prv/res/android"
+    package="com.qti.phone"
+    coreApp="true"
+    android:singleUser="true"
+    android:sharedUserId="android.uid.qtiphone">
+
+    <uses-sdk android:targetSdkVersion="35"
+        android:minSdkVersion="29"/>
+
+    <permission android:name="com.qualcomm.qti.permission.USE_EXT_TELEPHONY_SERVICE"
+                android:protectionLevel="signatureOrSystem" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.STATUS_BAR" />
+    <uses-permission android:name="com.qualcomm.permission.USE_QCRIL_MSG_TUNNEL" />
+    <uses-permission android:name="com.qti.permission.RECEIVE_ESSENTIAL_RECORDS_LOADED" />
+    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_PROFILES" />
+    <uses-permission android:name="android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS" />
+
+    <overlay
+        android:targetPackage="com.qti.phone"
+        android:requiredSystemPropertyName="ro.boot.vendor.qspa.modem"
+        android:requiredSystemPropertyValue="enabled"/>
+
+    <application
+        android:persistent="true"
+        android:directBootAware="true">
+
+        <receiver
+            android:name=".QtiTelephonyBootReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:label="BootReceiver"
+            androidprv:systemUserOnly="true" >
+            <intent-filter android:priority="1200">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".ExtTelephonyService"
+            android:exported="true"
+            android:singleUser="true"
+            android:permission="com.qualcomm.qti.permission.USE_EXT_TELEPHONY_SERVICE"/>
+
+        <service android:name=".primarycard.PrimaryCardService"
+            android:exported="false"
+            android:singleUser="true"/>
+
+        <activity android:name=".primarycard.PrimaryCardSelectionActivity"
+            android:label="@string/primary_card_selection_dialog_title"
+            android:launchMode="singleTop"
+            android:excludeFromRecents="true"
+            />
+
+        <activity android:name=".subsidylock.SubsidyCardSelectionActivity"
+            android:label="@string/subsidysimcard_selection_dialog_title"
+            android:launchMode="singleTop"
+            android:excludeFromRecents="true"
+            />
+
+        <uses-library android:name="com.qti.extphone.extphonelib"/>
+        <uses-library android:name="com.qualcomm.qcrilhook" />
+
+    </application>
+
+</manifest>

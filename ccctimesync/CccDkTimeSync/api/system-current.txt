@@ -1,0 +1,69 @@
+// Signature format: 2.0
+package org.carconnectivity.android.digitalkey.timesync {
+
+  public class BleTimestamp implements android.os.Parcelable {
+    ctor public BleTimestamp(long, long, int, int, boolean);
+    method public int describeContents();
+    method public long getBluetoothTimeMicroseconds();
+    method public int getDeviceTimeUncertainty();
+    method public int getMaxClockSkewPpm();
+    method public long getSystemTimeMicroseconds();
+    method public boolean isClockSkewMeasurementAvailable();
+    method public void writeToParcel(android.os.Parcel, int);
+    field public static final android.os.Parcelable.Creator<org.carconnectivity.android.digitalkey.timesync.BleTimestamp> CREATOR;
+  }
+
+  public final class CccDkTimeSync {
+    ctor public CccDkTimeSync(@NonNull android.content.Context, @NonNull java.util.concurrent.Executor, @NonNull org.carconnectivity.android.digitalkey.timesync.CccDkTimeSync.ConnectionCallback);
+    method public void getApiVersion(@NonNull org.carconnectivity.android.digitalkey.timesync.Version, @NonNull org.carconnectivity.android.digitalkey.timesync.Version, org.carconnectivity.android.digitalkey.timesync.CccDkTimeSync.VersionListener) throws android.os.RemoteException;
+    method @RequiresPermission(android.Manifest.permission.BLUETOOTH_CONNECT) public void registerBleLmpEventListener(byte[], org.carconnectivity.android.digitalkey.timesync.CccDkTimeSync.BleLmpEventListener) throws android.os.RemoteException;
+    method @RequiresPermission(android.Manifest.permission.BLUETOOTH_CONNECT) public void registerEventCallback(byte[], org.carconnectivity.android.digitalkey.timesync.CccDkTimeSync.EventCallback) throws android.os.RemoteException;
+    method @RequiresPermission(android.Manifest.permission.BLUETOOTH_CONNECT) public void unregisterBleLmpEventListener(byte[]) throws android.os.RemoteException;
+    method @RequiresPermission(android.Manifest.permission.BLUETOOTH_CONNECT) public void unregisterEventCallback(byte[]) throws android.os.RemoteException;
+    field public static final org.carconnectivity.android.digitalkey.timesync.Version VERSION;
+    field public static final org.carconnectivity.android.digitalkey.timesync.Version VERSION_UNSUPPORTED;
+  }
+
+  public enum CccDkTimeSync.BleLmpEvent {
+    enum_constant public static final org.carconnectivity.android.digitalkey.timesync.CccDkTimeSync.BleLmpEvent CONNECT_IND;
+    enum_constant public static final org.carconnectivity.android.digitalkey.timesync.CccDkTimeSync.BleLmpEvent LL_PHY_UPDATE_IND;
+  }
+
+  public static interface CccDkTimeSync.BleLmpEventListener {
+    method public void onTimestamp(byte[], org.carconnectivity.android.digitalkey.timesync.BleTimestamp, org.carconnectivity.android.digitalkey.timesync.CccDkTimeSync.Direction, org.carconnectivity.android.digitalkey.timesync.CccDkTimeSync.BleLmpEvent, int);
+  }
+
+  public static interface CccDkTimeSync.ConnectionCallback {
+    method public void onConnected();
+    method public void onDisconnected();
+  }
+
+  public enum CccDkTimeSync.Direction {
+    enum_constant public static final org.carconnectivity.android.digitalkey.timesync.CccDkTimeSync.Direction RX;
+    enum_constant public static final org.carconnectivity.android.digitalkey.timesync.CccDkTimeSync.Direction TX;
+  }
+
+  public static interface CccDkTimeSync.EventCallback extends org.carconnectivity.android.digitalkey.timesync.CccDkTimeSync.BleLmpEventListener {
+    method public void onRegisterFailure();
+    method public void onRegisterSuccess();
+  }
+
+  public static interface CccDkTimeSync.VersionListener {
+    method public void onVersion(org.carconnectivity.android.digitalkey.timesync.Version);
+  }
+
+  public class Version implements android.os.Parcelable {
+    ctor public Version(byte, byte);
+    method public int compare(org.carconnectivity.android.digitalkey.timesync.Version);
+    method public int describeContents();
+    method public byte getMajor();
+    method public byte getMinor();
+    method public boolean isEqualTo(org.carconnectivity.android.digitalkey.timesync.Version);
+    method public boolean isGreaterThan(org.carconnectivity.android.digitalkey.timesync.Version);
+    method public boolean isLessThan(org.carconnectivity.android.digitalkey.timesync.Version);
+    method public void writeToParcel(android.os.Parcel, int);
+    field public static final android.os.Parcelable.Creator<org.carconnectivity.android.digitalkey.timesync.Version> CREATOR;
+  }
+
+}
+

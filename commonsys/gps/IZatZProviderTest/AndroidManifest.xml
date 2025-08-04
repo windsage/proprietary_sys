@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!---/******************************************************************************
+* @file    AndroidManifest.xml
+* @brief   declare the permission to access location api
+*
+*  Coppyright (C) 2021-2022 Qualcomm Technologies, Inc.
+*  All Rights Reserved.
+*  Confidential and Proprietary - Qualcomm Technologies, Inc.
+*  *****************************************************************************-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qti.services.zprovidertest"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <uses-sdk android:targetSdkVersion="33" />
+
+    <uses-permission android:name="com.qualcomm.permission.IZAT"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="com.qualcomm.permission.ALTITUDE_PROVIDER" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!-- 'persistent' makes this application immune from OOM killer -->
+    <application
+        android:label="ZProviderTest"
+        android:persistent="true"
+        android:allowBackup="false">
+
+        <uses-library android:name="com.qti.location.sdk" android:required="true"/>
+        <service android:name="com.qti.services.zprovidertest.ZProviderService"
+                 android:exported="false">
+            <intent-filter>
+                <action
+                android:name="com.qti.services.zprovidertest.ZProviderService" />
+            </intent-filter>
+        </service>
+
+    </application>
+</manifest>

@@ -1,0 +1,22 @@
+aidl_interface {
+    name: "vendor.qti.hardware.wifi.wifimyftm",
+    vendor_available: true,
+    system_ext_specific: true,
+    srcs: [
+        "vendor/qti/hardware/wifi/wifimyftm/*.aidl",
+    ],
+    stability: "vintf",
+    backend: {
+        java: {
+            sdk_version: "module_current",
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+    frozen: true,
+
+}

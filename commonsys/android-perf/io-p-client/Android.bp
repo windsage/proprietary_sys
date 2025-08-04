@@ -1,0 +1,48 @@
+cc_library_headers {
+
+    name: "perf_iopd_client_system_headers",
+
+    export_include_dirs: [
+        ".",
+    ],
+
+    system_ext_specific: true,
+}
+
+
+cc_library_shared {
+
+    srcs: [
+        "client.cpp",
+    ],
+
+    header_libs: [
+        "libcutils_headers",
+        "perf_mpctl_client_system_headers",
+    ],
+
+    shared_libs: [
+        "libcutils",
+        "libutils",
+        "libxml2",
+        "liblog",
+        "vendor.qti.hardware.iop@2.0",
+        "libhidlbase",
+        "libqti-perfd-client_system",
+    ],
+
+    cflags: [
+        "-DCLIENT",
+        "-g0",
+        "-Wall",
+        "-Wno-unused-variable",
+        "-Wno-unused-parameter",
+        "-Wno-unused-function",
+        "-DVENDOR_DIR=\"$(TARGET_COPY_OUT_VENDOR)/etc\"",
+    ],
+
+    name: "libqti-iopd-client_system",
+    system_ext_specific: true,
+    owner: "qti",
+
+}

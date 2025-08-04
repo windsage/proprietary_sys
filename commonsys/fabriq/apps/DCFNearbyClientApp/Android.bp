@@ -1,0 +1,19 @@
+android_app {
+    name: "DCFNearbyClientApp",
+    srcs: [
+        "src/**/*.kt",
+        "src/**/*.java",
+        "src/**/client/service/I*.aidl",
+        "src/**/screensharing/I*.aidl",
+    ],
+    sdk_version:"system_current",
+    certificate: "platform",
+    product_specific: true,
+    resource_dirs:["res"],
+    manifest: "AndroidManifest.xml",
+    static_libs: [
+        "androidx.core_core-ktx",
+        "androidx-constraintlayout_constraintlayout",
+        "androidx.preference_preference",
+    ],
+}

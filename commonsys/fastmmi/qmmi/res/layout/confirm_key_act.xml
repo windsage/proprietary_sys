@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    Copyright (c) 2020, 2022 Qualcomm Technologies, Inc.
+    All Rights Reserved.
+    Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/full_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/case_top"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/case_title"
+            layout="@layout/case_title" />
+
+        <LinearLayout
+            android:id="@+id/ll_confirm_key"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/case_title"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/confirm_key"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/keypad_confirm_key"
+                android:textSize="20dip" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/case_bottom"
+        layout="@layout/case_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries. All rights reserved-->
+<!--Confidential and Proprietary - Qualcomm Technologies, Inc.-->
+<api_management_metadata>
+    <modules platform="LA">
+         <module name="libloremipsum" project="platform/hardware/qcom/display" path="vendor/lib64/libloremipsum.so">
+             <header file="class1.h" path="include/class1.h"/>
+        </module>
+    </modules>
+    <modules platform="LE">
+         
+    </modules>
+</api_management_metadata>

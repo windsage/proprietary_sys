@@ -1,0 +1,10 @@
+
+
+java_library {
+    name: "ramdump_copy_daemon",
+    installable: true,
+
+    srcs: ["**/*.java"],
+    system_ext_specific: true,
+
+}

@@ -1,0 +1,27 @@
+/*==============================================================================
+ *  @file IWifiDisplaySessionCb.hal
+ *
+ *  @par DESCRIPTION:
+ *       HAL interface for Wifi Display Session Callbacks
+ *
+ *
+ * Copyright (c) 2018 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+==============================================================================*/
+package vendor.qti.hardware.wifidisplaysession@1.0;
+
+import IWifiDisplaySessionVideoTrackCb;
+
+interface IWifiDisplaySessionVideoTrack {
+
+    createMediaTrack(uint64_t trackObj, uint64_t clientdata, IWifiDisplaySessionVideoTrackCb cb) generates(int64_t status, int64_t instanceId);
+
+    encode(int64_t instanceId, handle input, sampleInfo info) generates(int32_t status);
+
+    getTrackInfo(int64_t instanceId) generates (int32_t status, mediaInfo info);
+
+    destroyMediaTrack(int64_t instanceId);
+
+};
+

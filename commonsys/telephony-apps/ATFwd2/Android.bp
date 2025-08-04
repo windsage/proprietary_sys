@@ -1,0 +1,23 @@
+///******************************************************************************
+//*@file Android.bp
+//*brief Rules for compiling the source files
+//*******************************************************************************/
+
+android_app {
+    name: "AtFwd2",
+
+    srcs: ["src/**/*.java"],
+
+    certificate: "platform",
+
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
+
+    libs: ["qti-telephony-hidl-wrapper"],
+    static_libs: [
+        "vendor.qti.hardware.radio.atfwd-V1-java",
+    ],
+    platform_apis: true,
+    system_ext_specific: true,
+}

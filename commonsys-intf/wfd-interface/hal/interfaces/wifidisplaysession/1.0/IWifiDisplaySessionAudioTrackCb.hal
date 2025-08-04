@@ -1,0 +1,32 @@
+/*==============================================================================
+ *  @file IWifiDisplaySessionAudioTrackCb.hal
+ *
+ *  @par DESCRIPTION:
+ *       HAL interface for Wifi Display Audio Track Callbacks
+ *
+ *
+ * Copyright (c) 2018 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+==============================================================================*/
+package vendor.qti.hardware.wifidisplaysession@1.0;
+
+
+interface IWifiDisplaySessionAudioTrackCb
+{
+
+    trackInfoUpdated(int64_t clientdata, mediaInfo info) generates (int32_t status);
+
+    pause(int64_t clientdata) generates (int32_t status);
+
+    resume(int64_t clientdata) generates (int32_t status);
+
+    start(int64_t clientdata) generates (int32_t status);
+
+    stop(int64_t clientdata) generates (int32_t status);
+
+    audioProxyClosed(int64_t clientdata) generates (int32_t status);
+
+    isProxyAvailable(int64_t clientdata) generates (int32_t retval);
+};
+

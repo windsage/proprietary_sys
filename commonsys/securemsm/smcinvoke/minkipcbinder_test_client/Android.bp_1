@@ -1,0 +1,15 @@
+cc_binary {
+
+name: "smcinvoke_system_client",
+
+srcs: ["minkIpcBinderTest.cpp"],
+
+shared_libs: ["libminkipcbinder_system",
+	      "liblog",
+              "libcutils",
+              "libutils",
+             ],
+header_libs: ["minkipcbinder_headers", "commonsys_securemsm_smcinvoke_minksocke_headers", "mink_commonsys_headers"],
+system_ext_specific: true,
+
+}

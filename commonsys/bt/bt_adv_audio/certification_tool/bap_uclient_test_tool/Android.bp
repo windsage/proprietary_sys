@@ -1,0 +1,46 @@
+soong_config_module_type_import {
+    from: "device/qcom/qssi/Android.bp",
+    module_types: [
+         "aosp_vs_qva_cc_defaults",
+    ],
+}
+aosp_vs_qva_cc_defaults {
+     name: "qva_cc_defaults",
+     soong_config_variables: {
+         aosp_or_qva: {
+           qva: {
+             static_libs: [
+                "libbluetooth-types-qti",
+             ],
+           }
+        }
+    }
+}
+
+cc_binary {
+    name: "bap_uclient_test",
+    system_ext_specific: true,
+    defaults: ["qva_cc_defaults"],
+
+    srcs: ["bap_uclient_test.cpp"],
+
+    include_dirs: [
+        ".",
+        "vendor/qcom/opensource/commonsys/system/bt/include",
+        "packages/modules/Bluetooth/system/types",
+        "vendor/qcom/opensource/commonsys/system/bt/stack/l2cap",
+        "vendor/qcom/opensource/commonsys/system/bt/utils/include",
+        "vendor/qcom/opensource/commonsys/system/bt",
+        "vendor/qcom/proprietary/commonsys/bt/bt_adv_audio/vhal/include",
+        "external/libchrome",
+    ],
+
+    cflags: ["-DHAS_NO_BDROID_BUILDCFG"],
+
+    shared_libs: [
+        "libcutils",
+        "libchrome",
+        "libutils",
+    ],
+
+}

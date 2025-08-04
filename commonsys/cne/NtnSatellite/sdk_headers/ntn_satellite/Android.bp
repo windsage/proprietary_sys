@@ -1,0 +1,6 @@
+cc_library_headers {
+    name: "qms_sdk_ntn_satellite_headers",
+    export_include_dirs: ["."],
+    system_ext_specific: true,
+    host_supported: true,
+}

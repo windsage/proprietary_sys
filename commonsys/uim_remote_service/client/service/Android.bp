@@ -1,0 +1,65 @@
+///******************************************************************************
+//*@file Android.mk
+//*brief Rules for copiling the source files
+//*******************************************************************************/
+
+
+// Build the auto generated files into a library to be used by both the
+// app and the service
+java_library {
+    name: "uimremoteclientlibrary",
+    provides_uses_lib: "com.qualcomm.uimremoteclientlibrary",
+    installable: true,
+    sdk_version: "system_current",
+    product_specific: true,
+    srcs: ["src/com/qualcomm/uimremoteclient/IUimRemoteClientService.aidl"] + ["src/com/qualcomm/uimremoteclient/IUimRemoteClientServiceCallback.aidl"],
+
+}
+
+// ==========================================================================
+// Build the service
+
+src_proto = ["src"]
+android_app {
+    name: "uimremoteclient",
+
+    srcs: ["**/*.java"] + [
+        "src_proto/**/*.proto"],
+
+    proto: {
+        type: "micro",
+    },
+
+    product_specific: true,
+    sdk_version: "system_current",
+    certificate: "platform",
+    optimize: {
+        enabled: false,
+    },
+
+    libs: [
+        "uimremoteclientlibrary",
+        "qti-telephony-utils",
+        "qti-telephony-hidl-wrapper-prd",
+    ],
+    static_libs: [
+        "vendor.qti.hardware.radio.uim_remote_client-V1.0-java",
+        "vendor.qti.hardware.radio.uim_remote_client-V1-java",
+        "QtiAidlServiceLib",
+    ],
+
+}
+
+// ==========================================================================
+prebuilt_etc {
+
+    name: "uimremoteclient.xml",
+
+    // This will install the file in /product/etc/permissions
+    //
+
+    src: "uimremoteclient.xml",
+    relative_install_path: "permissions",
+
+}
+

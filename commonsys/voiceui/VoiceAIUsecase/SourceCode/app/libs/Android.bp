@@ -1,0 +1,11 @@
+java_import {
+    name: "whisper",
+    jars: ["whisper.jar"],
+    sdk_version: "current",
+}
+
+java_import {
+    name: "wrapper.phonestate.jar",
+    jars: ["wrapper.phonestate.jar"],
+    sdk_version: "current",
+}

@@ -1,0 +1,9 @@
+prebuilt_etc {
+
+    name: "qti_telephony_system_packages_config.xml",
+
+    src: "qti_telephony_system_packages_config.xml",
+    sub_dir: "sysconfig",
+
+    system_ext_specific: true,
+}

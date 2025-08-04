@@ -1,0 +1,21 @@
+
+android_app {
+
+    name: "com.qti.services.zprovidertest",
+    owner: "qti",
+
+    system_ext_specific: true,
+
+    srcs: [
+        "java/com/qti/services/zprovidertest/ZProviderService.java",
+    ],
+
+    libs: ["com.qti.location.sdk"],
+    static_libs: ["android-support-v4"],
+    privileged: true,
+    optimize: {
+        enabled: false,
+    },
+    certificate: "platform",
+    platform_apis: true,
+}

@@ -1,0 +1,32 @@
+
+aidl_interface {
+    name: "vendor.qti.hardware.wifidisplaysession_aidl",
+    vendor_available: true,
+    system_ext_specific: true,
+    host_supported: true,
+    frozen: true,
+    owner: "qti",
+    srcs: ["vendor/qti/hardware/wifidisplaysession_aidl/*.aidl"],
+    imports: ["android.hardware.common-V2"],
+    stability: "vintf",
+    backend: {
+        cpp: {
+            // FIXME should this be disabled?
+            // prefer NDK backend which can be used anywhere
+            // If you disable this, you also need to delete the C++
+            // translate code.
+            enabled: false,
+        },
+        java: {
+            sdk_version: "module_current",
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: ["android.hardware.common-V2"],
+        },
+    ],
+
+}
+

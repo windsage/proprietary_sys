@@ -1,0 +1,26 @@
+aidl_interface {
+    name: "vendor.qti.snapdragonServices",
+    srcs: ["vendor/qti/snapdragonServices/*.aidl"],
+    system_ext_specific: true,
+    vendor_available: true,
+    stability: "vintf",
+    backend: {
+        cpp: {
+            enabled: false,
+        },
+        java: {
+            sdk_version: "module_current",
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+    frozen: true,
+
+}

@@ -1,0 +1,66 @@
+/*
+ * Copyright (c) 2021 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ *
+ * Not a Contribution.
+ */
+
+/*
+ * Copyright (C) 2016 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package vendor.qti.hardware.radio.ims@1.8;
+
+import @1.7::IImsRadioIndication;
+
+interface IImsRadioIndication extends @1.7::IImsRadioIndication {
+
+    /**
+     * MessageId.UNSOL_SERVICE_DOMAIN_CHANGED
+     *
+     * This indication will be received when modem sends NAS system info.
+     *
+     * @param domain indicates the UE's service domain.
+     *
+     */
+    oneway onServiceDomainChanged(SystemServiceDomain domain);
+
+    /**
+     * MessageId.UNSOL_SCBM_UPDATE_IND
+     *
+     * This indication will be received when modem enters/leaves Sms Callback mode.
+     * Modem enters SCBM for certain carriers after an emergency SMS is sent by user.
+     *
+     * @param mode indicates the state of modem whether its in SCBM or not.
+     *
+     */
+    oneway onSmsCallBackModeChanged(SmsCallBackMode mode);
+
+    /**
+     * MessageId.UNSOL_RESPONSE_CALL_STATE_CHANGE
+     *
+     * @param callList List of calls and their details.
+     *
+     */
+    oneway onCallStateChanged_1_8(vec<CallInfo> callList);
+
+    /**
+     *
+     * MessageId.UNSOL_CONFERENCE_CALL_STATE_COMPLETED
+     *
+     */
+    oneway onConferenceCallStateCompleted();
+};

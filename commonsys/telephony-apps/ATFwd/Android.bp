@@ -1,0 +1,26 @@
+///******************************************************************************
+//*@file Android.bp
+//*brief Rules for compiling the source files
+//*******************************************************************************/
+
+android_app {
+    name: "atfwd",
+
+    srcs: ["src/**/*.java"],
+
+    certificate: "platform",
+
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
+
+    libs: ["qti-telephony-hidl-wrapper"],
+    static_libs: [
+        "vendor.qti.hardware.radio.atcmdfwd-V1-java",
+        "vendor.qti.hardware.radio.atcmdfwd-V1.0-java",
+    ],
+    platform_apis: true,
+    vintf_fragments: ["atcmdfwd-saidl.xml"],
+    system_ext_specific: true,
+
+}

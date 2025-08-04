@@ -1,0 +1,84 @@
+Notes relating to hidl2aidl conversion of vendor.qti.hardware.wifidisplaysession@1.0 to vendor.qti.hardware.wifidisplaysession (if any) follow:
+Unhandled comments from vendor.qti.hardware.wifidisplaysession@1.0::types follow. Consider using hidl-lint to locate these and fixup as many as possible.
+ //Type of touch event
+ //Number of active touch points
+ //on the screen
+ //Id of the pointer
+ //X-Coordinate with respect to the
+ //negotiated display resolution
+ //Y-Coordinate with respect to the negotiated
+ //display resolution
+ //Type of key event
+ //The key code of the first key event
+ //in the format specified in WFD spec
+ //The key code of the second key event
+ //in the format specified in WFD spec
+ //Reference X-Coordinate for zoom with respect
+ //to the negotiated display resolution
+ //Reference Y-Coordinate for zoom with respect
+ //to the negotiated display resolution
+ //Unsigned integer portion of the number of times
+ //to zoom
+ //Fraction portion of the number of times to zoom
+ //Type of scroll event
+ //Number of pixels scrolled with respect to
+ //the negotiated display resolution
+ //For vertical scroll, a negative number
+ //indicates to scroll up; a positive number
+ //indicates to scroll down
+ //For horizontal scroll, a negative number
+ //indicates to scroll right;a positive number
+ //indicates to scroll left
+ //The signed integer portion of the amount units
+ //in radians to rotate.
+ //A negative number indicates to rotate clockwise;
+ //a positive number indicates to rotate counter-clockwise
+ //The fraction portion of the amount in units of
+ //radians to rotate.
+ //type of uibc event
+ //parameters of the event
+ //The last 16 bits of the WFD source marked
+ //RTP timestamp of the frames that are being displayed
+ //when user inputs are applied(from spec 1.22,line1266)
+ //otherwise "UINT16_MAX"
+
+audioInfo: Consider replacing char with int if signed integer is desired
+audioInfo: Consider replacing char with int if signed integer is desired
+An unhandled type was found in translation: handle
+deviceInfo: Consider replacing char with int if signed integer is desired
+deviceInfo: Consider replacing char with int if signed integer is desired
+deviceInfo: Consider replacing char with int if signed integer is desired
+uibc_key_event_parms: Consider replacing char with int if signed integer is desired
+uibc_key_event_parms: Consider replacing char with int if signed integer is desired
+uibc_scroll_event_parms: Consider replacing char with int if signed integer is desired
+uibc_event_t: Consider replacing char with int if signed integer is desired
+audioInfo: Consider replacing char with int if signed integer is desired
+audioInfo: Consider replacing char with int if signed integer is desired
+An unhandled type was found in translation: handle
+deviceInfo: Consider replacing char with int if signed integer is desired
+deviceInfo: Consider replacing char with int if signed integer is desired
+deviceInfo: Consider replacing char with int if signed integer is desired
+uibc_key_event_parms: Consider replacing char with int if signed integer is desired
+uibc_key_event_parms: Consider replacing char with int if signed integer is desired
+uibc_scroll_event_parms: Consider replacing char with int if signed integer is desired
+uibc_event_t: Consider replacing char with int if signed integer is desired
+audioInfo: Consider replacing char with int if signed integer is desired
+audioInfo: Consider replacing char with int if signed integer is desired
+An unhandled type was found in translation: handle
+deviceInfo: Consider replacing char with int if signed integer is desired
+deviceInfo: Consider replacing char with int if signed integer is desired
+deviceInfo: Consider replacing char with int if signed integer is desired
+uibc_key_event_parms: Consider replacing char with int if signed integer is desired
+uibc_key_event_parms: Consider replacing char with int if signed integer is desired
+uibc_scroll_event_parms: Consider replacing char with int if signed integer is desired
+uibc_event_t: Consider replacing char with int if signed integer is desired
+audioInfo: Consider replacing char with int if signed integer is desired
+audioInfo: Consider replacing char with int if signed integer is desired
+deviceInfo: Consider replacing char with int if signed integer is desired
+deviceInfo: Consider replacing char with int if signed integer is desired
+deviceInfo: Consider replacing char with int if signed integer is desired
+uibc_key_event_parms: Consider replacing char with int if signed integer is desired
+uibc_key_event_parms: Consider replacing char with int if signed integer is desired
+uibc_scroll_event_parms: Consider replacing char with int if signed integer is desired
+uibc_event_t: Consider replacing char with int if signed integer is desired
+END OF LOG

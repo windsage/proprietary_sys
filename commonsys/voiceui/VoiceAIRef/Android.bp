@@ -1,0 +1,36 @@
+filegroup {
+    name: "qvaaidl-srcs",
+    srcs: [ "aidl/**/*.aidl" ],
+    path: "aidl"
+}
+java_library {
+    name: "qva-aidl",
+    sdk_version: "current",
+    min_sdk_version: "29",
+    srcs: [ ":qvaaidl-srcs"],
+}
+
+android_app {
+    name: "VoiceAIRef",
+
+    srcs: ["src/**/*.java"],
+    resource_dirs: ["res"],
+    product_specific: true,
+    sdk_version: "current",
+    min_sdk_version: "29",
+    target_sdk_version: "current",
+    optimize: {
+        obfuscate: false,
+        shrink: true,
+        proguard_flags_files: [ "proguard-rules.pro" ],
+    },
+    static_libs: [
+        "qva-aidl",
+        "androidx.core_core-ktx",
+        "androidx-constraintlayout_constraintlayout",
+        "androidx.preference_preference",
+        "com.google.android.material_material",
+        "androidx.navigation_navigation-fragment",
+        "androidx.navigation_navigation-ui",
+    ],
+}

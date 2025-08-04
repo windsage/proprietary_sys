@@ -1,0 +1,24 @@
+/*
+  * Copyright (c) 2019 Qualcomm Technologies, Inc.
+  * All Rights Reserved.
+  * Confidential and Proprietary - Qualcomm Technologies, Inc.
+  */
+
+package vendor.qti.hardware.sigma_miracast@1.0;
+
+interface Isigma_miracast{
+
+    dev_send_frame(string cmd) generates (int32_t status);
+
+    sta_reset_default (string cmd) generates  (int32_t status);
+
+    start_wfd_connection(string cmd_string, string peer_ip, int32_t rtsp_port, int32_t dev_type, string session_id) generates  (int32_t status,string rtsp_session_id);
+
+    connect_go_start_wfd(string cmd_string, string peer_ip, int32_t rtsp_port, int32_t dev_type, string session_id) generates  (int32_t status,string rtsp_session_id);
+
+    sta_generate_event (string cmd_string) generates  (int32_t status);
+
+    dev_exec_action(string cmd) generates  (int32_t status);
+
+    sta_preset_testparameters(string cmd) generates  (int32_t status,string respBuf);
+};

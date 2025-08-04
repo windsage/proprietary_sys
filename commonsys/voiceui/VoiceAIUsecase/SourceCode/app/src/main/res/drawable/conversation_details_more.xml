@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+  ~ All Rights Reserved.
+  ~ Confidential and Proprietary - Qualcomm Technologies, Inc.
+ -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+android:width="4dp"
+android:height="16dp"
+android:viewportWidth="4"
+android:viewportHeight="16">
+<path
+    android:strokeColor="@android:color/white"
+    android:strokeWidth="2"
+    android:strokeAlpha="1"
+    android:pathData="M1.99999 8.83337C2.46023 8.83337 2.83332 8.46028 2.83332 8.00004C2.83332 7.5398 2.46023 7.16671 1.99999 7.16671C1.53975 7.16671 1.16666 7.5398 1.16666 8.00004C1.16666 8.46028 1.53975 8.83337 1.99999 8.83337Z"/>
+<path
+    android:strokeColor="@android:color/white"
+    android:strokeWidth="2"
+    android:strokeAlpha="1"
+    android:pathData="M1.99999 3.00004C2.46023 3.00004 2.83332 2.62694 2.83332 2.16671C2.83332 1.70647 2.46023 1.33337 1.99999 1.33337C1.53975 1.33337 1.16666 1.70647 1.16666 2.16671C1.16666 2.62694 1.53975 3.00004 1.99999 3.00004Z"/>
+<path
+    android:strokeColor="@android:color/white"
+    android:strokeWidth="2"
+    android:strokeAlpha="1"
+    android:pathData="M1.99999 14.6667C2.46023 14.6667 2.83332 14.2936 2.83332 13.8334C2.83332 13.3731 2.46023 13 1.99999 13C1.53975 13 1.16666 13.3731 1.16666 13.8334C1.16666 14.2936 1.53975 14.6667 1.99999 14.6667Z"/>
+
+</vector>

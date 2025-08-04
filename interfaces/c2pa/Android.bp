@@ -1,0 +1,31 @@
+aidl_interface {
+    name: "vendor.qti.hardware.c2pa",
+    vendor_available: true,
+    system_ext_specific: true,
+    srcs: ["vendor/qti/hardware/c2pa/*.aidl"],
+    stability: "vintf",
+    owner: "qti",
+    imports: [
+        "android.hardware.common-V2",
+    ],
+    backend: {
+        cpp: {
+            enabled: false,
+        },
+        java: {
+            sdk_version: "module_current",
+            enabled: true,
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: ["android.hardware.common-V2"],
+        },
+    ],
+    frozen: true,
+
+}

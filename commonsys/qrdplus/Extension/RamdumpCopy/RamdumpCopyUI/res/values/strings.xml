@@ -1,0 +1,10 @@
+<!--
+ * Copyright (c) 2022 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+-->
+<resources>
+    <string name="app_name">RamdumpCopy</string>
+    <string name="dummy_content">Device crashed!!!\nRAM dump is under copying, please do not reboot or power off your device.</string>
+</resources>

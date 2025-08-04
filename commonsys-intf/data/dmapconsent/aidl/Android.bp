@@ -1,0 +1,39 @@
+aidl_interface {
+    name: "vendor.qti.data.dmapconsent",
+    vendor_available: true,
+    host_supported: true,
+    srcs: ["vendor/qti/data/dmapconsent/*.aidl"],
+    stability: "vintf",
+    product_specific: false,
+    system_ext_specific: true,
+    owner: "qti",
+    backend: {
+        cpp: {
+            enabled: false,
+        },
+        java: {
+            enabled: true,
+            platform_apis: true,
+            gen_trace: false,
+        },
+        ndk: {
+            enabled: true,
+            gen_trace: false,
+        },
+        rust: {
+            enabled: false,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+        {
+            version: "2",
+            imports: [],
+        },
+
+    ],
+    frozen: true,
+}

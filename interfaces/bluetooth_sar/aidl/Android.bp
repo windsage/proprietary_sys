@@ -1,0 +1,32 @@
+// This is the expected build file, but it may not be right in all cases
+
+aidl_interface {
+    name: "vendor.qti.hardware.bluetooth_sar",
+    vendor_available: true,
+    product_specific: false,
+    srcs: ["vendor/qti/hardware/bluetooth_sar/*.aidl"],
+    local_include_dir: ".",
+    stability: "vintf",
+    host_supported: true,
+    owner: "qti",
+    backend: {
+        cpp: {
+            enabled: false,
+        },
+        java: {
+            //sdk_version: "module_current",
+            enabled: true,
+            platform_apis: true,
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+    frozen: true,
+}

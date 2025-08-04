@@ -1,0 +1,57 @@
+// ==========================================================================
+
+java_library {
+    name: "qti-telephony-common",
+    installable: true,
+
+    aidl: {
+        local_include_dirs: ["src/java"],
+    },
+    srcs: [
+        "src/**/*.java",
+        "src/java/**/I*.aidl",
+        "src/java/**/*.logtags",
+    ],
+
+    libs: [
+        "androidx.annotation_annotation",
+        "voip-common",
+        "ims-common",
+        "telephony-common",
+        "telephony-ext",
+        "android.hardware.radio-V1.0-java",
+        "qti-telephony-hidl-wrapper",
+        "qti-telephony-utils",
+        "extphonelib",
+        "ims-ext-common",
+    ],
+
+    static_libs: [
+        "qcrilhook-static",
+        "vendor.qti.hardware.radio.qtiradio-V1.0-java",
+        "vendor.qti.hardware.radio.qtiradio-V2.0-java",
+        "vendor.qti.hardware.radio.qtiradio-V2.1-java",
+        "vendor.qti.hardware.radio.qtiradio-V2.2-java",
+        "vendor.qti.hardware.radio.qtiradio-V2.3-java",
+        "vendor.qti.hardware.radio.qtiradio-V2.4-java",
+        "vendor.qti.hardware.radio.qtiradio-V2.5-java",
+        "vendor.qti.hardware.radio.qtiradio-V2.6-java",
+    ],
+
+    system_ext_specific: true,
+
+}
+
+// ==========================================================================
+
+prebuilt_etc {
+
+    name: "qti_telephony_common.xml",
+
+    // This will install the file in /system_ext/etc/permissions
+
+    src: "qti_telephony_common.xml",
+    relative_install_path: "permissions",
+    system_ext_specific: true,
+
+}

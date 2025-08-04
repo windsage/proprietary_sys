@@ -1,0 +1,31 @@
+aidl_interface {
+    name: "vendor.qti.latencyaidlservice",
+    vendor_available: true,
+    host_supported: true,
+    srcs: ["vendor/qti/latencyaidlservice/*.aidl"],
+    stability: "vintf",
+    product_specific: false,
+    system_ext_specific: true,
+    owner: "qti",
+    local_include_dir: ".",
+    backend: {
+        cpp: {
+            enabled: false,
+        },
+        java: {
+            enabled: true,
+            sdk_version: "system_current",
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+    frozen: true,
+
+}

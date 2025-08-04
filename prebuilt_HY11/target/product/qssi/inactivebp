@@ -1,0 +1,179 @@
+
+cc_prebuilt_library_shared{
+    name : "libGPMTEEC_system.qti",
+        strip:{
+               none: true,
+        },
+        multilib:{
+            lib32:{
+                   srcs : ["./system_ext/lib/libGPMTEEC_system.qti.so"],
+                },
+            lib64:{
+                   srcs : ["./system_ext/lib64/libGPMTEEC_system.qti.so"],
+                },
+        },
+        shared_libs: [
+                      "libc",
+                      "libcutils",
+                      "libutils",
+                      "liblog",
+                      "libGPTEE_system.qti",
+                      "libc++",
+                      "libm",
+                      "libdl",
+        ],
+        owner: "qcom",
+        system_ext_specific : true,
+}
+
+cc_prebuilt_library_shared{
+    name : "libGPQTEEC_system.qti",
+        strip:{
+               none: true,
+        },
+        multilib:{
+            lib32:{
+                   srcs : ["./system_ext/lib/libGPQTEEC_system.qti.so"],
+                },
+            lib64:{
+                   srcs : ["./system_ext/lib64/libGPQTEEC_system.qti.so"],
+                },
+        },
+        shared_libs: [
+                      "libc",
+                      "libcutils",
+                      "libutils",
+                      "liblog",
+                      "libhidlbase",
+                      "libGPTEE_system.qti",
+                      "libQTEEConnector_system",
+                      "vendor.qti.hardware.qteeconnector-V1-ndk",
+                      "vendor.qti.hardware.qteeconnector@1.0",
+                      "libc++",
+                      "libm",
+                      "libdl",
+        ],
+        owner: "qcom",
+        system_ext_specific : true,
+}
+
+cc_prebuilt_library_shared{
+    name : "libGPTEE_system.qti",
+        strip:{
+               none: true,
+        },
+        multilib:{
+            lib32:{
+                   srcs : ["./system_ext/lib/libGPTEE_system.qti.so"],
+                },
+            lib64:{
+                   srcs : ["./system_ext/lib64/libGPTEE_system.qti.so"],
+                },
+        },
+        shared_libs: [
+                      "libc",
+                      "libcutils",
+                      "libutils",
+                      "liblog",
+                      "libbase",
+                      "libc++",
+                      "libm",
+                      "libdl",
+        ],
+        owner: "qcom",
+        system_ext_specific : true,
+}
+
+cc_prebuilt_library_shared{
+    name : "libminkipcbinder_system",
+        strip:{
+               none: true,
+        },
+        multilib:{
+            lib32:{
+                   srcs : ["./system_ext/lib/libminkipcbinder_system.so"],
+                },
+            lib64:{
+                   srcs : ["./system_ext/lib64/libminkipcbinder_system.so"],
+                },
+        },
+        shared_libs: [
+                      "libcutils",
+                      "libutils",
+                      "liblog",
+                      "libbinder_ndk",
+                      "vendor.qti.hardware.minkipcbinder-V1-ndk",
+                      "libbinder",
+                      "libjsoncpp",
+                      "libc++",
+                      "libc",
+                      "libm",
+                      "libdl",
+        ],
+        owner: "qcom",
+        system_ext_specific : true,
+}
+
+cc_prebuilt_library_shared{
+    name : "libQSEEComAPI_system",
+        strip:{
+               none: true,
+        },
+        multilib:{
+            lib32:{
+                   srcs : ["./system_ext/lib/libQSEEComAPI_system.so"],
+                },
+            lib64:{
+                   srcs : ["./system_ext/lib64/libQSEEComAPI_system.so"],
+                },
+        },
+        shared_libs: [
+                      "libc",
+                      "libcutils",
+                      "libutils",
+                      "liblog",
+                      "libhidlbase",
+                      "libhidlmemory",
+                      "libdmabufheap",
+                      "libbinder_ndk",
+                      "vendor.qti.hardware.qseecom@1.0",
+                      "android.hidl.allocator@1.0",
+                      "android.hidl.memory@1.0",
+                      "vendor.qti.hardware.qseecom-V1-ndk",
+                      "libc++",
+                      "libm",
+                      "libdl",
+        ],
+        owner: "qcom",
+        system_ext_specific : true,
+}
+
+cc_prebuilt_library_shared{
+    name : "libQTEEConnector_system",
+        strip:{
+               none: true,
+        },
+        multilib:{
+            lib32:{
+                   srcs : ["./system_ext/lib/libQTEEConnector_system.so"],
+                },
+            lib64:{
+                   srcs : ["./system_ext/lib64/libQTEEConnector_system.so"],
+                },
+        },
+        shared_libs: [
+                      "libhidlbase",
+                      "liblog",
+                      "libcutils",
+                      "libutils",
+                      "libbinder_ndk",
+                      "vendor.qti.hardware.qteeconnector@1.0",
+                      "vendor.qti.hardware.qteeconnector-V1-ndk",
+                      "libc++",
+                      "libc",
+                      "libm",
+                      "libdl",
+        ],
+        owner: "qcom",
+        system_ext_specific : true,
+}

@@ -1,0 +1,33 @@
+/*
+ * Copyright (c) 2023 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+
+package vendor.qti.latency@2.3;
+
+import @2.2::ILinkLatencyService;
+import @2.2::StatusCode;
+import @2.0::SlotId;
+
+/**
+ * This is the root of the HAL module and is the interface returned when
+ * loading an implementation of the IFactory HAL.
+ */
+interface ILinkLatencyService extends @2.2::ILinkLatencyService {
+    /**
+     * Enables selection of data subcription to be prioritized. System will
+     * prioritize given data subscription as long as there is at least one vote for it.
+     *
+     * @param slotId SIM slot ID of subscription to prioritize
+     *
+     * @param isEnabled Value true enables prioritization of given data
+     *    subscription, and false disables it. System will continue
+     *    prioritizing data subscription as long as there is
+     *    one client requesting for this to be enabled.
+     * @return status operation status
+     */
+    @callflow(next={"*"})
+    prioritizeDataPerSubscription(SlotId slotId, bool isEnabled)
+        generates (StatusCode status);
+};

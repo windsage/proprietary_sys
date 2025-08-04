@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2023 Qualcomm Technologies, Inc.
+  ~ All Rights Reserved.
+  ~ Confidential and Proprietary - Qualcomm Technologies, Inc.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_enrollment_steps"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="27dp"
+        android:lineSpacingExtra="5sp"
+        android:text="@string/enroll_tips"
+        android:textColor="@color/transparent_text_color"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/enroll_steps_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:text="@string/steps_1"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/message" />
+
+    <ImageView
+        android:id="@+id/step1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="45dp"
+        android:contentDescription="@string/enroll_tips"
+        android:src="@drawable/enrolling_status"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/enroll_steps_title"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/step2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="45dp"
+        android:contentDescription="@string/enroll_tips"
+        android:src="@drawable/enroll_not_start"
+        app:layout_constraintLeft_toLeftOf="@id/step1"
+        app:layout_constraintTop_toTopOf="@id/enroll_steps_title"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/step3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="45dp"
+        android:contentDescription="@string/enroll_tips"
+        android:src="@drawable/enroll_not_start"
+        app:layout_constraintLeft_toLeftOf="@id/step2"
+        app:layout_constraintTop_toTopOf="@id/enroll_steps_title"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/step4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="45dp"
+        android:contentDescription="@string/enroll_tips"
+        android:src="@drawable/enroll_not_start"
+        app:layout_constraintLeft_toLeftOf="@id/step3"
+        app:layout_constraintTop_toTopOf="@id/enroll_steps_title"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/step5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="45dp"
+        android:contentDescription="@string/enroll_tips"
+        android:src="@drawable/enroll_not_start"
+        app:layout_constraintLeft_toLeftOf="@id/step4"
+        app:layout_constraintTop_toTopOf="@id/enroll_steps_title"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/phraseText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="25dp"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/harvard1"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/step1" />
+
+    <ImageView
+        android:id="@+id/bg_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="130dp"
+        android:contentDescription="@string/enroll_tips"
+        android:src="@drawable/bg_layer_blur"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/mic_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="140dp"
+        android:contentDescription="@string/enroll_tips"
+        android:src="@drawable/icon_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/mic_effect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/enroll_tips"
+        android:src="@drawable/icn_mic"
+        app:layout_constraintBottom_toBottomOf="@id/mic_bg"
+        app:layout_constraintLeft_toLeftOf="@id/mic_bg"
+        app:layout_constraintRight_toRightOf="@id/mic_bg"
+        app:layout_constraintTop_toTopOf="@id/mic_bg" />
+
+    <TextView
+        android:id="@+id/enroll_listening_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="84dp"
+        android:text="@string/enroll_listening"
+        android:textColor="@color/transparent_text_color"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

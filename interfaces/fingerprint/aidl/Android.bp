@@ -1,0 +1,27 @@
+
+aidl_interface {
+    name: "vendor.qti.hardware.fingerprint",
+    vendor_available: true,
+    srcs: ["vendor/qti/hardware/fingerprint/*.aidl"],
+    stability: "vintf",
+    backend: {
+        java: {
+            enabled: true,
+            platform_apis: true,
+        },
+        cpp: {
+            enabled: false,
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+    frozen: true,
+
+}

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+  ~ All rights reserved.
+  ~ Confidential and Proprietary - Qualcomm Technologies, Inc.
+  -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qualcomm.qti.voiceai.usecase"
+    android:versionCode="0100000"
+    android:versionName="1.0.0" >
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT" />
+    <uses-permission android:name="android.permission.READ_PRECISE_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"/>
+
+    <queries>
+        <package android:name="com.qualcomm.qti.voiceai.speech"/>
+    </queries>
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@drawable/launcher"
+        android:name=".UsecaseApplication"
+        android:theme="@style/Theme.VoiceAIUsecase" >
+        <uses-native-library
+            android:name="libcdsprpc.so"
+            android:required="true" />
+        <provider
+            android:authorities="com.qualcomm.qti.voiceai.usecase.conversation.database.ConversationProvider"
+            android:name=".conversation.database.ConversationProvider"
+            android:exported="false" />
+        <activity
+            android:name=".conversation.ui.ConversationRecordingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Material3.Dark.NoActionBar"/>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+
+            android:theme="@style/Theme.Material3.Dark.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".conversation.ui.PermissionActivity"
+            android:theme="@style/TransparentTheme"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize" android:exported="false"/>
+
+        <service
+            android:name=".voicecall.VoiceCallTranslationService"
+            android:enabled="true" android:foregroundServiceType="microphone|mediaPlayback"
+            android:exported="false">
+        </service>
+
+        <service
+            android:name=".voicecall.RxDownlinkRouteService"
+            android:enabled="true" android:foregroundServiceType="microphone|mediaPlayback"
+            android:exported="false"
+            android:process=":rx_downlink">
+        </service>
+
+        <activity
+            android:name=".voicecall.ui.VoiceCallSettingsActivity"
+            android:exported="false"
+            android:label="@string/voice_call_settings_title"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Material3.Dark.NoActionBar" />
+        <activity
+            android:name=".voicecall.ui.VoiceCallTranslationActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:label="@string/voice_call_translation"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Material3.Dark.NoActionBar" />
+    </application>
+
+</manifest>

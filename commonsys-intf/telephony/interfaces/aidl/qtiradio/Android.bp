@@ -1,0 +1,175 @@
+aidl_interface {
+    name: "vendor.qti.hardware.radio.common",
+    vendor_available: true,
+    product_specific: true,
+    srcs: ["vendor/qti/hardware/radio/*.aidl"],
+    local_include_dir: ".",
+    stability: "vintf",
+    host_supported: true,
+    owner: "qti",
+    backend: {
+        java: {
+            enabled: true,
+            sdk_version: "system_current",
+        },
+        cpp: {
+            enabled: false,
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+    frozen: true,
+
+}
+
+aidl_interface {
+    name: "vendor.qti.hardware.radio.qtiradio",
+    vendor_available: true,
+    product_specific: true,
+    srcs: ["vendor/qti/hardware/radio/qtiradio/*.aidl"],
+    local_include_dir: ".",
+    stability: "vintf",
+    host_supported: true,
+    owner: "qti",
+    backend: {
+        java: {
+            enabled: true,
+            sdk_version: "system_current",
+        },
+        cpp: {
+            enabled: false,
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+        {
+            version: "2",
+            imports: [],
+        },
+        {
+            version: "3",
+            imports: [],
+        },
+        {
+            version: "4",
+            imports: [],
+        },
+        {
+            version: "5",
+            imports: [],
+        },
+        {
+            version: "6",
+            imports: [],
+        },
+        {
+            version: "7",
+            imports: [],
+        },
+        {
+            version: "8",
+            imports: [],
+        },
+        {
+            version: "9",
+            imports: [],
+        },
+        {
+            version: "10",
+            imports: [],
+        },
+        {
+            version: "11",
+            imports: [],
+        },
+        {
+            version: "12",
+            imports: [],
+        },
+        {
+            version: "13",
+            imports: [],
+        },
+        {
+            version: "14",
+            imports: [],
+        },
+        {
+            version: "15",
+            imports: [],
+        },
+
+    ],
+    frozen: true,
+
+}
+
+aidl_interface {
+    name: "vendor.qti.hardware.radio.qtiradioconfig",
+    vendor_available: true,
+    product_specific: true,
+    srcs: ["vendor/qti/hardware/radio/qtiradioconfig/*.aidl"],
+    local_include_dir: ".",
+    stability: "vintf",
+    host_supported: true,
+    owner: "qti",
+    imports: ["vendor.qti.hardware.radio.common-V1"],
+    backend: {
+        java: {
+            enabled: true,
+            sdk_version: "system_current",
+        },
+        cpp: {
+            enabled: false,
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+        {
+            version: "2",
+            imports: [],
+        },
+        {
+            version: "3",
+            imports: [],
+        },
+        {
+            version: "4",
+            imports: ["vendor.qti.hardware.radio.common-V1"],
+        },
+        {
+            version: "5",
+            imports: ["vendor.qti.hardware.radio.common-V1"],
+        },
+        {
+            version: "6",
+            imports: ["vendor.qti.hardware.radio.common-V1"],
+        },
+        {
+            version: "7",
+            imports: ["vendor.qti.hardware.radio.common-V1"],
+        },
+
+    ],
+    frozen: true,
+
+}
